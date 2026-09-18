@@ -1,3 +1,4 @@
+import { withBase } from '../urls';
 import React from 'react';
 
 import { DraggableSticker, ProjectCard } from '../components';
@@ -7,7 +8,7 @@ export default function Home() {
   return <div className="w-layout-vflex home-container-draggable">
     <section className="w-layout-vflex home-header" aria-label="Introduction">
       <div className="w-layout-vflex center-aligned landingpage">
-        <h1 className="title-1 hero-title">Hi, I'm <a href="/about"><em>Nancy</em></a>!</h1>
+        <h1 className="title-1 hero-title">Hi, I'm <a href={withBase('/about')}><em>Nancy</em></a>!</h1>
         <div className="headinglandingpage">Designing thoughtful, human-centred solutions as a systems design engineer @UWaterloo</div>
         <div className="w-layout-hflex h-flex landingpage hero-icons" aria-label="Art, engineering, and Waterloo">
           {heroIcons.map((icon, index) => <div key={icon.top} className="header-text-image" tabIndex={0} aria-label={['An artist’s palette', 'An engineering gear', 'A Waterloo goose'][index]}>
@@ -15,7 +16,7 @@ export default function Home() {
             <img className="bottom" src={icon.bottom} alt="" />
           </div>)}
         </div>
-        <a href="/#projects" className="body-1 center-aligned projects-prompt">See my projects below!</a>
+        <a href={withBase('/#projects')} className="body-1 center-aligned projects-prompt">See my projects below!</a>
         {['head-left', 'header-right', 'revvity', 'gradeeasy', 'plooto', 'radicalgary'].map(name => <div key={name} className={`bg-colour-blur ${name}`} aria-hidden="true" />)}
       </div>
     </section>

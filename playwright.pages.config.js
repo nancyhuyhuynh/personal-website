@@ -2,11 +2,11 @@ import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
-  testIgnore: '**/pages.spec.js',
+  testMatch: 'pages.spec.js',
   fullyParallel: true,
   workers: 2,
   use: {
-    baseURL: 'http://localhost:5173',
+    baseURL: 'http://127.0.0.1:4174/personal-website/',
     launchOptions: { executablePath: process.env.CHROMIUM_EXECUTABLE_PATH || undefined },
     trace: 'retain-on-failure',
   },
@@ -15,8 +15,7 @@ export default defineConfig({
     { name: 'mobile', use: { ...devices['iPhone 13'], defaultBrowserType: 'chromium' } },
   ],
   webServer: {
-    command: 'npm run dev',
-    url: 'http://localhost:5173',
-    reuseExistingServer: !process.env.CI,
+    command: 'node scripts/serve-pages-test.mjs',
+    url: 'http://127.0.0.1:4174/personal-website/',
   },
 });

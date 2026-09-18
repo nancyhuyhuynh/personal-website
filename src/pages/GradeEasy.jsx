@@ -1,3 +1,4 @@
+import { withBase } from '../urls';
 import React from 'react';
 
 export default function GradeEasy() {
@@ -5,14 +6,14 @@ export default function GradeEasy() {
     <>
       <section className="banner-image">
         <div className="cover-image">
-          <img src="/assets/66eaefeeca36a36d0b34bab3_Frame-2--1-.png" alt="" loading="lazy" />
+          <img src={withBase('/assets/66eaefeeca36a36d0b34bab3_Frame-2--1-.png')} alt="" loading="lazy" />
         </div>
       </section>
       <section className="case-study-body">
         <div className="w-layout-blockcontainer cs-container w-container">
           <div className="w-layout-vflex v-flex _20-spacing">
             <div className="w-layout-hflex logo-chip gradeeasy">
-              <img src="/assets/66eb54c1e70365cc307944de_logo-3--1-.png" loading="lazy" alt="" className="logo-mini" />
+              <img src={withBase('/assets/66eb54c1e70365cc307944de_logo-3--1-.png')} loading="lazy" alt="" className="logo-mini" />
               <div className="body-1 white">
                 {"GradeEasy"}
               </div>
@@ -114,12 +115,12 @@ export default function GradeEasy() {
           <div className="w-layout-grid media-text _20-spacing gradeeasy-background">
             <div id="w-node-aee4bac6-a205-912c-02cc-f1f3a96ceeed-bd7bb354" className="cs-media">
               <div>
-                <img className="only-media" src="/assets/6829355479fb1a05bf7e60c0_Spreadsheet-tracking.png" alt="" loading="lazy" />
+                <img className="only-media" src={withBase('/assets/6829355479fb1a05bf7e60c0_Spreadsheet-tracking.png')} alt="" loading="lazy" />
               </div>
             </div>
             <div id="w-node-aee4bac6-a205-912c-02cc-f1f3a96ceef0-bd7bb354" className="cs-media">
               <div>
-                <img className="only-media" src="/assets/68293554d8c30949b2e4b8ae_Gradeeasy-tracking.png" alt="" loading="lazy" />
+                <img className="only-media" src={withBase('/assets/68293554d8c30949b2e4b8ae_Gradeeasy-tracking.png')} alt="" loading="lazy" />
               </div>
             </div>
             <div id="w-node-aee4bac6-a205-912c-02cc-f1f3a96ceef6-bd7bb354" className="body-1 grey center-aligned _20-bottom-padding">
@@ -222,7 +223,7 @@ export default function GradeEasy() {
         <div className="w-layout-blockcontainer cs-container w-container">
           <div className="w-layout-vflex v-flex _20-spacing center-aligned">
             <div className="cs-media">
-              <img src="/assets/682935c04650440bc7ee24f9_User-Pain-Points.png" alt="" loading="lazy" />
+              <img src={withBase('/assets/682935c04650440bc7ee24f9_User-Pain-Points.png')} alt="" loading="lazy" />
             </div>
             <div className="body-1 grey center-aligned">
               {"User pain points on existing grade tracking methods"}
@@ -294,7 +295,7 @@ export default function GradeEasy() {
         <div className="w-layout-blockcontainer cs-container w-container">
           <div className="w-layout-vflex v-flex _20-spacing center-aligned">
             <div className="cs-media">
-              <img className="only-media" src="/assets/682935c0d8c30949b2e4e086_Competitive-analysis.png" alt="" loading="lazy" />
+              <img className="only-media" src={withBase('/assets/682935c0d8c30949b2e4e086_Competitive-analysis.png')} alt="" loading="lazy" />
             </div>
             <div className="body-1 grey center-aligned">
               {"Competitive analysis of other grade trackers"}
@@ -330,13 +331,13 @@ export default function GradeEasy() {
           <div className="w-layout-grid media-text _20-spacing">
             <div id="w-node-dd401755-4f6e-ab6e-de89-f56f0655a5ab-bd7bb354" className="cs-media">
               <div>
-                <img className="only-media" src="/assets/6829361049263c690841204a_Old-sign-up.png" alt="" loading="lazy" />
+                <img className="only-media" src={withBase('/assets/6829361049263c690841204a_Old-sign-up.png')} alt="" loading="lazy" />
               </div>
             </div>
             <div id="w-node-dd401755-4f6e-ab6e-de89-f56f0655a5ae-bd7bb354" className="cs-media">
               <div className="w-layout-hflex h-flex _20-spacing">
                 <div>
-                  <img className="only-media" src="/assets/68293612d8c30949b2e500c5_New-sign-up.png" alt="" loading="lazy" />
+                  <img className="only-media" src={withBase('/assets/68293612d8c30949b2e500c5_New-sign-up.png')} alt="" loading="lazy" />
                 </div>
               </div>
             </div>
@@ -362,14 +363,14 @@ export default function GradeEasy() {
           <div className="w-layout-grid media-text _20-spacing">
             <div id="w-node-_1c6f2abf-6305-0a89-5951-785cd8d6e0be-bd7bb354" className="cs-media">
               <div className="w-layout-vflex v-flex _20-spacing">
-                <img className="only-media" src="/assets/682936c143639e0ce1bbd57b_Old-term-card-1.png" alt="" loading="lazy" />
-                <img className="only-media" src="/assets/682936c170093a50cc3c36fd_Old-term-card-2.png" alt="" loading="lazy" />
+                <img className="only-media" src={withBase('/assets/682936c143639e0ce1bbd57b_Old-term-card-1.png')} alt="" loading="lazy" />
+                <img className="only-media" src={withBase('/assets/682936c170093a50cc3c36fd_Old-term-card-2.png')} alt="" loading="lazy" />
               </div>
             </div>
             <div id="w-node-_1c6f2abf-6305-0a89-5951-785cd8d6e0c1-bd7bb354" className="cs-media">
               <div className="w-layout-hflex h-flex _20-spacing center-aligned">
                 <div>
-                  <img className="only-media" src="/assets/682936c0b42d35f376d57a8d_New-term-card.png" alt="" loading="lazy" />
+                  <img className="only-media" src={withBase('/assets/682936c0b42d35f376d57a8d_New-term-card.png')} alt="" loading="lazy" />
                 </div>
               </div>
             </div>
@@ -395,13 +396,13 @@ export default function GradeEasy() {
           <div className="w-layout-grid media-text _20-spacing">
             <div id="w-node-ed78c4b3-57aa-e274-d1de-be3ba5498af1-bd7bb354" className="cs-media">
               <div>
-                <img className="only-media" src="/assets/682936e6e5e6bd02aabf9b76_Old-table.png" alt="" loading="lazy" />
+                <img className="only-media" src={withBase('/assets/682936e6e5e6bd02aabf9b76_Old-table.png')} alt="" loading="lazy" />
               </div>
             </div>
             <div id="w-node-ed78c4b3-57aa-e274-d1de-be3ba5498af7-bd7bb354" className="cs-media">
               <div className="w-layout-hflex h-flex _20-spacing">
                 <div>
-                  <img className="only-media" src="/assets/682936e63a36b46cd28d426c_New-table.png" alt="" loading="lazy" />
+                  <img className="only-media" src={withBase('/assets/682936e63a36b46cd28d426c_New-table.png')} alt="" loading="lazy" />
                 </div>
               </div>
             </div>
@@ -433,15 +434,15 @@ export default function GradeEasy() {
             <div className="cs-media v-flex">
               <div className="w-layout-vflex v-flex _20-spacing tablet-horizontal">
                 <div className="w-layout-vflex v-flex _20-spacing center-aligned">
-                  <img src="/assets/6829380139ea6ea598569dd6_Transcript-upload-1.png" loading="lazy" alt="" className="only-media" />
+                  <img src={withBase('/assets/6829380139ea6ea598569dd6_Transcript-upload-1.png')} loading="lazy" alt="" className="only-media" />
                 </div>
                 <div className="w-layout-vflex v-flex _20-spacing center-aligned">
                   <div className="w-layout-hflex h-flex _20-spacing tablet">
                     <div>
-                      <img src="/assets/682936c0001db19910636bd9_Transcript-upload-2.png" loading="lazy" alt="" className="only-media" />
+                      <img src={withBase('/assets/682936c0001db19910636bd9_Transcript-upload-2.png')} loading="lazy" alt="" className="only-media" />
                     </div>
                     <div>
-                      <img src="/assets/682936c052f601287fe1c26e_Transcript-upload-3.png" loading="lazy" alt="" className="only-media" />
+                      <img src={withBase('/assets/682936c052f601287fe1c26e_Transcript-upload-3.png')} loading="lazy" alt="" className="only-media" />
                     </div>
                   </div>
                 </div>
@@ -534,8 +535,8 @@ export default function GradeEasy() {
               <div className="w-layout-vflex v-flex _40-spacing tablet-horizontal">
                 <div className="w-layout-blockcontainer w-container">
                   <div className="w-layout-vflex v-flex _20-spacing center-aligned">
-                    <img className="only-media" src="/assets/682938a8315fe0e5d7654474_max-1.png" alt="" loading="lazy" />
-                    <img className="only-media" src="/assets/682938b9395d922891379955_max-2.png" alt="" loading="lazy" />
+                    <img className="only-media" src={withBase('/assets/682938a8315fe0e5d7654474_max-1.png')} alt="" loading="lazy" />
+                    <img className="only-media" src={withBase('/assets/682938b9395d922891379955_max-2.png')} alt="" loading="lazy" />
                     <div className="body-1 grey center-aligned">
                       {"Several design options"}
                     </div>
@@ -545,7 +546,7 @@ export default function GradeEasy() {
                   <div className="w-layout-vflex v-flex _20-spacing center-aligned">
                     <div className="w-layout-hflex h-flex _20-spacing tablet">
                       <div>
-                        <img className="only-media" src="/assets/682938a8010ce56887679a1a_max-3.png" alt="" loading="lazy" />
+                        <img className="only-media" src={withBase('/assets/682938a8010ce56887679a1a_max-3.png')} alt="" loading="lazy" />
                       </div>
                     </div>
                     <div className="body-1 grey center-aligned">
@@ -564,7 +565,7 @@ export default function GradeEasy() {
                 <div className="w-layout-vflex v-flex _20-spacing center-aligned">
 
                 </div>
-                <img className="only-media" src="/assets/68293991e5e6bd02aac08f75_Dashboard.png" alt="" loading="lazy" />
+                <img className="only-media" src={withBase('/assets/68293991e5e6bd02aac08f75_Dashboard.png')} alt="" loading="lazy" />
                 <div className="w-layout-vflex v-flex _20-spacing center-aligned">
 
                 </div>
@@ -613,16 +614,16 @@ export default function GradeEasy() {
             <div className="cs-media">
               <div className="w-layout-grid grid _4x1 _40-spacing _20-tablet-spacing _2x2-mobile">
                 <div>
-                  <img src="/assets/6829399149263c690842790e_empty-state-1.png" loading="lazy" alt="" />
+                  <img src={withBase('/assets/6829399149263c690842790e_empty-state-1.png')} loading="lazy" alt="" />
                 </div>
                 <div>
-                  <img src="/assets/68293991d64340a80e6ef3fa_empty-state-2.png" loading="lazy" alt="" />
+                  <img src={withBase('/assets/68293991d64340a80e6ef3fa_empty-state-2.png')} loading="lazy" alt="" />
                 </div>
                 <div>
-                  <img src="/assets/68293991e5e6bd02aac08f2f_empty-state-3.png" loading="lazy" alt="" />
+                  <img src={withBase('/assets/68293991e5e6bd02aac08f2f_empty-state-3.png')} loading="lazy" alt="" />
                 </div>
                 <div>
-                  <img src="/assets/6829399186372c6792c0070d_empty-state-4.png" loading="lazy" alt="" />
+                  <img src={withBase('/assets/6829399186372c6792c0070d_empty-state-4.png')} loading="lazy" alt="" />
                 </div>
               </div>
             </div>
@@ -685,9 +686,9 @@ export default function GradeEasy() {
           <div className="w-layout-vflex v-flex _20-spacing center-aligned">
             <div className="w-layout-blockcontainer video-container w-container">
               <div className="cs-video gradeeasy-landing-page w-background-video w-background-video-atom">
-                <video id="32756354-e4b8-cfad-41e0-5669e05a0eea-video" loop muted playsInline controls preload="none" poster="/assets/66ca4e4f43000cf04ad71025-68293a80d8c30949b2e67f9e_GradeEasy-Landing-Page--1--poster-00001.jpg">
-                  <source src="/assets/66ca4e4f43000cf04ad71025-68293a80d8c30949b2e67f9e_GradeEasy-Landing-Page--1--transcode.webm" type="video/webm" />
-                  <source src="/assets/66ca4e4f43000cf04ad71025-68293a80d8c30949b2e67f9e_GradeEasy-Landing-Page--1--transcode.mp4" type="video/mp4" />
+                <video id="32756354-e4b8-cfad-41e0-5669e05a0eea-video" loop muted playsInline controls preload="none" poster={withBase('/assets/66ca4e4f43000cf04ad71025-68293a80d8c30949b2e67f9e_GradeEasy-Landing-Page--1--poster-00001.jpg')}>
+                  <source src={withBase('/assets/66ca4e4f43000cf04ad71025-68293a80d8c30949b2e67f9e_GradeEasy-Landing-Page--1--transcode.webm')} type="video/webm" />
+                  <source src={withBase('/assets/66ca4e4f43000cf04ad71025-68293a80d8c30949b2e67f9e_GradeEasy-Landing-Page--1--transcode.mp4')} type="video/mp4" />
                 </video>
               </div>
             </div>
@@ -717,9 +718,9 @@ export default function GradeEasy() {
           <div className="w-layout-vflex v-flex _20-spacing center-aligned">
             <div className="w-layout-blockcontainer video-container w-container">
               <div className="cs-video gradeeasy-demo w-background-video w-background-video-atom">
-                <video id="225964e0-be4d-4ae2-6cee-243d20b5501a-video" loop muted playsInline controls preload="none" poster="/assets/66ca4e4f43000cf04ad71025-68293a70379497ff579e65ae_GradeEasy-Demo-poster-00001.jpg">
-                  <source src="/assets/66ca4e4f43000cf04ad71025-68293a70379497ff579e65ae_GradeEasy-Demo-transcode.webm" type="video/webm" />
-                  <source src="/assets/66ca4e4f43000cf04ad71025-68293a70379497ff579e65ae_GradeEasy-Demo-transcode.mp4" type="video/mp4" />
+                <video id="225964e0-be4d-4ae2-6cee-243d20b5501a-video" loop muted playsInline controls preload="none" poster={withBase('/assets/66ca4e4f43000cf04ad71025-68293a70379497ff579e65ae_GradeEasy-Demo-poster-00001.jpg')}>
+                  <source src={withBase('/assets/66ca4e4f43000cf04ad71025-68293a70379497ff579e65ae_GradeEasy-Demo-transcode.webm')} type="video/webm" />
+                  <source src={withBase('/assets/66ca4e4f43000cf04ad71025-68293a70379497ff579e65ae_GradeEasy-Demo-transcode.mp4')} type="video/mp4" />
                 </video>
               </div>
             </div>

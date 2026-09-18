@@ -1,3 +1,4 @@
+import { withBase } from '../urls';
 import React from 'react';
 
 export default function RadiCalgary() {
@@ -5,14 +6,14 @@ export default function RadiCalgary() {
     <>
       <section className="banner-image">
         <div className="cover-image">
-          <img src="/assets/66cd0e30f183c84089f05c8f_Frame-134.png" loading="lazy" alt="" />
+          <img src={withBase('/assets/66cd0e30f183c84089f05c8f_Frame-134.png')} loading="lazy" alt="" />
         </div>
       </section>
       <section className="case-study-body last-container">
         <div className="w-layout-blockcontainer cs-container w-container">
           <div className="w-layout-vflex v-flex _20-spacing">
             <div className="w-layout-hflex logo-chip radicalgary">
-              <img src="/assets/66cd0ee9c16f980583a29979_4.png" loading="lazy" alt="" className="image-72" />
+              <img src={withBase('/assets/66cd0ee9c16f980583a29979_4.png')} loading="lazy" alt="" className="image-72" />
               <div className="body-1 medium white">
                 {"RadiCalgary"}
               </div>
@@ -224,7 +225,7 @@ export default function RadiCalgary() {
         </div>
         <div className="w-layout-blockcontainer cs-container w-container">
           <div className="w-layout-vflex v-flex _20-spacing center-aligned">
-            <img className="only-media" src="/assets/66de1d430b9561863f3d633a_Frame-502.png" alt="" loading="lazy" />
+            <img className="only-media" src={withBase('/assets/66de1d430b9561863f3d633a_Frame-502.png')} alt="" loading="lazy" />
             <div className="body-1 grey center-aligned">
               {"Affinity map comparing other web pages"}
             </div>
@@ -417,11 +418,11 @@ export default function RadiCalgary() {
         </div>
         <div className="w-layout-blockcontainer cs-container w-container">
           <div className="w-layout-grid radiicalgary-grid _5-card">
-            <img src="/assets/66de6c962c177583f8071222_Untitled_Artwork-5.png" loading="lazy" alt="" id="w-node-_4542aff4-a382-642f-48d4-4a3a2e23b141-644c7706" className="rc-img shadow" />
-            <img src="/assets/66de6c93da5a09c9a1d8f32e_Untitled_Artwork-6.png" loading="lazy" alt="" className="rc-img shadow" />
-            <img src="/assets/66de6c9a83ff8257a248f12a_Untitled_Artwork-4.png" loading="lazy" alt="" className="rc-img shadow" />
-            <img src="/assets/66de6ca3da5a09c9a1d900a4_Untitled_Artwork-1.png" loading="lazy" alt="" className="rc-img shadow" />
-            <img src="/assets/66de6c9f730b040270642b70_Untitled_Artwork-3.png" loading="lazy" alt="" id="w-node-_4542aff4-a382-642f-48d4-4a3a2e23b145-644c7706" className="rc-img shadow" />
+            <img src={withBase('/assets/66de6c962c177583f8071222_Untitled_Artwork-5.png')} loading="lazy" alt="" id="w-node-_4542aff4-a382-642f-48d4-4a3a2e23b141-644c7706" className="rc-img shadow" />
+            <img src={withBase('/assets/66de6c93da5a09c9a1d8f32e_Untitled_Artwork-6.png')} loading="lazy" alt="" className="rc-img shadow" />
+            <img src={withBase('/assets/66de6c9a83ff8257a248f12a_Untitled_Artwork-4.png')} loading="lazy" alt="" className="rc-img shadow" />
+            <img src={withBase('/assets/66de6ca3da5a09c9a1d900a4_Untitled_Artwork-1.png')} loading="lazy" alt="" className="rc-img shadow" />
+            <img src={withBase('/assets/66de6c9f730b040270642b70_Untitled_Artwork-3.png')} loading="lazy" alt="" id="w-node-_4542aff4-a382-642f-48d4-4a3a2e23b145-644c7706" className="rc-img shadow" />
           </div>
         </div>
         <div className="w-layout-blockcontainer cs-container small w-container">
@@ -436,11 +437,11 @@ export default function RadiCalgary() {
         </div>
         <div className="w-layout-blockcontainer cs-container w-container">
           <div className="w-layout-grid radiicalgary-grid _5-card">
-            <img src="/assets/66de72b5f48421d2f547ba24_Home-Page.png" loading="lazy" alt="" className="rc-img shadow" />
-            <img src="/assets/66de72c05feb03b8ce8e972f_About-Wireframe.png" loading="lazy" alt="" className="rc-img" />
-            <img src="/assets/66de72c7f224eedc5aa6a52e_Mobile-Hygiene-Page.png" loading="lazy" alt="" className="rc-img shadow" />
-            <img src="/assets/66de72d38945e61eaf1a320b_CPUCV-Page.png" loading="lazy" alt="" className="rc-img shadow" />
-            <img src="/assets/66de72df0b20da8ad02cb62b_RadiCare-Page.png" loading="lazy" alt="" className="rc-img shadow" />
+            <img src={withBase('/assets/66de72b5f48421d2f547ba24_Home-Page.png')} loading="lazy" alt="" className="rc-img shadow" />
+            <img src={withBase('/assets/66de72c05feb03b8ce8e972f_About-Wireframe.png')} loading="lazy" alt="" className="rc-img" />
+            <img src={withBase('/assets/66de72c7f224eedc5aa6a52e_Mobile-Hygiene-Page.png')} loading="lazy" alt="" className="rc-img shadow" />
+            <img src={withBase('/assets/66de72d38945e61eaf1a320b_CPUCV-Page.png')} loading="lazy" alt="" className="rc-img shadow" />
+            <img src={withBase('/assets/66de72df0b20da8ad02cb62b_RadiCare-Page.png')} loading="lazy" alt="" className="rc-img shadow" />
           </div>
         </div>
         <div className="w-layout-blockcontainer cs-container small w-container">
@@ -457,7 +458,7 @@ export default function RadiCalgary() {
           </div>
         </div>
         <div className="w-layout-blockcontainer cs-container w-container">
-          <img className="image-73" src="/assets/66de1d7a2b3719a1e44cca12_Frame-542.png" alt="" id="solution2" loading="lazy" />
+          <img className="image-73" src={withBase('/assets/66de1d7a2b3719a1e44cca12_Frame-542.png')} alt="" id="solution2" loading="lazy" />
         </div>
         <div className="w-layout-blockcontainer cs-container small w-container">
           <section id="results" className="w-layout-vflex v-flex _20-spacing">
@@ -476,20 +477,20 @@ export default function RadiCalgary() {
         </div>
         <div className="w-layout-blockcontainer cs-container w-container">
           <div className="w-layout-grid radiicalgary-grid _5-card">
-            <img src="/assets/66de74510f5c1d74cebb0ed2_Home-Page--1-.png" loading="lazy" alt="" className="rc-img shadow" />
-            <img src="/assets/66de74570b9561863f8cc197_About-Page.png" loading="lazy" alt="" className="rc-img shadow" />
-            <img src="/assets/66de7468db004510adf3df67_Mobile-Hygiene-Page--1-.png" loading="lazy" alt="" className="rc-img shadow" />
-            <img src="/assets/66de7476228cfcb3051a5350_CPUCV-Page--1-.png" loading="lazy" alt="" className="rc-img shadow" />
-            <img src="/assets/66de747ed883601826781def_Social-Enterprise-Page.png" loading="lazy" alt="" className="rc-img shadow" />
+            <img src={withBase('/assets/66de74510f5c1d74cebb0ed2_Home-Page--1-.png')} loading="lazy" alt="" className="rc-img shadow" />
+            <img src={withBase('/assets/66de74570b9561863f8cc197_About-Page.png')} loading="lazy" alt="" className="rc-img shadow" />
+            <img src={withBase('/assets/66de7468db004510adf3df67_Mobile-Hygiene-Page--1-.png')} loading="lazy" alt="" className="rc-img shadow" />
+            <img src={withBase('/assets/66de7476228cfcb3051a5350_CPUCV-Page--1-.png')} loading="lazy" alt="" className="rc-img shadow" />
+            <img src={withBase('/assets/66de747ed883601826781def_Social-Enterprise-Page.png')} loading="lazy" alt="" className="rc-img shadow" />
           </div>
         </div>
         <div className="w-layout-blockcontainer cs-container w-container">
           <div className="w-layout-vflex v-flex _20-spacing center-aligned">
             <div className="w-layout-blockcontainer video-container w-container">
               <div className="cs-video w-background-video w-background-video-atom">
-                <video id="96298940-4a26-9709-a501-9872f92e22ec-video" loop muted playsInline controls preload="none" poster="/assets/66ca4e4f43000cf04ad71025-6820fe35172a418ac834f4b1_RadiCalgary-poster-00001.jpg">
-                  <source src="/assets/66ca4e4f43000cf04ad71025-6820fe35172a418ac834f4b1_RadiCalgary-transcode.webm" type="video/webm" />
-                  <source src="/assets/66ca4e4f43000cf04ad71025-6820fe35172a418ac834f4b1_RadiCalgary-transcode.mp4" type="video/mp4" />
+                <video id="96298940-4a26-9709-a501-9872f92e22ec-video" loop muted playsInline controls preload="none" poster={withBase('/assets/66ca4e4f43000cf04ad71025-6820fe35172a418ac834f4b1_RadiCalgary-poster-00001.jpg')}>
+                  <source src={withBase('/assets/66ca4e4f43000cf04ad71025-6820fe35172a418ac834f4b1_RadiCalgary-transcode.webm')} type="video/webm" />
+                  <source src={withBase('/assets/66ca4e4f43000cf04ad71025-6820fe35172a418ac834f4b1_RadiCalgary-transcode.mp4')} type="video/mp4" />
                 </video>
               </div>
             </div>

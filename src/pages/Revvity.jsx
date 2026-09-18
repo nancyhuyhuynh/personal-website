@@ -1,3 +1,4 @@
+import { withBase } from '../urls';
 import React from 'react';
 
 export default function Revvity() {
@@ -5,14 +6,14 @@ export default function Revvity() {
     <>
       <section className="banner-image">
         <div className="cover-image">
-          <img src="/assets/681161c0113bd8e49fa46edd_Banner--1-.png" loading="lazy" alt="" />
+          <img src={withBase('/assets/681161c0113bd8e49fa46edd_Banner--1-.png')} loading="lazy" alt="" />
         </div>
       </section>
       <section className="case-study-body">
         <div className="w-layout-blockcontainer cs-container w-container">
           <div className="w-layout-vflex v-flex _20-spacing">
             <div className="w-layout-hflex logo-chip revvity">
-              <img src="/assets/6811631d9ad8ff3b9c7105e3_Vector.png" loading="lazy" width="20" alt="" />
+              <img src={withBase('/assets/6811631d9ad8ff3b9c7105e3_Vector.png')} loading="lazy" width="20" alt="" />
               <div className="body-1 medium">
                 {"Revvity Health Science"}
               </div>
@@ -114,16 +115,16 @@ export default function Revvity() {
           <div className="w-layout-grid media-text _20-spacing">
             <div id="w-node-ed78c4b3-57aa-e274-d1de-be3ba5498af1-288108e5" className="cs-media">
               <div>
-                <img src="/assets/68116969b643a1b64fcbb561_Previous-screen.png" alt="" loading="lazy" />
+                <img src={withBase('/assets/68116969b643a1b64fcbb561_Previous-screen.png')} alt="" loading="lazy" />
               </div>
             </div>
             <div id="w-node-ed78c4b3-57aa-e274-d1de-be3ba5498af7-288108e5" className="cs-media">
               <div className="w-layout-hflex h-flex _20-spacing">
                 <div>
-                  <img src="/assets/681169f4a92ca3e0d45f49b6_Launch-Screen.png" loading="lazy" alt="" className="only-media tablet" />
+                  <img src={withBase('/assets/681169f4a92ca3e0d45f49b6_Launch-Screen.png')} loading="lazy" alt="" className="only-media tablet" />
                 </div>
                 <div>
-                  <img src="/assets/681169f57e89789b883e5612_Home.png" loading="lazy" alt="" className="only-media tablet" />
+                  <img src={withBase('/assets/681169f57e89789b883e5612_Home.png')} loading="lazy" alt="" className="only-media tablet" />
                 </div>
               </div>
             </div>
@@ -227,7 +228,7 @@ export default function Revvity() {
         <div className="w-layout-blockcontainer cs-container w-container">
           <div className="w-layout-vflex v-flex _20-spacing center-aligned">
             <div className="cs-media">
-              <img src="/assets/68116e2f045234e62e9c0bf1_image-1.png" alt="" loading="lazy" />
+              <img src={withBase('/assets/68116e2f045234e62e9c0bf1_image-1.png')} alt="" loading="lazy" />
             </div>
             <div className="body-1 grey center-aligned">
               {"Two of the main workflows"}
@@ -249,7 +250,7 @@ export default function Revvity() {
         </div>
         <div className="w-layout-blockcontainer cs-container w-container">
           <div className="w-layout-vflex v-flex _20-spacing center-aligned">
-            <img className="only-media tablet" src="/assets/68116edb70b8674c957e4322_Screenshot-2025-04-26-at-8.29.51-PM-1.png" alt="" loading="lazy" />
+            <img className="only-media tablet" src={withBase('/assets/68116edb70b8674c957e4322_Screenshot-2025-04-26-at-8.29.51-PM-1.png')} alt="" loading="lazy" />
             <div className="body-1 grey center-aligned">
               <a href="https://revvity.design/22ce34993/p/383d44-touch-screen-guidelines-v1" target="_blank" className="link" rel="noreferrer">
                 {"Revvity.design"}
@@ -280,25 +281,25 @@ export default function Revvity() {
           <div className="w-layout-vflex v-flex _20-spacing center-aligned">
             <div className="cs-media">
               <div className="swapping-media">
-                <img src="/assets/68117009662105c68a11f367_1---2nd-Iteration.png" loading="lazy" alt="" className="media-1" style={{"display": "none"}} />
-                <img src="/assets/68117009d391b4759a7c9d81_2---2nd-Iteration.png" loading="lazy" alt="" className="media-2" style={{"display": "none"}} />
-                <img src="/assets/6811700a2a30ea72717c0a71_3---2nd-Iteration.png" loading="lazy" alt="" className="media-3" style={{"display": "none"}} />
-                <img src="/assets/68117009e0df97ec671bf2f1_4---2nd-Iteration.png" loading="lazy" alt="" className="media-4" style={{"display": "none"}} />
-                <img src="/assets/6811704229aacfbe04ce4a2c_Empty-Screen.png" loading="lazy" alt="" className="empty-revvity-screen" />
+                <img src={withBase('/assets/68117009662105c68a11f367_1---2nd-Iteration.png')} loading="lazy" alt="" className="media-1" style={{"display": "none"}} />
+                <img src={withBase('/assets/68117009d391b4759a7c9d81_2---2nd-Iteration.png')} loading="lazy" alt="" className="media-2" style={{"display": "none"}} />
+                <img src={withBase('/assets/6811700a2a30ea72717c0a71_3---2nd-Iteration.png')} loading="lazy" alt="" className="media-3" style={{"display": "none"}} />
+                <img src={withBase('/assets/68117009e0df97ec671bf2f1_4---2nd-Iteration.png')} loading="lazy" alt="" className="media-4" style={{"display": "none"}} />
+                <img src={withBase('/assets/6811704229aacfbe04ce4a2c_Empty-Screen.png')} loading="lazy" alt="" className="empty-revvity-screen" />
               </div>
               <div className="swapping-media">
-                <img src="/assets/6811733b2e50324c71b65acf_2---4th-Iteration.png" loading="lazy" alt="" className="media-2" style={{"display": "none"}} />
-                <img src="/assets/6811733b70b8674c95819773_1---4th-Iteration.png" loading="lazy" alt="" className="media-1" style={{"display": "none"}} />
-                <img src="/assets/6811733bd391b4759a7ed184_3---4th-Iteration.png" loading="lazy" alt="" className="media-3" style={{"display": "none"}} />
-                <img src="/assets/6811733bd391b4759a7ed188_4---4th-Iteration.png" loading="lazy" alt="" className="media-4" style={{"display": "none"}} />
-                <img src="/assets/6811704229aacfbe04ce4a2c_Empty-Screen.png" loading="lazy" alt="" className="empty-revvity-screen" />
+                <img src={withBase('/assets/6811733b2e50324c71b65acf_2---4th-Iteration.png')} loading="lazy" alt="" className="media-2" style={{"display": "none"}} />
+                <img src={withBase('/assets/6811733b70b8674c95819773_1---4th-Iteration.png')} loading="lazy" alt="" className="media-1" style={{"display": "none"}} />
+                <img src={withBase('/assets/6811733bd391b4759a7ed184_3---4th-Iteration.png')} loading="lazy" alt="" className="media-3" style={{"display": "none"}} />
+                <img src={withBase('/assets/6811733bd391b4759a7ed188_4---4th-Iteration.png')} loading="lazy" alt="" className="media-4" style={{"display": "none"}} />
+                <img src={withBase('/assets/6811704229aacfbe04ce4a2c_Empty-Screen.png')} loading="lazy" alt="" className="empty-revvity-screen" />
               </div>
               <div className="swapping-media">
-                <img src="/assets/6811738bd6827507b5cba2c4_1---5th-Iteration.png" loading="lazy" alt="" className="media-1" style={{"display": "none"}} />
-                <img src="/assets/6811738b534e1210b4fe6340_2---5th-Iteration.png" loading="lazy" alt="" className="media-2" style={{"display": "none"}} />
-                <img src="/assets/6811738b29aacfbe04d0b9eb_3---5th-Iteration.png" loading="lazy" alt="" className="media-3" style={{"display": "none"}} />
-                <img src="/assets/6811738b90c00e097808f377_4---5th-Iteration.png" loading="lazy" alt="" className="media-4" style={{"display": "none"}} />
-                <img src="/assets/6811704229aacfbe04ce4a2c_Empty-Screen.png" loading="lazy" alt="" className="empty-revvity-screen" />
+                <img src={withBase('/assets/6811738bd6827507b5cba2c4_1---5th-Iteration.png')} loading="lazy" alt="" className="media-1" style={{"display": "none"}} />
+                <img src={withBase('/assets/6811738b534e1210b4fe6340_2---5th-Iteration.png')} loading="lazy" alt="" className="media-2" style={{"display": "none"}} />
+                <img src={withBase('/assets/6811738b29aacfbe04d0b9eb_3---5th-Iteration.png')} loading="lazy" alt="" className="media-3" style={{"display": "none"}} />
+                <img src={withBase('/assets/6811738b90c00e097808f377_4---5th-Iteration.png')} loading="lazy" alt="" className="media-4" style={{"display": "none"}} />
+                <img src={withBase('/assets/6811704229aacfbe04ce4a2c_Empty-Screen.png')} loading="lazy" alt="" className="empty-revvity-screen" />
               </div>
             </div>
             <div className="body-1 grey center-aligned">
@@ -320,27 +321,27 @@ export default function Revvity() {
           <div className="w-layout-grid media-text _20-spacing">
             <div id="w-node-_715bf8a3-1cdc-8799-66f7-baeb47b22fdf-288108e5" className="cs-media center-aligned">
               <div className="swapping-media-8">
-                <img className="media-1-8" src="/assets/68119d0369999437b26a9b13_Error-1--1-.png" alt="" loading="lazy" style={{"display": "none"}} />
-                <img className="media-2-8" src="/assets/68119d0387addee6fcacfbd4_Error-2.png" alt="" loading="lazy" style={{"display": "none"}} />
-                <img className="media-3-8" src="/assets/68119d01f34229a23972cf58_Error-3.png" alt="" loading="lazy" style={{"display": "none"}} />
-                <img className="media-4-8" src="/assets/68119d02345ae0d91cd4638d_Error-4.png" alt="" loading="lazy" style={{"display": "none"}} />
-                <img className="media-5-8" src="/assets/68119d02339e2d7d1178bedd_Error-5.png" alt="" loading="lazy" style={{"display": "none"}} />
-                <img className="media-6-8" src="/assets/68119d01808822593c69c258_Error-6.png" alt="" loading="lazy" style={{"display": "none"}} />
-                <img className="media-7-8" src="/assets/68119d020e2928c2a1af0fb6_Error-7.png" alt="" loading="lazy" style={{"display": "none"}} />
-                <img className="media-8-8" src="/assets/68119d010bfd241182d063ba_Error-8--3-.png" alt="" loading="lazy" style={{"display": "none"}} />
-                <img src="/assets/68119d24cb262dfd6f8947e0_Empty-Error.png" loading="lazy" alt="" />
+                <img className="media-1-8" src={withBase('/assets/68119d0369999437b26a9b13_Error-1--1-.png')} alt="" loading="lazy" style={{"display": "none"}} />
+                <img className="media-2-8" src={withBase('/assets/68119d0387addee6fcacfbd4_Error-2.png')} alt="" loading="lazy" style={{"display": "none"}} />
+                <img className="media-3-8" src={withBase('/assets/68119d01f34229a23972cf58_Error-3.png')} alt="" loading="lazy" style={{"display": "none"}} />
+                <img className="media-4-8" src={withBase('/assets/68119d02345ae0d91cd4638d_Error-4.png')} alt="" loading="lazy" style={{"display": "none"}} />
+                <img className="media-5-8" src={withBase('/assets/68119d02339e2d7d1178bedd_Error-5.png')} alt="" loading="lazy" style={{"display": "none"}} />
+                <img className="media-6-8" src={withBase('/assets/68119d01808822593c69c258_Error-6.png')} alt="" loading="lazy" style={{"display": "none"}} />
+                <img className="media-7-8" src={withBase('/assets/68119d020e2928c2a1af0fb6_Error-7.png')} alt="" loading="lazy" style={{"display": "none"}} />
+                <img className="media-8-8" src={withBase('/assets/68119d010bfd241182d063ba_Error-8--3-.png')} alt="" loading="lazy" style={{"display": "none"}} />
+                <img src={withBase('/assets/68119d24cb262dfd6f8947e0_Empty-Error.png')} loading="lazy" alt="" />
               </div>
             </div>
             <div id="w-node-_715bf8a3-1cdc-8799-66f7-baeb47b22fed-288108e5" className="cs-media">
               <div className="w-layout-hflex h-flex _20-spacing center-aligned">
                 <div>
-                  <img src="/assets/68119bd0d372e6b9ce8bc845_Export-Results.png" loading="lazy" alt="" className="only-media tablet" />
+                  <img src={withBase('/assets/68119bd0d372e6b9ce8bc845_Export-Results.png')} loading="lazy" alt="" className="only-media tablet" />
                 </div>
                 <div className="w-layout-vflex v-flex _10-spacing center-aligned">
-                  <img src="/assets/68119bf8bee042582a8ce3b2_Option-List.png" loading="lazy" alt="" className="shadow" />
-                  <img src="/assets/68119bffd84a14f94cf4bacb__Toast-Structure.png" loading="lazy" alt="" className="revvity-toast" />
-                  <img src="/assets/68119bfe861fe7c407fec746__Toast-Structure-2.png" loading="lazy" alt="" className="revvity-toast" />
-                  <img src="/assets/68119bfef47a8ce143899670__Toast-Structure-1.png" loading="lazy" alt="" className="revvity-toast" />
+                  <img src={withBase('/assets/68119bf8bee042582a8ce3b2_Option-List.png')} loading="lazy" alt="" className="shadow" />
+                  <img src={withBase('/assets/68119bffd84a14f94cf4bacb__Toast-Structure.png')} loading="lazy" alt="" className="revvity-toast" />
+                  <img src={withBase('/assets/68119bfe861fe7c407fec746__Toast-Structure-2.png')} loading="lazy" alt="" className="revvity-toast" />
+                  <img src={withBase('/assets/68119bfef47a8ce143899670__Toast-Structure-1.png')} loading="lazy" alt="" className="revvity-toast" />
                 </div>
               </div>
             </div>
@@ -354,7 +355,7 @@ export default function Revvity() {
         </div>
         <div className="w-layout-blockcontainer cs-container _50-padding w-container">
           <div className="w-layout-grid media-text larger-c1 tablet-vertical">
-            <img className="image-71" src="/assets/681174aa1c4ad2eee713a5be_Previous-screen--1-.png" alt="" id="w-node-_9748845f-2d35-17eb-e52f-4868b626b520-288108e5" loading="lazy" />
+            <img className="image-71" src={withBase('/assets/681174aa1c4ad2eee713a5be_Previous-screen--1-.png')} alt="" id="w-node-_9748845f-2d35-17eb-e52f-4868b626b520-288108e5" loading="lazy" />
             <div id="w-node-_9748845f-2d35-17eb-e52f-4868b626b521-288108e5" className="w-layout-vflex v-flex _20-spacing">
               <div className="heading-5">
                 {"User Testing"}
@@ -452,7 +453,7 @@ export default function Revvity() {
             <div className="cs-media">
               <div className="w-layout-vflex v-flex _40-spacing tablet-horizontal">
                 <div className="w-layout-vflex v-flex _20-spacing center-aligned">
-                  <img src="/assets/681177f85fc3cea2e17fb45c_Previous-step-one.png" loading="lazy" alt="" className="only-media tablet" />
+                  <img src={withBase('/assets/681177f85fc3cea2e17fb45c_Previous-step-one.png')} loading="lazy" alt="" className="only-media tablet" />
                   <div className="body-1 grey center-aligned">
                     {"Previous step one"}
                   </div>
@@ -460,10 +461,10 @@ export default function Revvity() {
                 <div className="w-layout-vflex v-flex _20-spacing center-aligned">
                   <div className="w-layout-hflex h-flex _20-spacing tablet">
                     <div>
-                      <img src="/assets/68117849662105c68a17ff10_Select-Option.png" loading="lazy" alt="" className="only-media tablet" />
+                      <img src={withBase('/assets/68117849662105c68a17ff10_Select-Option.png')} loading="lazy" alt="" className="only-media tablet" />
                     </div>
                     <div>
-                      <img src="/assets/6811784913fdff50b2b31bda_Load-Device.png" loading="lazy" alt="" className="only-media tablet" />
+                      <img src={withBase('/assets/6811784913fdff50b2b31bda_Load-Device.png')} loading="lazy" alt="" className="only-media tablet" />
                     </div>
                   </div>
                   <div className="body-1 grey center-aligned">
@@ -479,7 +480,7 @@ export default function Revvity() {
             <div className="cs-media">
               <div className="w-layout-vflex v-flex _40-spacing tablet-horizontal">
                 <div className="w-layout-vflex v-flex _20-spacing center-aligned">
-                  <img src="/assets/681179b6605463ab07166a19_Previous-table.png" loading="lazy" alt="" className="only-media tablet" />
+                  <img src={withBase('/assets/681179b6605463ab07166a19_Previous-table.png')} loading="lazy" alt="" className="only-media tablet" />
                   <div className="body-1 grey center-aligned">
                     {"Previous table"}
                   </div>
@@ -487,10 +488,10 @@ export default function Revvity() {
                 <div className="w-layout-vflex v-flex _20-spacing center-aligned">
                   <div className="w-layout-hflex h-flex _20-spacing tablet">
                     <div>
-                      <img src="/assets/681179c4d3f7c9b34f7aa7a1_Enter-Information.png" loading="lazy" alt="" className="only-media tablet" />
+                      <img src={withBase('/assets/681179c4d3f7c9b34f7aa7a1_Enter-Information.png')} loading="lazy" alt="" className="only-media tablet" />
                     </div>
                     <div>
-                      <img src="/assets/681179ccbe17d86ed4e38bcb_Results.png" loading="lazy" alt="" className="only-media tablet" />
+                      <img src={withBase('/assets/681179ccbe17d86ed4e38bcb_Results.png')} loading="lazy" alt="" className="only-media tablet" />
                     </div>
                   </div>
                   <div className="body-1 grey center-aligned">
@@ -643,16 +644,16 @@ export default function Revvity() {
                 <div className="w-layout-vflex v-flex _20-spacing center-aligned">
                   <div className="w-layout-hflex h-flex _20-spacing">
                     <div>
-                      <img className="only-media tablet" src="/assets/68117b31834f0ac3afdd731b_2---Prev-Running-test.png" alt="" loading="lazy" />
+                      <img className="only-media tablet" src={withBase('/assets/68117b31834f0ac3afdd731b_2---Prev-Running-test.png')} alt="" loading="lazy" />
                     </div>
                     <div>
-                      <img className="only-media tablet" src="/assets/68117b31345ae0d91cbb75ad_1---Prev-Running-test.png" alt="" loading="lazy" />
+                      <img className="only-media tablet" src={withBase('/assets/68117b31345ae0d91cbb75ad_1---Prev-Running-test.png')} alt="" loading="lazy" />
                     </div>
                     <div>
-                      <img className="only-media tablet" src="/assets/6811733bd391b4759a7ed184_3---4th-Iteration.png" alt="" loading="lazy" />
+                      <img className="only-media tablet" src={withBase('/assets/6811733bd391b4759a7ed184_3---4th-Iteration.png')} alt="" loading="lazy" />
                     </div>
                     <div>
-                      <img className="only-media tablet" src="/assets/68117b3106bba981f3afc1b3_4---Prev-Running-test.png" alt="" loading="lazy" />
+                      <img className="only-media tablet" src={withBase('/assets/68117b3106bba981f3afc1b3_4---Prev-Running-test.png')} alt="" loading="lazy" />
                     </div>
                   </div>
                   <div className="body-1 grey center-aligned">
@@ -662,16 +663,16 @@ export default function Revvity() {
                 <div className="w-layout-vflex v-flex _20-spacing center-aligned">
                   <div className="w-layout-hflex h-flex _20-spacing">
                     <div>
-                      <img className="only-media tablet" src="/assets/68117c39ba6f15373a6ad4d3_1---Final-running-test.png" alt="" loading="lazy" />
+                      <img className="only-media tablet" src={withBase('/assets/68117c39ba6f15373a6ad4d3_1---Final-running-test.png')} alt="" loading="lazy" />
                     </div>
                     <div>
-                      <img className="only-media tablet" src="/assets/6811738b534e1210b4fe6340_2---5th-Iteration.png" alt="" loading="lazy" />
+                      <img className="only-media tablet" src={withBase('/assets/6811738b534e1210b4fe6340_2---5th-Iteration.png')} alt="" loading="lazy" />
                     </div>
                     <div>
-                      <img className="only-media tablet" src="/assets/6811738b29aacfbe04d0b9eb_3---5th-Iteration.png" alt="" loading="lazy" />
+                      <img className="only-media tablet" src={withBase('/assets/6811738b29aacfbe04d0b9eb_3---5th-Iteration.png')} alt="" loading="lazy" />
                     </div>
                     <div>
-                      <img className="only-media tablet" src="/assets/6811738b90c00e097808f377_4---5th-Iteration.png" alt="" loading="lazy" />
+                      <img className="only-media tablet" src={withBase('/assets/6811738b90c00e097808f377_4---5th-Iteration.png')} alt="" loading="lazy" />
                     </div>
                   </div>
                   <div className="body-1 grey center-aligned">
@@ -686,33 +687,33 @@ export default function Revvity() {
       <section className="large-image">
         <section id="result-image" className="w-layout-hflex h-flex center-aligned _150-padding">
           <div className="w-layout-vflex v-flex _20-spacing">
-            <img className="only-media tablet" src="/assets/6811a83ac8c4c74ad0faf83a_Col-1.png" alt="" loading="lazy" />
+            <img className="only-media tablet" src={withBase('/assets/6811a83ac8c4c74ad0faf83a_Col-1.png')} alt="" loading="lazy" />
           </div>
           <div className="w-layout-vflex v-flex _10-spacing">
-            <img className="only-media tablet" src="/assets/6811a8872d3396c1ad201f49_Step-3_-Cartridge.png" alt="" loading="lazy" />
-            <img className="only-media tablet" src="/assets/6811a88a808822593c71466e_Step-4_-Scan-Barcodes.png" alt="" loading="lazy" />
+            <img className="only-media tablet" src={withBase('/assets/6811a8872d3396c1ad201f49_Step-3_-Cartridge.png')} alt="" loading="lazy" />
+            <img className="only-media tablet" src={withBase('/assets/6811a88a808822593c71466e_Step-4_-Scan-Barcodes.png')} alt="" loading="lazy" />
           </div>
           <div className="w-layout-vflex v-flex _10-spacing">
-            <img className="only-media tablet" src="/assets/6811a8abe791f04fedc07e4c_Launch-Screen.png" alt="" loading="lazy" />
-            <img className="only-media tablet" src="/assets/6811a8b4cb262dfd6f9105b3_Running-Assay---pre-break.png" alt="" loading="lazy" />
-            <img className="only-media tablet" src="/assets/6811a8ba53388f6595f5872e_Running-Assay---post-break.png" alt="" loading="lazy" />
+            <img className="only-media tablet" src={withBase('/assets/6811a8abe791f04fedc07e4c_Launch-Screen.png')} alt="" loading="lazy" />
+            <img className="only-media tablet" src={withBase('/assets/6811a8b4cb262dfd6f9105b3_Running-Assay---pre-break.png')} alt="" loading="lazy" />
+            <img className="only-media tablet" src={withBase('/assets/6811a8ba53388f6595f5872e_Running-Assay---post-break.png')} alt="" loading="lazy" />
           </div>
           <div className="w-layout-vflex v-flex _10-spacing">
-            <img className="only-media tablet" src="/assets/6811a8f5be1183b1cc751b1a_Home.png" alt="" loading="lazy" />
-            <img className="only-media tablet" src="/assets/6811a8feada7c59f9f2a0529_Running-Assay---pre-break---pause.png" alt="" loading="lazy" />
-            <img className="only-media tablet" src="/assets/6811a903f34229a2397a4c83_Running-Assay---run-complete.png" alt="" loading="lazy" />
+            <img className="only-media tablet" src={withBase('/assets/6811a8f5be1183b1cc751b1a_Home.png')} alt="" loading="lazy" />
+            <img className="only-media tablet" src={withBase('/assets/6811a8feada7c59f9f2a0529_Running-Assay---pre-break---pause.png')} alt="" loading="lazy" />
+            <img className="only-media tablet" src={withBase('/assets/6811a903f34229a2397a4c83_Running-Assay---run-complete.png')} alt="" loading="lazy" />
           </div>
           <div className="w-layout-vflex v-flex _10-spacing">
-            <img className="only-media tablet" src="/assets/6811a92abee042582a95758c_Warning-Before-Run.png" alt="" loading="lazy" />
-            <img className="only-media tablet" src="/assets/6811a930260890a73a62a3ff_Running-Assay---assay-paused---part-2---unfilled.png" alt="" loading="lazy" />
-            <img className="only-media tablet" src="/assets/6811a934cafe33d9eab5d0be_Running-Assay---run-stopped.png" alt="" loading="lazy" />
+            <img className="only-media tablet" src={withBase('/assets/6811a92abee042582a95758c_Warning-Before-Run.png')} alt="" loading="lazy" />
+            <img className="only-media tablet" src={withBase('/assets/6811a930260890a73a62a3ff_Running-Assay---assay-paused---part-2---unfilled.png')} alt="" loading="lazy" />
+            <img className="only-media tablet" src={withBase('/assets/6811a934cafe33d9eab5d0be_Running-Assay---run-stopped.png')} alt="" loading="lazy" />
           </div>
           <div className="w-layout-vflex v-flex _10-spacing">
-            <img className="only-media tablet" src="/assets/6811a97e81638c25f4427915_Step-5_-Assay-Parameters.png" alt="" loading="lazy" />
-            <img className="only-media tablet" src="/assets/6811a989343df1c6a4a8c4f2_Running-Assay---results.png" alt="" loading="lazy" />
+            <img className="only-media tablet" src={withBase('/assets/6811a97e81638c25f4427915_Step-5_-Assay-Parameters.png')} alt="" loading="lazy" />
+            <img className="only-media tablet" src={withBase('/assets/6811a989343df1c6a4a8c4f2_Running-Assay---results.png')} alt="" loading="lazy" />
           </div>
           <div className="w-layout-vflex v-flex _20-spacing">
-            <img className="only-media tablet" src="/assets/6811a95c9567417382ed2bf0_Col-7.png" alt="" loading="lazy" />
+            <img className="only-media tablet" src={withBase('/assets/6811a95c9567417382ed2bf0_Col-7.png')} alt="" loading="lazy" />
           </div>
         </section>
       </section>
@@ -736,9 +737,9 @@ export default function Revvity() {
           <div className="w-layout-grid media-text larger-c2 mobile-vertical">
             <div>
               <div className="only-media video w-background-video w-background-video-atom">
-                <video id="0dbbb5ec-05b2-de9b-a9ff-4c991dbf1cbd-video" loop muted playsInline controls preload="none" poster="/assets/66ca4e4f43000cf04ad71025-682b75f426f8e7fcc9f3892c_Revvity---Preparing-a-Test2x-poster-00001.jpg">
-                  <source src="/assets/66ca4e4f43000cf04ad71025-682b75f426f8e7fcc9f3892c_Revvity---Preparing-a-Test2x-transcode.webm" type="video/webm" />
-                  <source src="/assets/66ca4e4f43000cf04ad71025-682b75f426f8e7fcc9f3892c_Revvity---Preparing-a-Test2x-transcode.mp4" type="video/mp4" />
+                <video id="0dbbb5ec-05b2-de9b-a9ff-4c991dbf1cbd-video" loop muted playsInline controls preload="none" poster={withBase('/assets/66ca4e4f43000cf04ad71025-682b75f426f8e7fcc9f3892c_Revvity---Preparing-a-Test2x-poster-00001.jpg')}>
+                  <source src={withBase('/assets/66ca4e4f43000cf04ad71025-682b75f426f8e7fcc9f3892c_Revvity---Preparing-a-Test2x-transcode.webm')} type="video/webm" />
+                  <source src={withBase('/assets/66ca4e4f43000cf04ad71025-682b75f426f8e7fcc9f3892c_Revvity---Preparing-a-Test2x-transcode.mp4')} type="video/mp4" />
                 </video>
               </div>
             </div>
@@ -764,9 +765,9 @@ export default function Revvity() {
             </div>
             <div>
               <div className="only-media video w-background-video w-background-video-atom">
-                <video id="0dbbb5ec-05b2-de9b-a9ff-4c991dbf1ccb-video" loop muted playsInline controls preload="none" poster="/assets/66ca4e4f43000cf04ad71025-682b75fb3b1fffd1b9872842_Revvity---Running-a-Test2x-poster-00001.jpg">
-                  <source src="/assets/66ca4e4f43000cf04ad71025-682b75fb3b1fffd1b9872842_Revvity---Running-a-Test2x-transcode.webm" type="video/webm" />
-                  <source src="/assets/66ca4e4f43000cf04ad71025-682b75fb3b1fffd1b9872842_Revvity---Running-a-Test2x-transcode.mp4" type="video/mp4" />
+                <video id="0dbbb5ec-05b2-de9b-a9ff-4c991dbf1ccb-video" loop muted playsInline controls preload="none" poster={withBase('/assets/66ca4e4f43000cf04ad71025-682b75fb3b1fffd1b9872842_Revvity---Running-a-Test2x-poster-00001.jpg')}>
+                  <source src={withBase('/assets/66ca4e4f43000cf04ad71025-682b75fb3b1fffd1b9872842_Revvity---Running-a-Test2x-transcode.webm')} type="video/webm" />
+                  <source src={withBase('/assets/66ca4e4f43000cf04ad71025-682b75fb3b1fffd1b9872842_Revvity---Running-a-Test2x-transcode.mp4')} type="video/mp4" />
                 </video>
               </div>
             </div>
@@ -776,9 +777,9 @@ export default function Revvity() {
           <div className="w-layout-grid media-text larger-c2 mobile-vertical">
             <div>
               <div className="only-media video w-background-video w-background-video-atom">
-                <video id="0dbbb5ec-05b2-de9b-a9ff-4c991dbf1ccf-video" loop muted playsInline controls preload="none" poster="/assets/66ca4e4f43000cf04ad71025-682b75ffc36575e00e7c51b3_Revvity---View-Results2x-poster-00001.jpg">
-                  <source src="/assets/66ca4e4f43000cf04ad71025-682b75ffc36575e00e7c51b3_Revvity---View-Results2x-transcode.webm" type="video/webm" />
-                  <source src="/assets/66ca4e4f43000cf04ad71025-682b75ffc36575e00e7c51b3_Revvity---View-Results2x-transcode.mp4" type="video/mp4" />
+                <video id="0dbbb5ec-05b2-de9b-a9ff-4c991dbf1ccf-video" loop muted playsInline controls preload="none" poster={withBase('/assets/66ca4e4f43000cf04ad71025-682b75ffc36575e00e7c51b3_Revvity---View-Results2x-poster-00001.jpg')}>
+                  <source src={withBase('/assets/66ca4e4f43000cf04ad71025-682b75ffc36575e00e7c51b3_Revvity---View-Results2x-transcode.webm')} type="video/webm" />
+                  <source src={withBase('/assets/66ca4e4f43000cf04ad71025-682b75ffc36575e00e7c51b3_Revvity---View-Results2x-transcode.mp4')} type="video/mp4" />
                 </video>
               </div>
             </div>

@@ -1,3 +1,4 @@
+import { withBase } from '../urls';
 import React from 'react';
 
 export default function Plooto() {
@@ -5,14 +6,14 @@ export default function Plooto() {
     <>
       <section className="banner-image">
         <div className="cover-image">
-          <img src="/assets/66cfc073db678868a950a24f_Frame-12121--1-.png" loading="lazy" alt="" />
+          <img src={withBase('/assets/66cfc073db678868a950a24f_Frame-12121--1-.png')} loading="lazy" alt="" />
         </div>
       </section>
       <section className="case-study-body">
         <div className="w-layout-blockcontainer cs-container w-container">
           <div className="w-layout-vflex v-flex _20-spacing">
             <div className="w-layout-hflex logo-chip plooto">
-              <img src="/assets/66cd5b36d563b555c7e1ce37_plooto_logo.jpeg" loading="lazy" alt="" className="logo-mini" />
+              <img src={withBase('/assets/66cd5b36d563b555c7e1ce37_plooto_logo.jpeg')} loading="lazy" alt="" className="logo-mini" />
               <div className="body-1 medium white">
                 {"Plooto"}
               </div>
@@ -126,7 +127,7 @@ export default function Plooto() {
         </div>
         <div className="w-layout-blockcontainer cs-container w-container">
           <div className="w-layout-vflex v-flex _20-spacing center-aligned">
-            <img className="only-media" src="/assets/66d0a237c9273951e2fe34eb_Sign-Up-Flow-Tile--1-.png" alt="" loading="lazy" />
+            <img className="only-media" src={withBase('/assets/66d0a237c9273951e2fe34eb_Sign-Up-Flow-Tile--1-.png')} alt="" loading="lazy" />
             <div className="body-1 grey center-aligned">
               {"Previous three account options upon onboarding"}
             </div>
@@ -157,8 +158,8 @@ export default function Plooto() {
         <div className="w-layout-blockcontainer cs-container w-container">
           <div className="w-layout-vflex v-flex _20-spacing center-aligned">
             <div className="cs-media center-aligned plooto-stats">
-              <img className="only-media plooto-metric" src="/assets/66d08edefdb2e7bc39f2d582_Screenshot-2024-08-29-at-11.03.47-AM-1.png" alt="" loading="lazy" />
-              <img src="/assets/66d09b441ec69f3ab4b9ad96_Frame-2.png" loading="lazy" alt="" className="only-media plooto-metric" />
+              <img className="only-media plooto-metric" src={withBase('/assets/66d08edefdb2e7bc39f2d582_Screenshot-2024-08-29-at-11.03.47-AM-1.png')} alt="" loading="lazy" />
+              <img src={withBase('/assets/66d09b441ec69f3ab4b9ad96_Frame-2.png')} loading="lazy" alt="" className="only-media plooto-metric" />
             </div>
             <div className="body-1 grey center-aligned">
               {"User segmentation of a sample size of Plooto users"}
@@ -191,7 +192,7 @@ export default function Plooto() {
         </div>
       </section>
       <section className="large-image padding">
-        <img src="/assets/66d3d734a457cbb2fdb112ed_Frame-12128--5--min.png" alt="" loading="lazy" />
+        <img src={withBase('/assets/66d3d734a457cbb2fdb112ed_Frame-12128--5--min.png')} alt="" loading="lazy" />
       </section>
       <section className="case-study-body last-container">
         <div className="w-layout-blockcontainer cs-container small w-container">
@@ -310,13 +311,13 @@ export default function Plooto() {
             <div className="cs-media">
               <div className="w-layout-vflex v-flex _40-spacing tablet-horizontal">
                 <div className="w-layout-vflex v-flex _20-spacing center-aligned">
-                  <img src="/assets/66d7512420293779ff9d0189_Select-Business-Type--1-.png" loading="lazy" alt="" className="only-media tablet" />
+                  <img src={withBase('/assets/66d7512420293779ff9d0189_Select-Business-Type--1-.png')} loading="lazy" alt="" className="only-media tablet" />
                   <div className="body-1 grey center-aligned">
                     {"❌ Two-card layout"}
                   </div>
                 </div>
                 <div className="w-layout-vflex v-flex _20-spacing center-aligned">
-                  <img src="/assets/66d75124b9d963c2a3dd858a_Select-Business-Type-v1.png" loading="lazy" alt="" className="only-media tablet" />
+                  <img src={withBase('/assets/66d75124b9d963c2a3dd858a_Select-Business-Type-v1.png')} loading="lazy" alt="" className="only-media tablet" />
                   <div className="body-1 grey center-aligned">
                     {"✅ Four-card layout"}
                   </div>
@@ -330,13 +331,13 @@ export default function Plooto() {
             <div className="cs-media">
               <div className="w-layout-vflex v-flex _40-spacing tablet-horizontal">
                 <div className="w-layout-vflex v-flex _20-spacing center-aligned">
-                  <img src="/assets/66ecba97e9594ed24783192e_Client-Settings-_-Client-Information-_-Edit-Team-Member--2--1--2-.png" loading="lazy" alt="" className="only-media tablet" />
+                  <img src={withBase('/assets/66ecba97e9594ed24783192e_Client-Settings-_-Client-Information-_-Edit-Team-Member--2--1--2-.png')} loading="lazy" alt="" className="only-media tablet" />
                   <div className="body-1 grey center-aligned">
                     {"❌ Using several names: user, company member, and firm member"}
                   </div>
                 </div>
                 <div className="w-layout-vflex v-flex _20-spacing center-aligned">
-                  <img src="/assets/66ecb9d7bb593141fa38e3b8_Client-Settings-_-Client-Information-_-Edit-Team-Member--1-.png" loading="lazy" alt="" className="only-media tablet" />
+                  <img src={withBase('/assets/66ecb9d7bb593141fa38e3b8_Client-Settings-_-Client-Information-_-Edit-Team-Member--1-.png')} loading="lazy" alt="" className="only-media tablet" />
                   <div className="body-1 grey center-aligned">
                     {"✅ Consolidating into one name: user"}
                   </div>
@@ -419,7 +420,7 @@ export default function Plooto() {
                 </div>
               </div>
               <div id="w-node-_3b5990ec-955d-8daa-faea-1767454a8516-e778a71a">
-                <img src="/assets/66ecbef5e6983332b3d8997b_Frame-12121--3-.png" loading="lazy" alt="" className="image-62" />
+                <img src={withBase('/assets/66ecbef5e6983332b3d8997b_Frame-12121--3-.png')} loading="lazy" alt="" className="image-62" />
               </div>
               <div className="w-layout-vflex cs-media statistic">
                 <h1 className="heading-3 statistic">
@@ -481,9 +482,9 @@ export default function Plooto() {
         </div>
         <div className="w-layout-blockcontainer video-container w-container">
           <div className="cs-video plooto w-background-video w-background-video-atom">
-            <video id="3b5990ec-955d-8daa-faea-1767454a8527-video" loop muted playsInline controls preload="none" poster="/assets/66ca4e4f43000cf04ad71025-681d66b2d6731330b9fc348b_Generic-Parent-Node-poster-00001.jpg">
-              <source src="/assets/66ca4e4f43000cf04ad71025-681d66b2d6731330b9fc348b_Generic-Parent-Node-transcode.webm" type="video/webm" />
-                  <source src="/assets/66ca4e4f43000cf04ad71025-681d66b2d6731330b9fc348b_Generic-Parent-Node-transcode.mp4" type="video/mp4" />
+            <video id="3b5990ec-955d-8daa-faea-1767454a8527-video" loop muted playsInline controls preload="none" poster={withBase('/assets/66ca4e4f43000cf04ad71025-681d66b2d6731330b9fc348b_Generic-Parent-Node-poster-00001.jpg')}>
+              <source src={withBase('/assets/66ca4e4f43000cf04ad71025-681d66b2d6731330b9fc348b_Generic-Parent-Node-transcode.webm')} type="video/webm" />
+                  <source src={withBase('/assets/66ca4e4f43000cf04ad71025-681d66b2d6731330b9fc348b_Generic-Parent-Node-transcode.mp4')} type="video/mp4" />
             </video>
           </div>
         </div>
@@ -506,9 +507,9 @@ export default function Plooto() {
           <div className="w-layout-vflex v-flex _20-spacing center-aligned">
             <div className="w-layout-blockcontainer video-container w-container">
               <div className="cs-video plooto w-background-video w-background-video-atom">
-                <video id="96298940-4a26-9709-a501-9872f92e22ec-video" loop muted playsInline controls preload="none" poster="/assets/66ca4e4f43000cf04ad71025-6820c238e86c2903b290d788_Preparing-for-Pass-Off-poster-00001.jpg">
-                  <source src="/assets/66ca4e4f43000cf04ad71025-6820c238e86c2903b290d788_Preparing-for-Pass-Off-transcode.webm" type="video/webm" />
-                  <source src="/assets/66ca4e4f43000cf04ad71025-6820c238e86c2903b290d788_Preparing-for-Pass-Off-transcode.mp4" type="video/mp4" />
+                <video id="96298940-4a26-9709-a501-9872f92e22ec-video" loop muted playsInline controls preload="none" poster={withBase('/assets/66ca4e4f43000cf04ad71025-6820c238e86c2903b290d788_Preparing-for-Pass-Off-poster-00001.jpg')}>
+                  <source src={withBase('/assets/66ca4e4f43000cf04ad71025-6820c238e86c2903b290d788_Preparing-for-Pass-Off-transcode.webm')} type="video/webm" />
+                  <source src={withBase('/assets/66ca4e4f43000cf04ad71025-6820c238e86c2903b290d788_Preparing-for-Pass-Off-transcode.mp4')} type="video/mp4" />
                 </video>
               </div>
             </div>
@@ -567,7 +568,7 @@ export default function Plooto() {
         </div>
         <div className="w-layout-blockcontainer cs-container w-container">
           <div className="w-layout-vflex v-flex _20-spacing center-aligned">
-            <img className="only-media" src="/assets/66e31d7aea60e260f5e9f16e_Screenshot-2024-09-12-at-12.57.26-PM.png" alt="" loading="lazy" />
+            <img className="only-media" src={withBase('/assets/66e31d7aea60e260f5e9f16e_Screenshot-2024-09-12-at-12.57.26-PM.png')} alt="" loading="lazy" />
             <div className="body-1 grey center-aligned">
               {"Next steps for usability improvements"}
             </div>

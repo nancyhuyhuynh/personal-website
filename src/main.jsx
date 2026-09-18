@@ -2,6 +2,8 @@ import React, { Suspense, lazy, useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import Home from './pages/Home';
 import { Navigation, Footer } from './components';
+import { pageTitles } from './routes';
+import { routeFromPath, withBase } from './urls';
 import './fonts.css';
 import './reference.css';
 import './styles.css';
@@ -17,7 +19,7 @@ const routes = {
 };
 
 function currentLocation() {
-  return window.location.pathname.replace(/\/$/, '') + window.location.hash || '/';
+  return (routeFromPath(window.location.pathname) ?? '/404') + window.location.hash;
 }
 
 function App() {
@@ -30,7 +32,7 @@ function App() {
       const link = event.target.closest('a');
       if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || link.target || link.hasAttribute('download')) return;
       const url = new URL(link.href, window.location.href);
-      if (url.origin !== window.location.origin || !routes[url.pathname.replace(/\/$/, '') || '/']) return;
+      if (url.origin !== window.location.origin || !routes[routeFromPath(url.pathname)]) return;
       event.preventDefault();
       window.history.pushState({}, '', url.pathname + url.hash);
       setLocation(currentLocation());
@@ -47,17 +49,17 @@ function App() {
   }, []);
 
   useEffect(() => {
-    document.title = `${route?.title || 'Page not found'} | Nancy Huynh`;
+    document.title = `${pageTitles[path] || 'Page not found'} | Nancy Huynh`;
     const id = location.split('#')[1];
     if (id) requestAnimationFrame(() => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }));
-  }, [location, route]);
+  }, [location, path]);
 
   return <>
     <a className="skip-link" href="#main">Skip to content</a>
     <Navigation path={path} projectsActive={location.includes('#projects')} />
     <main id="main" tabIndex={-1} className={path === '/' ? 'home-page' : 'content-page'}>
       <Suspense fallback={<div className="page-loading" role="status">Loading…</div>}>
-        {route ? <route.Component /> : <div className="not-found"><h1>Page not found</h1><a href="/">Back to home</a></div>}
+        {route ? <route.Component /> : <div className="not-found"><h1>Page not found</h1><a href={withBase('/')}>Back to home</a></div>}
       </Suspense>
     </main>
     <Footer />
