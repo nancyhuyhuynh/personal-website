@@ -1,0 +1,70 @@
+html { scroll-behavior: smooth; }
+body { margin: 0; }
+#root { isolation: isolate; }
+main { outline: none; }
+a, button { -webkit-tap-highlight-color: transparent; }
+a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible { outline: 3px solid #508be3; outline-offset: 5px; }
+.skip-link { position: fixed; top: -80px; left: 16px; z-index: 1000; background: #191919; color: white; padding: 12px 20px; border-radius: 8px; }
+.skip-link:focus { top: 12px; }
+.brand-link { flex-shrink: 0; transition: transform .2s ease; }
+.brand-link:hover { transform: rotate(-12deg); }
+.nav-menu-4 { float: none; }
+.nav-menu-4 .nav-link { align-self: center; }
+.hero-title { margin: 0; }
+.hero-title a { color: inherit; text-decoration: none; }
+.hero-title a:hover { text-decoration: underline; text-shadow: -3px 2px 2px #0003; }
+.hero-icons { gap: 0; }
+.bg-colour-blur.head-left { transform: translate(44%, 50%); }
+.bg-colour-blur.header-right { transform: translate(-44%, -50%); }
+.header-text-image { position: relative; transition: transform .25s ease; }
+.header-text-image:hover, .header-text-image:focus-visible { transform: rotate(-8deg); }
+.header-text-image .top { inset: 0; transition: opacity .25s ease; }
+.header-text-image:hover .top, .header-text-image:focus-visible .top { opacity: 0; }
+.projects-prompt { text-decoration: none; }
+.projects-prompt:hover { text-decoration: underline; text-underline-offset: 4px; }
+.sticker-button { border: 0; padding: 0; background: transparent; flex: 0 1 120px; touch-action: none; user-select: none; -webkit-user-select: none; }
+.character-images.draggable { cursor: grab; }
+.character-images.is-dragging { cursor: grabbing; }
+.sticker-button img { pointer-events: none; width: 100%; }
+.sticker-button .top-character-image, .sticker-button .bottom-character-image { inset: 0; }
+.top-character-image { transition: opacity .18s ease; }
+.sticker-button:hover .top-character-image, .sticker-button:focus-visible .top-character-image, .sticker-button.is-dragging .top-character-image { opacity: 0; }
+#projects { scroll-margin-top: 100px; }
+.project-logo { width: 20px; max-height: 24px; object-fit: contain; }
+.project-description { margin: 0; }
+.case-study-card { align-items: center; }
+.button-arrow { width: 24px; height: 24px; transition: transform .2s ease; }
+.link-block-5:hover .button-arrow { transform: translateX(3px); }
+.black-button-arrow { transition: background-color .2s ease, transform .2s ease; }
+.link-block-5:hover .black-button-arrow { background: #393939; transform: translateY(-2px); }
+.top-card-image { transition: opacity .3s ease, transform .35s ease; }
+.bottom-card-image { transition: transform .35s ease; }
+.div-card-image:hover .top-card-image, .cs-cover-link:focus-visible .top-card-image { opacity: 0; }
+.div-card-image:hover .bottom-card-image, .cs-cover-link:focus-visible .bottom-card-image { transform: scale(1.025); }
+.content-page img { max-width: 100%; }
+.content-page a[target="_blank"] { text-underline-offset: 4px; }
+.content-page .w-background-video video { position: static; width: 100%; height: 100%; object-fit: contain; }
+.page-loading, .not-found { min-height: 65vh; padding: 100px 24px; text-align: center; font-family: Inter, sans-serif; }
+.footer a:hover { opacity: .75; }
+@media (min-width: 1440px) { .sticker-button { flex-basis: 130px; } }
+@media (max-width: 991px) {
+  .sticker-button { flex-basis: 100px; }
+  .nav-menu-4 .body-1.navbar { margin: 0; }
+  .cs-cover-link { width: 100%; }
+  .cs-cover-link .div-card-image { margin-inline: auto; }
+  .case-study-card { margin-inline: 0; }
+}
+@media (max-width: 767px) {
+  .sticker-button { flex-basis: 80px; }
+}
+@media (max-width: 479px) {
+  .sticker-button { flex-basis: 70px; }
+  .nav-menu-4 { gap: 5px; padding: 5px 15px; }
+  .brand-link img { width: 32px; height: 32px; }
+  .characters { width: 100%; }
+  .chip-container { flex-wrap: wrap; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
