@@ -25,16 +25,22 @@ a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible { outline: 3
 .header-text-image { position: relative; transition: transform .25s ease; }
 .header-text-image:hover, .header-text-image:focus-visible { transform: rotate(-8deg); }
 .header-text-image .top { inset: 0; transition: opacity .25s ease; }
-.header-text-image:hover .top, .header-text-image:focus-visible .top { opacity: 0; }
+.header-text-image.is-coloured .top { opacity: 0; }
 .projects-prompt { text-decoration: none; }
 .projects-prompt:hover { text-decoration: underline; text-underline-offset: 4px; }
 .sticker-button { border: 0; padding: 0; background: transparent; flex: 0 1 120px; touch-action: none; user-select: none; -webkit-user-select: none; }
 .character-images.draggable { cursor: grab; }
 .character-images.is-dragging { cursor: grabbing; }
-.sticker-button img { pointer-events: none; width: 100%; }
+.sticker-button img { pointer-events: none; width: 100%; translate: 0 0; transition: translate .25s ease, opacity .18s ease; }
 .sticker-button .top-character-image, .sticker-button .bottom-character-image { inset: 0; }
-.top-character-image { transition: opacity .18s ease; }
-.sticker-button:hover .top-character-image, .sticker-button:focus-visible .top-character-image, .sticker-button.is-dragging .top-character-image { opacity: 0; }
+/* Animate the artwork so the drag position and pointer target stay stable. */
+.sticker-button:hover img, .sticker-button:focus-visible img { translate: 0 -10px; animation: character-jiggle .5s ease; }
+@keyframes character-jiggle {
+  0%, 100% { transform: rotate(0deg); }
+  20%, 60% { transform: rotate(-5deg); }
+  40%, 80% { transform: rotate(5deg); }
+}
+.sticker-button.is-coloured .top-character-image { opacity: 0; }
 #projects { scroll-margin-top: 100px; }
 .project-logo { width: 20px; max-height: 24px; object-fit: contain; }
 .project-description { margin: 0; }

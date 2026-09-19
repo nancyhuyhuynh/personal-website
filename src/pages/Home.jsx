@@ -1,10 +1,12 @@
 import { withBase } from '../urls';
-import React from 'react';
+import React, { useState } from 'react';
 
 import { DraggableSticker, ProjectCard } from '../components';
 import { projects, stickers, heroIcons } from '../content';
 
 export default function Home() {
+  const [colouredIcons, setColouredIcons] = useState({});
+  const colourIcon = index => setColouredIcons(previous => ({ ...previous, [index]: true }));
   return <div className="w-layout-vflex home-container-draggable">
     <div className="home-background" aria-hidden="true">
       {['head-left', 'header-right', 'revvity', 'gradeeasy', 'plooto', 'radicalgary'].map(name => <div key={name} className={`bg-colour-blur ${name}`} />)}
@@ -14,7 +16,7 @@ export default function Home() {
         <h1 className="title-1 hero-title">Hi, I'm <a href={withBase('/about')}><em>Nancy</em></a>!</h1>
         <div className="headinglandingpage">Designing thoughtful, human-centred solutions as a systems design engineer @UWaterloo</div>
         <div className="w-layout-hflex h-flex landingpage hero-icons" aria-label="Art, engineering, and Waterloo">
-          {heroIcons.map((icon, index) => <div key={icon.top} className="header-text-image" tabIndex={0} aria-label={['An artist’s palette', 'An engineering gear', 'A Waterloo goose'][index]}>
+          {heroIcons.map((icon, index) => <div key={icon.top} className={`header-text-image${colouredIcons[index] ? ' is-coloured' : ''}`} onPointerEnter={() => colourIcon(index)} onPointerDown={() => colourIcon(index)} onFocus={() => colourIcon(index)} tabIndex={0} aria-label={['An artist’s palette', 'An engineering gear', 'A Waterloo goose'][index]}>
             <img className="top" src={icon.top} alt="" />
             <img className="bottom" src={icon.bottom} alt="" />
           </div>)}

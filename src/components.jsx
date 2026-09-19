@@ -55,6 +55,7 @@ export function Footer() {
 }
 
 export function DraggableSticker({ sticker, index }) {
+  const [coloured, setColoured] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [dragging, setDragging] = useState(false);
   const origin = useRef(null);
@@ -64,11 +65,14 @@ export function DraggableSticker({ sticker, index }) {
     if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
   }
   return <button
-    className={`${sticker.className} sticker-button${dragging ? ' is-dragging' : ''}`}
+    className={`${sticker.className} sticker-button${dragging ? ' is-dragging' : ''}${coloured ? ' is-coloured' : ''}`}
+    onPointerEnter={() => setColoured(true)}
+    onFocus={() => setColoured(true)}
     aria-label={`Move illustrated character ${index + 1}. Use arrow keys to move, Escape to reset.`}
     style={{ transform: `translate(${position.x}px, ${position.y}px)`, zIndex: dragging ? 20 : 10 }}
     onPointerDown={event => {
       if (event.button !== 0) return;
+      setColoured(true);
       origin.current = { x: event.clientX - position.x, y: event.clientY - position.y };
       event.currentTarget.setPointerCapture(event.pointerId);
       setDragging(true);
