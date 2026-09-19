@@ -31,6 +31,18 @@ a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible { outline: 3
 .sticker-button { border: 0; padding: 0; background: transparent; flex: 0 1 120px; touch-action: none; user-select: none; -webkit-user-select: none; }
 .character-images.draggable { cursor: grab; }
 .character-images.is-dragging { cursor: grabbing; }
+.character-images.has-drag-cursor:not(.is-dragging) { cursor: none; }
+.div-card-image.has-read-cursor, .div-card-image.has-read-cursor * { cursor: none; }
+.drag-cursor { position: fixed; z-index: 2000; pointer-events: none; user-select: none; }
+.drag-cursor-bubble { display: block; padding: 6px 10px; border: 2px solid #242424; border-radius: 22px 22px 22px 5px; background: #f8f6f2; color: #242424; font: 700 15px/1.2 Inter, sans-serif; white-space: nowrap; transform: translate(8px, -100%); transform-origin: bottom left; animation: drag-cursor-pop .2s ease-out; transition: transform .2s ease, background-color .2s ease; }
+.read-cursor-revvity { background: #fff8c9; }
+.read-cursor-gradeeasy { background: #dfecfc; }
+.read-cursor-plooto { background: #dfe3ed; }
+.read-cursor-radicalgary { background: #f0dff0; }
+@keyframes drag-cursor-pop {
+  from { opacity: 0; transform: translate(8px, -90%) scale(.95); }
+  to { opacity: 1; transform: translate(8px, -100%) scale(1); }
+}
 .sticker-button img { pointer-events: none; width: 100%; translate: 0 0; transition: translate .25s ease, opacity .18s ease; }
 .sticker-button .top-character-image, .sticker-button .bottom-character-image { inset: 0; }
 /* Animate the artwork so the drag position and pointer target stay stable. */

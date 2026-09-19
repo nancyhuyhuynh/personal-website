@@ -1,5 +1,6 @@
 import { withBase } from './urls';
 import React from 'react';
+import { createPortal } from 'react-dom';
 
 import { useEffect, useRef, useState } from 'react';
 
@@ -70,34 +71,54 @@ export function Footer() {
   </footer>;
 }
 
-export function DraggableSticker({ sticker, index }) {
+export function DraggableSticker({ sticker, index, showDragHint, onDragged }) {
   const [coloured, setColoured] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [dragging, setDragging] = useState(false);
+  const [cursor, setCursor] = useState(null);
   const origin = useRef(null);
+  function trackCursor(event) {
+    if (showDragHint && event.pointerType === 'mouse') setCursor({ x: event.clientX, y: event.clientY });
+  }
+  useEffect(() => {
+    const hideCursor = () => setCursor(null);
+    window.addEventListener('blur', hideCursor);
+    window.addEventListener('scroll', hideCursor, true);
+    return () => {
+      window.removeEventListener('blur', hideCursor);
+      window.removeEventListener('scroll', hideCursor, true);
+    };
+  }, []);
   function finish(event) {
     origin.current = null;
     setDragging(false);
     if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
+    if (event.type === 'pointercancel' || !event.currentTarget.matches(':hover')) setCursor(null);
   }
-  return <button
-    className={`${sticker.className} sticker-button${dragging ? ' is-dragging' : ''}${coloured ? ' is-coloured' : ''}`}
-    onPointerEnter={() => setColoured(true)}
+  return <><button
+    className={`${sticker.className} sticker-button${dragging ? ' is-dragging' : ''}${coloured ? ' is-coloured' : ''}${cursor && showDragHint ? ' has-drag-cursor' : ''}`}
+    onPointerEnter={event => { setColoured(true); trackCursor(event); }}
+    onPointerLeave={() => { if (!origin.current) setCursor(null); }}
     onFocus={() => setColoured(true)}
     aria-label={`Move illustrated character ${index + 1}. Use arrow keys to move, Escape to reset.`}
     style={{ transform: `translate(${position.x}px, ${position.y}px)`, zIndex: dragging ? 20 : 10 }}
     onPointerDown={event => {
       if (event.button !== 0) return;
       setColoured(true);
-      origin.current = { x: event.clientX - position.x, y: event.clientY - position.y };
+      origin.current = { x: event.clientX - position.x, y: event.clientY - position.y, startX: event.clientX, startY: event.clientY };
       event.currentTarget.setPointerCapture(event.pointerId);
       setDragging(true);
     }}
     onPointerMove={event => {
-      if (origin.current) setPosition({ x: event.clientX - origin.current.x, y: event.clientY - origin.current.y });
+      trackCursor(event);
+      if (origin.current) {
+        setPosition({ x: event.clientX - origin.current.x, y: event.clientY - origin.current.y });
+        if (showDragHint && Math.hypot(event.clientX - origin.current.startX, event.clientY - origin.current.startY) >= 4) onDragged();
+      }
     }}
     onPointerUp={finish}
     onPointerCancel={finish}
+    onLostPointerCapture={finish}
     onDoubleClick={() => setPosition({ x: 0, y: 0 })}
     onKeyDown={event => {
       const changes = { ArrowLeft: [-10, 0], ArrowRight: [10, 0], ArrowUp: [0, -10], ArrowDown: [0, 10] };
@@ -111,10 +132,27 @@ export function DraggableSticker({ sticker, index }) {
     <img className="top-character-image" src={sticker.top} alt="" draggable="false" />
     <img className="bottom-character-image" src={sticker.bottom} alt="" draggable="false" />
     <img className="empty-character" src={sticker.spacer} alt="" draggable="false" />
-  </button>;
+  </button>
+    {showDragHint && cursor && !dragging && createPortal(<div className="drag-cursor" aria-hidden="true" style={{ left: cursor.x, top: cursor.y }}>
+      <span className="drag-cursor-bubble">Drag me</span>
+    </div>, document.body)}
+  </>;
 }
 
 export function ProjectCard({ project }) {
+  const [cursor, setCursor] = useState(null);
+  function trackCursor(event) {
+    if (event.pointerType === 'mouse') setCursor({ x: event.clientX, y: event.clientY });
+  }
+  useEffect(() => {
+    const hideCursor = () => setCursor(null);
+    window.addEventListener('blur', hideCursor);
+    window.addEventListener('scroll', hideCursor, true);
+    return () => {
+      window.removeEventListener('blur', hideCursor);
+      window.removeEventListener('scroll', hideCursor, true);
+    };
+  }, []);
   return <article className="w-layout-grid case-study-card">
     <div className="w-layout-vflex case-study-text">
       <div className="w-layout-vflex flex-block-53">
@@ -131,11 +169,20 @@ export function ProjectCard({ project }) {
       </a>
     </div>
     <a href={withBase(`/projects/${project.id}`)} className="cs-cover-link w-inline-block" aria-label={`Explore ${project.company}`}>
-      <div className="div-card-image">
+      <div className={`div-card-image${cursor ? ' has-read-cursor' : ''}`}
+        onPointerEnter={trackCursor}
+        onPointerMove={trackCursor}
+        onPointerLeave={() => setCursor(null)}
+        onPointerCancel={() => setCursor(null)}
+        onPointerDown={() => setCursor(null)}
+      >
         <img className="top-card-image" src={project.top} alt={`${project.company} project preview`} loading="lazy" />
         <img className="bottom-card-image" src={project.bottom} alt="" loading="lazy" />
         <img src={project.spacer} alt="" loading="lazy" />
       </div>
     </a>
+    {cursor && createPortal(<div className="drag-cursor" aria-hidden="true" style={{ left: cursor.x, top: cursor.y }}>
+      <span className={`drag-cursor-bubble read-cursor-${project.id}`}>Read me</span>
+    </div>, document.body)}
   </article>;
 }

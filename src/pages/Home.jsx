@@ -4,7 +4,14 @@ import React, { useState } from 'react';
 import { DraggableSticker, ProjectCard } from '../components';
 import { projects, stickers, heroIcons } from '../content';
 
+let hasDraggedCharacter = false;
+
 export default function Home() {
+  const [showDragHint, setShowDragHint] = useState(!hasDraggedCharacter);
+  function dismissDragHint() {
+    hasDraggedCharacter = true;
+    setShowDragHint(false);
+  }
   const [colouredIcons, setColouredIcons] = useState({});
   const colourIcon = index => setColouredIcons(previous => ({ ...previous, [index]: true }));
   return <div className="w-layout-vflex home-container-draggable">
@@ -25,7 +32,7 @@ export default function Home() {
       </div>
     </section>
     <div className="w-layout-hflex characters" aria-label="Draggable illustrated characters">
-      {stickers.map((sticker, index) => <DraggableSticker key={sticker.top} sticker={sticker} index={index} />)}
+      {stickers.map((sticker, index) => <DraggableSticker key={sticker.top} sticker={sticker} index={index} showDragHint={showDragHint} onDragged={dismissDragHint} />)}
     </div>
     <section className="w-layout-blockcontainer container-5 w-container" id="projects" aria-label="Selected projects">
       <div className="w-layout-vflex div-all-case-study-cards">{projects.map(project => <ProjectCard key={project.id} project={project} />)}</div>
