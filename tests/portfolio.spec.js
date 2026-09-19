@@ -48,6 +48,23 @@ test('navigation, project links, and browser history work', async ({ page }) => 
   await expect(page.getByRole('link', { name: /PDF/ })).toHaveAttribute('href', /drive.google.com/);
 });
 
+test('menu highlight follows scrolling between Home and Projects', async ({ page }) => {
+  await page.goto('/');
+  const nav = page.getByRole('navigation');
+  const home = nav.getByRole('link', { name: 'Home', exact: true });
+  const projects = nav.getByRole('link', { name: 'Projects', exact: true });
+  await expect(home).toHaveAttribute('aria-current', 'page');
+  await projects.click();
+  await expect(projects).toHaveAttribute('aria-current', 'page');
+  await expect(home).not.toHaveClass(/w--current/);
+  await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
+  await expect(home).toHaveAttribute('aria-current', 'page');
+  await expect(projects).not.toHaveClass(/w--current/);
+  await expect(page).toHaveURL('/#projects');
+  await page.evaluate(() => document.getElementById('projects').scrollIntoView({ behavior: 'instant' }));
+  await expect(projects).toHaveAttribute('aria-current', 'page');
+});
+
 test('characters support keyboard movement and reset', async ({ page }) => {
   await page.goto('/');
   const sticker = page.getByRole('button', { name: 'Move illustrated character 1.', exact: false });

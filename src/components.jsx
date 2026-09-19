@@ -3,9 +3,25 @@ import React from 'react';
 
 import { useEffect, useRef, useState } from 'react';
 
-export function Navigation({ path, projectsActive }) {
+export function Navigation({ path }) {
   const [hidden, setHidden] = useState(false);
+  const [projectsActive, setProjectsActive] = useState(false);
   const headerRef = useRef(null);
+
+  useEffect(() => {
+    const projects = path === '/' ? document.getElementById('projects') : null;
+    function updateActiveSection() {
+      const offset = projects ? parseFloat(getComputedStyle(projects).scrollMarginTop) || 0 : 0;
+      setProjectsActive(Boolean(projects && projects.getBoundingClientRect().top <= offset + 1));
+    }
+    updateActiveSection();
+    window.addEventListener('scroll', updateActiveSection, { passive: true });
+    window.addEventListener('resize', updateActiveSection);
+    return () => {
+      window.removeEventListener('scroll', updateActiveSection);
+      window.removeEventListener('resize', updateActiveSection);
+    };
+  }, [path]);
 
   useEffect(() => {
     let lastY = Math.max(0, window.scrollY);

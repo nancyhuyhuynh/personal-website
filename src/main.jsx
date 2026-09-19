@@ -56,7 +56,7 @@ function App() {
 
   return <>
     <a className="skip-link" href="#main">Skip to content</a>
-    <Navigation path={path} projectsActive={location.includes('#projects')} />
+    <Navigation path={path} />
     <main id="main" tabIndex={-1} className={path === '/' ? 'home-page' : 'content-page'}>
       <Suspense fallback={<div className="page-loading" role="status">Loading…</div>}>
         {route ? <route.Component /> : <div className="not-found"><h1>Page not found</h1><a href={withBase('/')}>Back to home</a></div>}
