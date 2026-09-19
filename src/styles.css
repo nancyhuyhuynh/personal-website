@@ -49,10 +49,12 @@ a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible { outline: 3
 .link-block-5:hover .button-arrow { transform: translateX(3px); }
 .black-button-arrow { transition: background-color .2s ease, transform .2s ease; }
 .link-block-5:hover .black-button-arrow { background: #393939; transform: translateY(-2px); }
-.top-card-image { transition: opacity .3s ease, transform .35s ease; }
-.bottom-card-image { transition: transform .35s ease; }
+.top-card-image, .bottom-card-image { transition: opacity .35s ease, transform .35s ease; }
 .div-card-image:hover .top-card-image, .cs-cover-link:focus-visible .top-card-image { opacity: 0; }
-.div-card-image:hover .bottom-card-image, .cs-cover-link:focus-visible .bottom-card-image { transform: scale(1.025); }
+.div-card-image:hover .top-card-image,
+.div-card-image:hover .bottom-card-image,
+.cs-cover-link:focus-visible .top-card-image,
+.cs-cover-link:focus-visible .bottom-card-image { transform: scale(1.025); }
 .content-page img { max-width: 100%; }
 .content-page a[target="_blank"] { text-underline-offset: 4px; }
 .content-page .w-background-video video { position: static; width: 100%; height: 100%; object-fit: contain; }
