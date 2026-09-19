@@ -739,7 +739,7 @@ export default function Revvity() {
           <div className="w-layout-grid media-text larger-c2 mobile-vertical">
             <div>
               <div className="only-media video w-background-video w-background-video-atom">
-                <video id="0dbbb5ec-05b2-de9b-a9ff-4c991dbf1cbd-video" loop muted playsInline controls preload="none" poster={withBase('/assets/66ca4e4f43000cf04ad71025-682b75f426f8e7fcc9f3892c_Revvity---Preparing-a-Test2x-poster-00001.jpg')}>
+                <video id="0dbbb5ec-05b2-de9b-a9ff-4c991dbf1cbd-video" autoPlay loop muted playsInline preload="auto" poster={withBase('/assets/66ca4e4f43000cf04ad71025-682b75f426f8e7fcc9f3892c_Revvity---Preparing-a-Test2x-poster-00001.jpg')}>
                   <source src={withBase('/assets/66ca4e4f43000cf04ad71025-682b75f426f8e7fcc9f3892c_Revvity---Preparing-a-Test2x-transcode.webm')} type="video/webm" />
                   <source src={withBase('/assets/66ca4e4f43000cf04ad71025-682b75f426f8e7fcc9f3892c_Revvity---Preparing-a-Test2x-transcode.mp4')} type="video/mp4" />
                 </video>
@@ -767,7 +767,7 @@ export default function Revvity() {
             </div>
             <div>
               <div className="only-media video w-background-video w-background-video-atom">
-                <video id="0dbbb5ec-05b2-de9b-a9ff-4c991dbf1ccb-video" loop muted playsInline controls preload="none" poster={withBase('/assets/66ca4e4f43000cf04ad71025-682b75fb3b1fffd1b9872842_Revvity---Running-a-Test2x-poster-00001.jpg')}>
+                <video id="0dbbb5ec-05b2-de9b-a9ff-4c991dbf1ccb-video" autoPlay loop muted playsInline preload="auto" poster={withBase('/assets/66ca4e4f43000cf04ad71025-682b75fb3b1fffd1b9872842_Revvity---Running-a-Test2x-poster-00001.jpg')}>
                   <source src={withBase('/assets/66ca4e4f43000cf04ad71025-682b75fb3b1fffd1b9872842_Revvity---Running-a-Test2x-transcode.webm')} type="video/webm" />
                   <source src={withBase('/assets/66ca4e4f43000cf04ad71025-682b75fb3b1fffd1b9872842_Revvity---Running-a-Test2x-transcode.mp4')} type="video/mp4" />
                 </video>
@@ -779,7 +779,7 @@ export default function Revvity() {
           <div className="w-layout-grid media-text larger-c2 mobile-vertical">
             <div>
               <div className="only-media video w-background-video w-background-video-atom">
-                <video id="0dbbb5ec-05b2-de9b-a9ff-4c991dbf1ccf-video" loop muted playsInline controls preload="none" poster={withBase('/assets/66ca4e4f43000cf04ad71025-682b75ffc36575e00e7c51b3_Revvity---View-Results2x-poster-00001.jpg')}>
+                <video id="0dbbb5ec-05b2-de9b-a9ff-4c991dbf1ccf-video" autoPlay loop muted playsInline preload="auto" poster={withBase('/assets/66ca4e4f43000cf04ad71025-682b75ffc36575e00e7c51b3_Revvity---View-Results2x-poster-00001.jpg')}>
                   <source src={withBase('/assets/66ca4e4f43000cf04ad71025-682b75ffc36575e00e7c51b3_Revvity---View-Results2x-transcode.webm')} type="video/webm" />
                   <source src={withBase('/assets/66ca4e4f43000cf04ad71025-682b75ffc36575e00e7c51b3_Revvity---View-Results2x-transcode.mp4')} type="video/mp4" />
                 </video>

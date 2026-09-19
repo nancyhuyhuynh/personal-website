@@ -688,7 +688,7 @@ export default function GradeEasy() {
           <div className="w-layout-vflex v-flex _20-spacing center-aligned">
             <div className="w-layout-blockcontainer video-container w-container">
               <div className="cs-video gradeeasy-landing-page w-background-video w-background-video-atom">
-                <video id="32756354-e4b8-cfad-41e0-5669e05a0eea-video" loop muted playsInline controls preload="none" poster={withBase('/assets/66ca4e4f43000cf04ad71025-68293a80d8c30949b2e67f9e_GradeEasy-Landing-Page--1--poster-00001.jpg')}>
+                <video id="32756354-e4b8-cfad-41e0-5669e05a0eea-video" autoPlay loop muted playsInline preload="auto" poster={withBase('/assets/66ca4e4f43000cf04ad71025-68293a80d8c30949b2e67f9e_GradeEasy-Landing-Page--1--poster-00001.jpg')}>
                   <source src={withBase('/assets/66ca4e4f43000cf04ad71025-68293a80d8c30949b2e67f9e_GradeEasy-Landing-Page--1--transcode.webm')} type="video/webm" />
                   <source src={withBase('/assets/66ca4e4f43000cf04ad71025-68293a80d8c30949b2e67f9e_GradeEasy-Landing-Page--1--transcode.mp4')} type="video/mp4" />
                 </video>
@@ -720,7 +720,7 @@ export default function GradeEasy() {
           <div className="w-layout-vflex v-flex _20-spacing center-aligned">
             <div className="w-layout-blockcontainer video-container w-container">
               <div className="cs-video gradeeasy-demo w-background-video w-background-video-atom">
-                <video id="225964e0-be4d-4ae2-6cee-243d20b5501a-video" loop muted playsInline controls preload="none" poster={withBase('/assets/66ca4e4f43000cf04ad71025-68293a70379497ff579e65ae_GradeEasy-Demo-poster-00001.jpg')}>
+                <video id="225964e0-be4d-4ae2-6cee-243d20b5501a-video" autoPlay loop muted playsInline preload="auto" poster={withBase('/assets/66ca4e4f43000cf04ad71025-68293a70379497ff579e65ae_GradeEasy-Demo-poster-00001.jpg')}>
                   <source src={withBase('/assets/66ca4e4f43000cf04ad71025-68293a70379497ff579e65ae_GradeEasy-Demo-transcode.webm')} type="video/webm" />
                   <source src={withBase('/assets/66ca4e4f43000cf04ad71025-68293a70379497ff579e65ae_GradeEasy-Demo-transcode.mp4')} type="video/mp4" />
                 </video>

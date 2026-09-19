@@ -490,7 +490,7 @@ export default function RadiCalgary() {
           <div className="w-layout-vflex v-flex _20-spacing center-aligned">
             <div className="w-layout-blockcontainer video-container w-container">
               <div className="cs-video w-background-video w-background-video-atom">
-                <video id="96298940-4a26-9709-a501-9872f92e22ec-video" loop muted playsInline controls preload="none" poster={withBase('/assets/66ca4e4f43000cf04ad71025-6820fe35172a418ac834f4b1_RadiCalgary-poster-00001.jpg')}>
+                <video id="96298940-4a26-9709-a501-9872f92e22ec-video" autoPlay loop muted playsInline preload="auto" poster={withBase('/assets/66ca4e4f43000cf04ad71025-6820fe35172a418ac834f4b1_RadiCalgary-poster-00001.jpg')}>
                   <source src={withBase('/assets/66ca4e4f43000cf04ad71025-6820fe35172a418ac834f4b1_RadiCalgary-transcode.webm')} type="video/webm" />
                   <source src={withBase('/assets/66ca4e4f43000cf04ad71025-6820fe35172a418ac834f4b1_RadiCalgary-transcode.mp4')} type="video/mp4" />
                 </video>

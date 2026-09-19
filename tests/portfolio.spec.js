@@ -108,14 +108,16 @@ test('characters drag and project artwork changes on hover', async ({ page, isMo
   await expect(cover.locator('.top-card-image')).toHaveCSS('opacity', '0');
 });
 
-test('case study video has a working local source and native playback', async ({ page }) => {
+test('case study videos autoplay, loop, and hide native controls', async ({ page }) => {
   await page.goto('/projects/revvity');
-  const video = page.locator('video').first();
-  await video.scrollIntoViewIfNeeded();
-  await video.evaluate(async element => {
-    element.load();
-    await element.play();
-    element.pause();
-  });
-  expect(await video.evaluate(element => element.readyState)).toBeGreaterThanOrEqual(2);
+  const videos = page.locator('video');
+  await expect(videos).toHaveCount(3);
+  for (const video of await videos.all()) {
+    await video.scrollIntoViewIfNeeded();
+    await expect(video).toHaveJSProperty('autoplay', true);
+    await expect(video).toHaveJSProperty('loop', true);
+    await expect(video).toHaveJSProperty('muted', true);
+    await expect(video).toHaveJSProperty('controls', false);
+    await expect.poll(() => video.evaluate(element => !element.paused)).toBe(true);
+  }
 });
