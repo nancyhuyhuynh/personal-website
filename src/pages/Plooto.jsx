@@ -1,7 +1,9 @@
 import { withBase } from '../urls';
+import { useScrollReveal } from '../useScrollReveal';
 import React from 'react';
 
 export default function Plooto() {
+  useScrollReveal('caseStudy');
   return (
     <>
       <section className="banner-image">

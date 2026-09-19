@@ -128,7 +128,7 @@ a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible { outline: 3
 /* Match the Webflow scroll entrance: 50px rise and a 750ms cubic fade.
    Individual translate preserves transforms used by dragging and hover. */
 .reveal-pending { opacity: 0; }
-.reveal-running { animation: scroll-reveal 750ms cubic-bezier(.645, .045, .355, 1) both; }
+.reveal-running { animation: scroll-reveal 750ms cubic-bezier(.645, .045, .355, 1) var(--reveal-delay, 0ms) both; }
 @keyframes scroll-reveal {
   from { opacity: 0; translate: 0 50px; }
   to { opacity: 1; translate: 0 0; }

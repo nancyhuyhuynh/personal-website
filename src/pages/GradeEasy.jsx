@@ -1,7 +1,9 @@
 import { withBase } from '../urls';
+import { useScrollReveal } from '../useScrollReveal';
 import React from 'react';
 
 export default function GradeEasy() {
+  useScrollReveal('caseStudy');
   return (
     <>
       <section className="banner-image">

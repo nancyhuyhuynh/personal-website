@@ -1,7 +1,9 @@
 import { withBase } from '../urls';
+import { useScrollReveal } from '../useScrollReveal';
 import React from 'react';
 
 export default function Revvity() {
+  useScrollReveal('caseStudy');
   return (
     <>
       <section className="banner-image">
@@ -119,7 +121,7 @@ export default function Revvity() {
               </div>
             </div>
             <div id="w-node-ed78c4b3-57aa-e274-d1de-be3ba5498af7-288108e5" className="cs-media">
-              <div className="w-layout-hflex h-flex _20-spacing">
+              <div className="w-layout-hflex h-flex _20-spacing" data-stagger-reveal>
                 <div>
                   <img src={withBase('/assets/681169f4a92ca3e0d45f49b6_Launch-Screen.png')} loading="lazy" alt="" className="only-media tablet" />
                 </div>
@@ -333,7 +335,7 @@ export default function Revvity() {
               </div>
             </div>
             <div id="w-node-_715bf8a3-1cdc-8799-66f7-baeb47b22fed-288108e5" className="cs-media">
-              <div className="w-layout-hflex h-flex _20-spacing center-aligned">
+              <div className="w-layout-hflex h-flex _20-spacing center-aligned" data-stagger-reveal>
                 <div>
                   <img src={withBase('/assets/68119bd0d372e6b9ce8bc845_Export-Results.png')} loading="lazy" alt="" className="only-media tablet" />
                 </div>
@@ -459,7 +461,7 @@ export default function Revvity() {
                   </div>
                 </div>
                 <div className="w-layout-vflex v-flex _20-spacing center-aligned">
-                  <div className="w-layout-hflex h-flex _20-spacing tablet">
+                  <div className="w-layout-hflex h-flex _20-spacing tablet" data-stagger-reveal>
                     <div>
                       <img src={withBase('/assets/68117849662105c68a17ff10_Select-Option.png')} loading="lazy" alt="" className="only-media tablet" />
                     </div>
@@ -486,7 +488,7 @@ export default function Revvity() {
                   </div>
                 </div>
                 <div className="w-layout-vflex v-flex _20-spacing center-aligned">
-                  <div className="w-layout-hflex h-flex _20-spacing tablet">
+                  <div className="w-layout-hflex h-flex _20-spacing tablet" data-stagger-reveal>
                     <div>
                       <img src={withBase('/assets/681179c4d3f7c9b34f7aa7a1_Enter-Information.png')} loading="lazy" alt="" className="only-media tablet" />
                     </div>
@@ -642,7 +644,7 @@ export default function Revvity() {
             <div className="cs-media">
               <div className="w-layout-vflex v-flex _40-spacing">
                 <div className="w-layout-vflex v-flex _20-spacing center-aligned">
-                  <div className="w-layout-hflex h-flex _20-spacing">
+                  <div className="w-layout-hflex h-flex _20-spacing" data-stagger-reveal>
                     <div>
                       <img className="only-media tablet" src={withBase('/assets/68117b31834f0ac3afdd731b_2---Prev-Running-test.png')} alt="" loading="lazy" />
                     </div>
@@ -661,7 +663,7 @@ export default function Revvity() {
                   </div>
                 </div>
                 <div className="w-layout-vflex v-flex _20-spacing center-aligned">
-                  <div className="w-layout-hflex h-flex _20-spacing">
+                  <div className="w-layout-hflex h-flex _20-spacing" data-stagger-reveal>
                     <div>
                       <img className="only-media tablet" src={withBase('/assets/68117c39ba6f15373a6ad4d3_1---Final-running-test.png')} alt="" loading="lazy" />
                     </div>
@@ -685,7 +687,7 @@ export default function Revvity() {
         </div>
       </section>
       <section className="large-image">
-        <section id="result-image" className="w-layout-hflex h-flex center-aligned _150-padding">
+        <section id="result-image" className="w-layout-hflex h-flex center-aligned _150-padding" data-stagger-reveal>
           <div className="w-layout-vflex v-flex _20-spacing">
             <img className="only-media tablet" src={withBase('/assets/6811a83ac8c4c74ad0faf83a_Col-1.png')} alt="" loading="lazy" />
           </div>
