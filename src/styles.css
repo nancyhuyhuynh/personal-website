@@ -66,6 +66,17 @@ a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible { outline: 3
 .black-button-arrow { transition: background-color .2s ease, transform .2s ease; }
 .link-block-5:hover .black-button-arrow { background: #393939; transform: translateY(-2px); }
 .top-card-image, .bottom-card-image { transition: opacity .35s ease, transform .35s ease; }
+.recent-fav-image .top-card-image,
+.recent-fav-image .bottom-card-image { transform: scale(1); transition: opacity .5s ease, transform .25s ease; }
+.recent-fav-image:hover .top-card-image { opacity: 0; transition-duration: .25s, .25s; }
+.recent-fav-image:hover .top-card-image,
+.recent-fav-image:hover .bottom-card-image { transform: scale(1.05); }
+@media (prefers-reduced-motion: reduce) {
+  .recent-fav-image .top-card-image,
+  .recent-fav-image .bottom-card-image { transition: none; }
+  .recent-fav-image:hover .top-card-image,
+  .recent-fav-image:hover .bottom-card-image { transform: none; }
+}
 .div-card-image:hover .top-card-image, .cs-cover-link:focus-visible .top-card-image { opacity: 0; }
 .div-card-image:hover .top-card-image,
 .div-card-image:hover .bottom-card-image,
@@ -76,6 +87,21 @@ a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible { outline: 3
 .content-page .w-background-video video { position: static; width: 100%; height: 100%; object-fit: contain; }
 .page-loading, .not-found { min-height: 65vh; padding: 100px 24px; text-align: center; font-family: Inter, sans-serif; }
 .footer a:hover { opacity: .75; }
+
+/* The Webflow gallery is a seamless, two-copy marquee. Keeping the viewport
+   separate from the moving track prevents the artwork from widening the page. */
+.crochet-viewport { position: relative; overflow: hidden; width: 100%; touch-action: pan-y; }
+.crochet-track { width: max-content; gap: 0; animation: crochet-marquee 42s linear infinite; will-change: transform; }
+.crochet-track .crochet-carousel { display: flex; flex: 0 0 auto; flex-wrap: nowrap; justify-content: flex-start; align-items: center; gap: 20px; width: max-content; padding-right: 20px; }
+.crochet-viewport:focus-within .crochet-track { animation-play-state: paused; }
+.crochet-track .crochet-carousel img { display: block; flex: 0 0 auto; width: auto; height: 200px; max-width: none; max-height: none; object-fit: contain; }
+@keyframes crochet-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .crochet-track { animation: none; transform: none; }
+}
 @media (min-width: 1440px) { .sticker-button { flex-basis: 130px; } }
 @media (max-width: 991px) {
   .sticker-button { flex-basis: 100px; }

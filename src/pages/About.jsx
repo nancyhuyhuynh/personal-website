@@ -153,8 +153,8 @@ export default function About() {
             {"crochet creations"}
           </div>
         </div>
-        <div className="div-block-17">
-          <div className="w-layout-hflex flex-block-41">
+        <div className="div-block-17 crochet-viewport" role="region" aria-label="Crochet creations gallery">
+          <div className="w-layout-hflex flex-block-41 crochet-track">
             <div className="w-layout-hflex crochet-carousel">
               <img src={withBase('/assets/66da1a0d1f390aa4d787b151_Subject-2--1-.png')} loading="lazy" width="Auto" alt="" className="dragons" />
               <img src={withBase('/assets/66da1f5ba4dfd16e069d1fb2_IMG_3495--1-.png')} loading="lazy" width="200" height="Auto" alt="" className="capybara-bath" />
@@ -166,7 +166,7 @@ export default function About() {
               <img src={withBase('/assets/66da68aaf552f0dd6869baa7_IMG_0524.png')} loading="lazy" height="150" alt="" className="bear-bunny-capybara" />
               <img src={withBase('/assets/66da1a342a1a6f1efb3067f1_Subject-10-1.png')} loading="lazy" width="250" alt="" className="balloon-animal" />
             </div>
-            <div className="w-layout-hflex crochet-carousel">
+            <div className="w-layout-hflex crochet-carousel" aria-hidden="true">
               <img src={withBase('/assets/66da1a0d1f390aa4d787b151_Subject-2--1-.png')} loading="lazy" width="Auto" alt="" className="dragons" />
               <img src={withBase('/assets/66da1f5ba4dfd16e069d1fb2_IMG_3495--1-.png')} loading="lazy" width="200" height="Auto" alt="" className="capybara-bath" />
               <img src={withBase('/assets/66da1f5b964bf1652e0d2a18_IMG_7312--1-.png')} loading="lazy" width="250" alt="" className="bunny-s" />
