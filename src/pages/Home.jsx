@@ -6,6 +6,9 @@ import { projects, stickers, heroIcons } from '../content';
 
 export default function Home() {
   return <div className="w-layout-vflex home-container-draggable">
+    <div className="home-background" aria-hidden="true">
+      {['head-left', 'header-right', 'revvity', 'gradeeasy', 'plooto', 'radicalgary'].map(name => <div key={name} className={`bg-colour-blur ${name}`} />)}
+    </div>
     <section className="w-layout-vflex home-header" aria-label="Introduction">
       <div className="w-layout-vflex center-aligned landingpage">
         <h1 className="title-1 hero-title">Hi, I'm <a href={withBase('/about')}><em>Nancy</em></a>!</h1>
@@ -17,7 +20,6 @@ export default function Home() {
           </div>)}
         </div>
         <a href={withBase('/#projects')} className="body-1 center-aligned projects-prompt">See my projects below!</a>
-        {['head-left', 'header-right', 'revvity', 'gradeeasy', 'plooto', 'radicalgary'].map(name => <div key={name} className={`bg-colour-blur ${name}`} aria-hidden="true" />)}
       </div>
     </section>
     <div className="w-layout-hflex characters" aria-label="Draggable illustrated characters">
