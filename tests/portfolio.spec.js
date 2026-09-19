@@ -59,6 +59,23 @@ test('characters support keyboard movement and reset', async ({ page }) => {
   await expect(sticker).toHaveCSS('transform', 'matrix(1, 0, 0, 1, 0, 0)');
 });
 
+test('menu hides on downward scroll and returns on upward scroll or keyboard focus', async ({ page }) => {
+  await page.goto('/');
+  const menu = page.locator('header.navbar-2');
+  await expect(menu).toHaveCSS('opacity', '1');
+  await page.evaluate(() => window.scrollTo({ top: 500, behavior: 'instant' }));
+  await expect(menu).toHaveCSS('opacity', '0');
+  await expect(menu).not.toBeInViewport();
+  await page.evaluate(() => window.scrollTo({ top: 350, behavior: 'instant' }));
+  await expect(menu).toHaveCSS('opacity', '1');
+  await expect(menu).toBeInViewport();
+  await page.evaluate(() => window.scrollTo({ top: 600, behavior: 'instant' }));
+  await expect(menu).toHaveCSS('opacity', '0');
+  await menu.getByRole('link').first().focus();
+  await expect(menu).toHaveCSS('opacity', '1');
+  await expect(menu).toBeInViewport();
+});
+
 test('characters drag and project artwork changes on hover', async ({ page, isMobile }) => {
   test.skip(isMobile, 'Pointer hover is a desktop interaction.');
   await page.goto('/');

@@ -1,11 +1,32 @@
 import { withBase } from './urls';
 import React from 'react';
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export function Navigation({ path, projectsActive }) {
+  const [hidden, setHidden] = useState(false);
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    let lastY = Math.max(0, window.scrollY);
+    setHidden(false);
+    function onScroll() {
+      // Clamp overscroll and ignore tiny movements to prevent flickering.
+      const y = Math.max(0, Math.min(window.scrollY, document.documentElement.scrollHeight - window.innerHeight));
+      if (y <= headerRef.current.offsetHeight) {
+        setHidden(false);
+        lastY = y;
+      } else if (Math.abs(y - lastY) >= 8) {
+        setHidden(y > lastY);
+        lastY = y;
+      }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [path]);
+
   const links = [['Home', '/'], ['Projects', '/#projects'], ['About', '/about'], ['Resume', '/resume']];
-  return <header className="navbar-2">
+  return <header ref={headerRef} className={`navbar-2${hidden ? ' is-hidden' : ''}`}>
     <nav className="nav-menu-4" aria-label="Main navigation">
       <a href={withBase('/')} className="brand-link" aria-label="Nancy Huynh home"><img src={withBase('/assets/68eda3953dccfdef218d1e04_nancysLogo.png')} width="40" height="40" alt="" /></a>
       {links.map(([label, href]) => {

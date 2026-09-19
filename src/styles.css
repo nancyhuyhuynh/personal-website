@@ -9,6 +9,9 @@ a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible { outline: 3
 .skip-link:focus { top: 12px; }
 .brand-link { flex-shrink: 0; transition: transform .2s ease; }
 .brand-link:hover { transform: rotate(-12deg); }
+.navbar-2 { opacity: 1; transition: transform .55s ease-in-out, opacity .35s ease-out; }
+.navbar-2.is-hidden { transform: translateY(-100%); opacity: 0; pointer-events: none; }
+.navbar-2:focus-within { transform: translateY(0); opacity: 1; pointer-events: auto; }
 .nav-menu-4 { float: none; }
 .nav-menu-4 .nav-link { align-self: center; }
 .hero-title { margin: 0; }
