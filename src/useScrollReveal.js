@@ -12,7 +12,7 @@ export function useScrollReveal(page) {
     const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
     if (motion.matches || !('IntersectionObserver' in window)) return;
 
-    const elements = [...document.querySelectorAll(`${targets[page]}, .footer .div-block-9`)];
+    const elements = [...document.querySelectorAll(targets[page])];
     // Avoid animating both a group and its descendants.
     const groups = elements.filter(element => !elements.some(parent => parent !== element && parent.contains(element)));
     const finish = element => element.classList.remove('reveal-pending', 'reveal-running');

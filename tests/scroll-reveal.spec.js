@@ -27,3 +27,10 @@ test('reduced motion leaves content visible across page navigation', async ({ pa
     await expect(page.locator('.reveal-pending, .reveal-running')).toHaveCount(0);
   }
 });
+
+for (const path of ['/', '/about', '/resume']) {
+  test(`${path} does not animate the footer`, async ({ page }) => {
+    await page.goto(path);
+    await expect(page.locator('.footer .div-block-9')).not.toHaveClass(/reveal-/);
+  });
+}
