@@ -88,6 +88,55 @@ a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible { outline: 3
 .page-loading, .not-found { min-height: 65vh; padding: 100px 24px; text-align: center; font-family: Inter, sans-serif; }
 .footer a:hover { opacity: .75; }
 
+/* Webflow used page interactions to reveal these stacked screenshots. Recreate
+   the two galleries locally so every iteration is visible in turn. */
+.swapping-media > .media-1,
+.swapping-media > .media-2,
+.swapping-media > .media-3,
+.swapping-media > .media-4 {
+  display: block !important;
+  inset: 0;
+  width: 100%;
+  opacity: 0;
+  animation: revvity-swap-four 6s step-end infinite;
+}
+.swapping-media > .media-1 { animation-delay: 0s; }
+.swapping-media > .media-2 { animation-delay: -4.5s; }
+.swapping-media > .media-3 { animation-delay: -3s; }
+.swapping-media > .media-4 { animation-delay: -1.5s; }
+
+.swapping-media-8 > [class^="media-"] {
+  display: block !important;
+  inset: 0;
+  width: 100%;
+  opacity: 0;
+  animation: revvity-swap-eight 12s step-end infinite;
+}
+.swapping-media-8 > .media-1-8 { animation-delay: 0s; }
+.swapping-media-8 > .media-2-8 { animation-delay: -10.5s; }
+.swapping-media-8 > .media-3-8 { animation-delay: -9s; }
+.swapping-media-8 > .media-4-8 { animation-delay: -7.5s; }
+.swapping-media-8 > .media-5-8 { animation-delay: -6s; }
+.swapping-media-8 > .media-6-8 { animation-delay: -4.5s; }
+.swapping-media-8 > .media-7-8 { animation-delay: -3s; }
+.swapping-media-8 > .media-8-8 { animation-delay: -1.5s; }
+
+@keyframes revvity-swap-four {
+  0%, 24.99% { opacity: 1; }
+  25%, 100% { opacity: 0; }
+}
+@keyframes revvity-swap-eight {
+  0%, 12.49% { opacity: 1; }
+  12.5%, 100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .swapping-media > [class^="media-"],
+  .swapping-media-8 > [class^="media-"] { opacity: 0; }
+  .swapping-media > .media-1,
+  .swapping-media-8 > .media-1-8 { opacity: 1; }
+}
+
 /* The Webflow gallery is a seamless, two-copy marquee. Keeping the viewport
    separate from the moving track prevents the artwork from widening the page. */
 .crochet-viewport { position: relative; overflow: hidden; width: 100%; touch-action: pan-y; }

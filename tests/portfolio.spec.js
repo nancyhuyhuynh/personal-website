@@ -121,3 +121,28 @@ test('case study videos autoplay, loop, and hide native controls', async ({ page
     await expect.poll(() => video.evaluate(element => !element.paused)).toBe(true);
   }
 });
+
+test('Revvity screenshot galleries cycle through every Webflow media state', async ({ page }) => {
+  await page.goto('/projects/revvity');
+
+  const iterationFrames = page.locator('.swapping-media > [class^="media-"]');
+  const modalFrames = page.locator('.swapping-media-8 > [class^="media-"]');
+  await expect(iterationFrames).toHaveCount(12);
+  await expect(modalFrames).toHaveCount(8);
+
+  for (const frame of await iterationFrames.all()) {
+    await expect(frame).toHaveCSS('display', 'block');
+    await expect(frame).toHaveCSS('animation-name', 'revvity-swap-four');
+    await expect(frame).toHaveCSS('animation-duration', '6s');
+  }
+  for (const frame of await modalFrames.all()) {
+    await expect(frame).toHaveCSS('display', 'block');
+    await expect(frame).toHaveCSS('animation-name', 'revvity-swap-eight');
+    await expect(frame).toHaveCSS('animation-duration', '12s');
+  }
+
+  await expect(page.locator('.swapping-media').first().locator('.media-1')).toHaveCSS('animation-delay', '0s');
+  await expect(page.locator('.swapping-media').first().locator('.media-4')).toHaveCSS('animation-delay', '-1.5s');
+  await expect(page.locator('.swapping-media-8 > .media-1-8')).toHaveCSS('animation-delay', '0s');
+  await expect(page.locator('.swapping-media-8 > .media-8-8')).toHaveCSS('animation-delay', '-1.5s');
+});
