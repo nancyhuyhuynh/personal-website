@@ -1,7 +1,31 @@
+import { useColouredBackground } from '../useColouredBackground';
+import { useScrollReveal } from '../useScrollReveal';
 import { withBase } from '../urls';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function About() {
+  useScrollReveal('about');
+  useColouredBackground();
+  const [portrait, setPortrait] = useState(1);
+
+  useEffect(() => {
+    const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let timer;
+    function updatePlayback() {
+      clearInterval(timer);
+      if (motion.matches) {
+        setPortrait(1);
+      } else {
+        timer = setInterval(() => setPortrait(current => current % 5 + 1), 1500);
+      }
+    }
+    updatePlayback();
+    motion.addEventListener('change', updatePlayback);
+    return () => {
+      clearInterval(timer);
+      motion.removeEventListener('change', updatePlayback);
+    };
+  }, []);
   return (
     <>
       <div className="w-layout-blockcontainer container w-container">
@@ -9,11 +33,11 @@ export default function About() {
           <div className="w-layout-vflex about-page-container">
             <div className="w-layout-grid grid-6">
               <div id="w-node-c29c00f2-6fa4-eb42-adb8-72be8e2a611e-79f132b3" className="character-block">
-                <img src={withBase('/assets/68ed96410c43950e8c538fd0_portrait5.png')} loading="lazy" alt="" className="image-69" style={{"display": "none"}} />
-                <img src={withBase('/assets/68ed9641d9cf65d22b19830f_portrait4.png')} loading="lazy" alt="" className="image-68" style={{"display": "none"}} />
-                <img src={withBase('/assets/68ed9641a2ad67efe12b27dc_portrait2.png')} loading="lazy" alt="" className="image-66" style={{"display": "none"}} />
-                <img src={withBase('/assets/68ed96412ccf2747295eb007_portrait3.png')} loading="lazy" alt="" className="image-67" style={{"display": "none"}} />
-                <img src={withBase('/assets/68ed96419cc3f5bcb2aac251_portrait1.png')} loading="lazy" alt="" className="image-70" style={{"display": "block"}} />
+                <img src={withBase('/assets/68ed96410c43950e8c538fd0_portrait5.png')} loading="eager" alt="" className="image-69" style={{ display: portrait === 5 ? 'block' : 'none' }} />
+                <img src={withBase('/assets/68ed9641d9cf65d22b19830f_portrait4.png')} loading="eager" alt="" className="image-68" style={{ display: portrait === 4 ? 'block' : 'none' }} />
+                <img src={withBase('/assets/68ed9641a2ad67efe12b27dc_portrait2.png')} loading="eager" alt="" className="image-66" style={{ display: portrait === 2 ? 'block' : 'none' }} />
+                <img src={withBase('/assets/68ed96412ccf2747295eb007_portrait3.png')} loading="eager" alt="" className="image-67" style={{ display: portrait === 3 ? 'block' : 'none' }} />
+                <img src={withBase('/assets/68ed96419cc3f5bcb2aac251_portrait1.png')} loading="eager" alt="" className="image-70" style={{ display: portrait === 1 ? 'block' : 'none' }} />
                 <img src={withBase('/assets/67f477ec9939effcfddd12e6_Property-1-Variant6.png')} loading="lazy" alt="" />
               </div>
               <div className="w-layout-vflex flex-block-38">

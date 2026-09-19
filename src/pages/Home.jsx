@@ -1,3 +1,4 @@
+import { useScrollReveal } from '../useScrollReveal';
 import { withBase } from '../urls';
 import React, { useState } from 'react';
 
@@ -7,6 +8,7 @@ import { projects, stickers, heroIcons } from '../content';
 let hasDraggedCharacter = false;
 
 export default function Home() {
+  useScrollReveal('home');
   const [showDragHint, setShowDragHint] = useState(!hasDraggedCharacter);
   function dismissDragHint() {
     hasDraggedCharacter = true;

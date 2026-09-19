@@ -1,6 +1,10 @@
+import { useColouredBackground } from '../useColouredBackground';
+import { useScrollReveal } from '../useScrollReveal';
 import React from 'react';
 
 export default function Resume() {
+  useScrollReveal('resume');
+  useColouredBackground();
   return (
     <>
       <div className="w-layout-blockcontainer container w-container">
