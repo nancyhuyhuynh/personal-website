@@ -80,6 +80,8 @@ test('menu hides on downward scroll and returns on upward scroll or keyboard foc
   await page.goto('/');
   const menu = page.locator('header.navbar-2');
   await expect(menu).toHaveCSS('opacity', '1');
+  await menu.getByRole('link', { name: 'Home', exact: true }).click();
+  await expect(menu.getByRole('link', { name: 'Home', exact: true })).toBeFocused();
   await page.evaluate(() => window.scrollTo({ top: 500, behavior: 'instant' }));
   await expect(menu).toHaveCSS('opacity', '0');
   await expect(menu).not.toBeInViewport();
