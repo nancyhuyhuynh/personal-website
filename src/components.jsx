@@ -71,14 +71,14 @@ export function Footer() {
   </footer>;
 }
 
-export function DraggableSticker({ sticker, index, showDragHint, onDragged }) {
+export function DraggableSticker({ sticker, index }) {
   const [coloured, setColoured] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [dragging, setDragging] = useState(false);
   const [cursor, setCursor] = useState(null);
   const origin = useRef(null);
   function trackCursor(event) {
-    if (showDragHint && event.pointerType === 'mouse') setCursor({ x: event.clientX, y: event.clientY });
+    if (event.pointerType === 'mouse') setCursor({ x: event.clientX, y: event.clientY });
   }
   useEffect(() => {
     const hideCursor = () => setCursor(null);
@@ -96,7 +96,7 @@ export function DraggableSticker({ sticker, index, showDragHint, onDragged }) {
     if (event.type === 'pointercancel' || !event.currentTarget.matches(':hover')) setCursor(null);
   }
   return <><button
-    className={`${sticker.className} sticker-button${dragging ? ' is-dragging' : ''}${coloured ? ' is-coloured' : ''}${cursor && showDragHint ? ' has-drag-cursor' : ''}`}
+    className={`${sticker.className} sticker-button${dragging ? ' is-dragging' : ''}${coloured ? ' is-coloured' : ''}${cursor ? ' has-drag-cursor' : ''}`}
     onPointerEnter={event => { setColoured(true); trackCursor(event); }}
     onPointerLeave={() => { if (!origin.current) setCursor(null); }}
     onFocus={() => setColoured(true)}
@@ -105,7 +105,7 @@ export function DraggableSticker({ sticker, index, showDragHint, onDragged }) {
     onPointerDown={event => {
       if (event.button !== 0) return;
       setColoured(true);
-      origin.current = { x: event.clientX - position.x, y: event.clientY - position.y, startX: event.clientX, startY: event.clientY };
+      origin.current = { x: event.clientX - position.x, y: event.clientY - position.y };
       event.currentTarget.setPointerCapture(event.pointerId);
       setDragging(true);
     }}
@@ -113,7 +113,6 @@ export function DraggableSticker({ sticker, index, showDragHint, onDragged }) {
       trackCursor(event);
       if (origin.current) {
         setPosition({ x: event.clientX - origin.current.x, y: event.clientY - origin.current.y });
-        if (showDragHint && Math.hypot(event.clientX - origin.current.startX, event.clientY - origin.current.startY) >= 4) onDragged();
       }
     }}
     onPointerUp={finish}
@@ -133,7 +132,7 @@ export function DraggableSticker({ sticker, index, showDragHint, onDragged }) {
     <img className="bottom-character-image" src={sticker.bottom} alt="" draggable="false" />
     <img className="empty-character" src={sticker.spacer} alt="" draggable="false" />
   </button>
-    {showDragHint && cursor && !dragging && createPortal(<div className="drag-cursor" aria-hidden="true" style={{ left: cursor.x, top: cursor.y }}>
+    {cursor && !dragging && createPortal(<div className="drag-cursor" aria-hidden="true" style={{ left: cursor.x, top: cursor.y }}>
       <span className="drag-cursor-bubble">Drag me</span>
     </div>, document.body)}
   </>;

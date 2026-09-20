@@ -105,6 +105,7 @@ test('characters drag and project artwork changes on hover', async ({ page, isMo
   await page.mouse.move(bounds.x + bounds.width / 2 + 80, bounds.y + bounds.height / 2 - 40, { steps: 8 });
   await page.mouse.up();
   await expect(sticker).toHaveCSS('transform', 'matrix(1, 0, 0, 1, 80, -40)');
+  await expect(page.locator('.drag-cursor-bubble', { hasText: 'Drag me' })).toBeVisible();
   const cover = page.getByRole('link', { name: 'Explore Revvity Health Science' });
   await cover.hover();
   await expect(cover.locator('.top-card-image')).toHaveCSS('opacity', '0');
