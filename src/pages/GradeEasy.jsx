@@ -1,11 +1,22 @@
 import { withBase } from '../urls';
 import { useScrollReveal } from '../useScrollReveal';
 import React from 'react';
+import { CaseStudyNav } from '../components';
+
+const sections = [
+  { id: 'overview', label: 'Overview', heading: 'Overview' },
+  { id: 'problem', label: 'Problem', heading: 'Problem' },
+  { id: 'research', label: 'Research', heading: 'Research' },
+  { id: 'design', label: 'Design', heading: 'Design' },
+  { id: 'results', label: 'Results', heading: 'Results' },
+  { id: 'reflection', label: 'Reflection', heading: 'Reflection' },
+];
 
 export default function GradeEasy() {
   useScrollReveal('caseStudy');
   return (
     <>
+      <CaseStudyNav title="GradeEasy" sections={sections} />
       <section className="banner-image">
         <div className="cover-image">
           <img src={withBase('/assets/66eaefeeca36a36d0b34bab3_Frame-2--1-.png')} alt="" loading="lazy" />

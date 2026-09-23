@@ -1,11 +1,23 @@
 import { withBase } from '../urls';
 import { useScrollReveal } from '../useScrollReveal';
 import React from 'react';
+import { CaseStudyNav } from '../components';
+
+const sections = [
+  { id: 'overview', label: 'Overview', heading: 'Overview' },
+  { id: 'background', label: 'Background', heading: 'Background' },
+  { id: 'goal', label: 'Goal', heading: 'Understanding the Goal' },
+  { id: 'research', label: 'Research', heading: 'Research' },
+  { id: 'design', label: 'Design', heading: 'Design' },
+  { id: 'results', label: 'Results', heading: 'Results' },
+  { id: 'reflection', label: 'Reflection', heading: 'Reflection' },
+];
 
 export default function RadiCalgary() {
   useScrollReveal('caseStudy');
   return (
     <>
+      <CaseStudyNav title="RadiCalgary" sections={sections} />
       <section className="banner-image">
         <div className="cover-image">
           <img src={withBase('/assets/66cd0e30f183c84089f05c8f_Frame-134.png')} loading="lazy" alt="" />

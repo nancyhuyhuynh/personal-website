@@ -1,11 +1,22 @@
 import { withBase } from '../urls';
 import { useScrollReveal } from '../useScrollReveal';
 import React from 'react';
+import { CaseStudyNav } from '../components';
+
+const sections = [
+  { id: 'overview', label: 'Overview', heading: 'Overview' },
+  { id: 'background', label: 'Background', heading: 'Background' },
+  { id: 'research', label: 'Research', heading: 'Research' },
+  { id: 'design', label: 'Design', heading: 'Design' },
+  { id: 'results', label: 'Results', heading: 'Results' },
+  { id: 'reflection', label: 'Reflection', heading: 'Reflection' },
+];
 
 export default function Plooto() {
   useScrollReveal('caseStudy');
   return (
     <>
+      <CaseStudyNav title="Plooto" sections={sections} />
       <section className="banner-image">
         <div className="cover-image">
           <img src={withBase('/assets/66cfc073db678868a950a24f_Frame-12121--1-.png')} loading="lazy" alt="" />

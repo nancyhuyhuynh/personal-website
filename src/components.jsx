@@ -71,6 +71,53 @@ export function Footer() {
   </footer>;
 }
 
+export function CaseStudyNav({ title, sections }) {
+  const [activeId, setActiveId] = useState(sections[0]?.id);
+
+  useEffect(() => {
+    const headings = [...document.querySelectorAll('.case-study-body .heading-5, .case-study-body .heading-6')];
+    const targets = sections.map(section => {
+      const heading = headings.find(node => node.textContent.trim() === section.heading);
+      const target = document.getElementById(section.id) || heading?.closest('.cs-container') || heading?.parentElement;
+      if (target) target.id = section.id;
+      return target;
+    }).filter(Boolean);
+
+    function updateActiveSection() {
+      const marker = Math.min(window.innerHeight * .35, 280);
+      let current = targets[0];
+      for (const target of targets) {
+        if (target.getBoundingClientRect().top <= marker) current = target;
+      }
+      if (current) setActiveId(current.id);
+    }
+
+    updateActiveSection();
+    window.addEventListener('scroll', updateActiveSection, { passive: true });
+    window.addEventListener('resize', updateActiveSection);
+    return () => {
+      window.removeEventListener('scroll', updateActiveSection);
+      window.removeEventListener('resize', updateActiveSection);
+    };
+  }, [sections]);
+
+  return <nav className="case-study-nav" aria-label="Case study sections">
+    <div className="case-study-nav-label">{title}</div>
+    <ol>
+      {sections.map(section => <li key={section.id}>
+        <a
+          href={`#${section.id}`}
+          className={activeId === section.id ? 'is-active' : ''}
+          aria-current={activeId === section.id ? 'location' : undefined}
+        >
+          <span className="case-study-nav-dot" aria-hidden="true" />
+          <span>{section.label}</span>
+        </a>
+      </li>)}
+    </ol>
+  </nav>;
+}
+
 export function DraggableSticker({ sticker, index }) {
   const [coloured, setColoured] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });

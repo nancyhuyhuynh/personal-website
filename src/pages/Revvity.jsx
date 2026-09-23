@@ -1,11 +1,22 @@
 import { withBase } from '../urls';
 import { useScrollReveal } from '../useScrollReveal';
 import React from 'react';
+import { CaseStudyNav } from '../components';
+
+const sections = [
+  { id: 'overview', label: 'Overview', heading: 'Overview' },
+  { id: 'problem', label: 'Problem', heading: 'Problem' },
+  { id: 'research', label: 'Research', heading: 'Research' },
+  { id: 'design', label: 'Design', heading: 'Design' },
+  { id: 'results', label: 'Results', heading: 'Results' },
+  { id: 'reflection', label: 'Reflection', heading: 'Reflection' },
+];
 
 export default function Revvity() {
   useScrollReveal('caseStudy');
   return (
     <>
+      <CaseStudyNav title="Revvity" sections={sections} />
       <section className="banner-image">
         <div className="cover-image">
           <img src={withBase('/assets/681161c0113bd8e49fa46edd_Banner--1-.png')} loading="lazy" alt="" />
