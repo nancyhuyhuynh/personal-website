@@ -71,6 +71,12 @@ a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible { outline: 3
 .link-block-5:hover .button-arrow { transform: translateX(3px); }
 .black-button-arrow { transition: background-color .2s ease, transform .2s ease; }
 .link-block-5:hover .black-button-arrow { background: #393939; transform: translateY(-2px); }
+.link-block-4 .white-button { background: #fff; transition: background-color .2s ease, transform .2s ease; }
+.link-block-4 .body2,
+.link-block-4 .text-brand-icon,
+.link-block-4 .text-icon { color: #242424; }
+.link-block-4:hover .white-button,
+.link-block-4:focus-visible .white-button { background: #e2e2e2; transform: translateY(-2px); }
 .top-card-image, .bottom-card-image { transition: opacity .35s ease, transform .35s ease; }
 .recent-fav-image .top-card-image,
 .recent-fav-image .bottom-card-image { transform: scale(1); transition: opacity .5s ease, transform .25s ease; }
