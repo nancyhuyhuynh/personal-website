@@ -16,6 +16,7 @@ const routes = {
   '/projects/gradeeasy': { title: 'GradeEasy', Component: lazy(() => import('./pages/GradeEasy')) },
   '/projects/plooto': { title: 'Plooto', Component: lazy(() => import('./pages/Plooto')) },
   '/projects/radicalgary': { title: 'RadiCalgary', Component: lazy(() => import('./pages/RadiCalgary')) },
+  '/projects/lyft': { title: 'Lyft', Component: lazy(() => import('./pages/Lyft')) },
 };
 
 function currentLocation() {

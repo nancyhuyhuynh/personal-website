@@ -1,4 +1,5 @@
 import { withBase } from './urls';
+import LyftProjectCover from './LyftProjectCover';
 import React from 'react';
 import { createPortal } from 'react-dom';
 
@@ -186,6 +187,7 @@ export function DraggableSticker({ sticker, index }) {
 }
 
 export function ProjectCard({ project }) {
+  const isLyft = project.id === 'lyft';
   const [cursor, setCursor] = useState(null);
   function trackCursor(event) {
     if (event.pointerType === 'mouse') setCursor({ x: event.clientX, y: event.clientY });
@@ -211,20 +213,22 @@ export function ProjectCard({ project }) {
         <p className="body-1 project-description">{project.description}</p>
       </div>
       <a href={withBase(`/projects/${project.id}`)} className="link-block-5 w-inline-block" aria-label={`Read the ${project.company} case study`}>
-        <div className="w-layout-hflex black-button-arrow"><span className="body-1 white">Read the Case Study</span><img className="button-arrow" src={withBase('/assets/67d75631937bee50f3e4c1a8_Icons.png')} alt="" /></div>
+        <div className="w-layout-hflex black-button-arrow"><span className="body-1 white">Read the Case Study</span><img className="button-arrow" src={isLyft ? withBase('/assets/lyft-card-arrow.svg') : withBase('/assets/67d75631937bee50f3e4c1a8_Icons.png')} alt="" /></div>
       </a>
     </div>
     <a href={withBase(`/projects/${project.id}`)} className="cs-cover-link w-inline-block" aria-label={`Explore ${project.company}`}>
-      <div className={`div-card-image${cursor ? ' has-read-cursor' : ''}`}
+      <div className={`div-card-image${isLyft ? ' lyft-project-cover' : ''}${cursor ? ' has-read-cursor' : ''}`}
         onPointerEnter={trackCursor}
         onPointerMove={trackCursor}
         onPointerLeave={() => setCursor(null)}
         onPointerCancel={() => setCursor(null)}
         onPointerDown={() => setCursor(null)}
       >
-        <img className="top-card-image" src={project.top} alt={`${project.company} project preview`} loading="lazy" />
-        <img className="bottom-card-image" src={project.bottom} alt="" loading="lazy" />
-        <img src={project.spacer} alt="" loading="lazy" />
+        {isLyft ? <LyftProjectCover /> : <>
+          <img className="top-card-image" src={project.top} alt={`${project.company} project preview`} loading="lazy" />
+          <img className="bottom-card-image" src={project.bottom} alt="" loading="lazy" />
+          <img src={project.spacer} alt="" loading="lazy" />
+        </>}
       </div>
     </a>
     {cursor && createPortal(<div className="drag-cursor" aria-hidden="true" style={{ left: cursor.x, top: cursor.y }}>

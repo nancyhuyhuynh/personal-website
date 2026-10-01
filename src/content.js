@@ -2,6 +2,18 @@ import { withBase } from './urls';
 
 export const projects = [
   {
+    "id": "lyft",
+    "company": "Lyft",
+    "logo": withBase("/assets/lyft-card-logo.svg"),
+    "title": "Rider Badges Refresh",
+    "tags": [
+      "Internship",
+      "Mobile Design",
+      "Animation"
+    ],
+    "description": "Redesigning Lyft’s rider badges to celebrate achievements and encourage engagement."
+  },
+  {
     "id": "revvity",
     "company": "Revvity Health Science",
     "logo": withBase("/assets/6811631d9ad8ff3b9c7105e3_Vector.png"),

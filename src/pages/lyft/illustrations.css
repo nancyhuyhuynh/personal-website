@@ -1,0 +1,223 @@
+/* Local CSS for the layered Figma illustrations. The surrounding page uses Lyft.css. */
+.lyft-layered-art p { margin: 0; font: inherit; }
+.lyft-layered-art .lyft-badgecollection-0 { display:contents; position:relative; width:100%;height:100%; }
+.lyft-layered-art .lyft-badgecollection-1 { position:absolute; display:flex; height:197.952px; align-items:center; justify-content:center; left:0; top:40.45px; width:186.277px; }
+.lyft-layered-art .lyft-badgecollection-2 { rotate:-15deg; flex:none; }
+.lyft-layered-art .lyft-badgecollection-3 { background:var(--color-1,white); align-content:stretch; filter:drop-shadow(0px 0px 0.5px rgba(0,0,0,0.12)) drop-shadow(0px 6px 5px rgba(0,0,0,0.16)); display:flex; flex-direction:column; height:165.117px; align-items:center; justify-content:center; position:relative; border-radius:20px; width:148.605px; }
+.lyft-layered-art .lyft-badgecollection-4 { align-content:stretch; display:flex; gap:10px; align-items:center; justify-content:center; padding-left:14px;padding-right:14px; padding-block:1px; position:relative; flex-shrink:0; }
+.lyft-layered-art .lyft-badgecollection-5 { height:120px; position:relative; flex-shrink:0; width:110.419px; }
+.lyft-layered-art .lyft-badgecollection-6 { position:absolute; display:contents; inset:0 0 9.42% 0; }
+.lyft-layered-art .lyft-badgecollection-7 { position:absolute; inset:0 0 9.42% 0; }
+.lyft-layered-art .lyft-badgecollection-8 { position:absolute; display:block; inset:0; max-width:none; width:100%;height:100%; }
+.lyft-layered-art .lyft-badgecollection-9 { position:absolute; inset:96.62% 11.25% 0 11.25%; }
+.lyft-layered-art .lyft-badgecollection-10 { position:absolute; display:contents; inset:19.17% 23.5% 24.95% 23.58%; }
+.lyft-layered-art .lyft-badgecollection-11 { position:absolute; display:contents; inset:19.17% 27.65% 24.95% 27.73%; }
+.lyft-layered-art .lyft-badgecollection-12 { position:absolute; inset:19.17% 27.65% 24.95% 27.73%; }
+.lyft-layered-art .lyft-badgecollection-13 { position:absolute; inset:48.69% 23.5% 36.13% 23.58%; }
+.lyft-layered-art .lyft-badgecollection-14 { overflow-wrap:break-word; display:flex; flex-direction:column; font-family:"Inter",sans-serif; font-weight:600; justify-content:center; line-height:0; font-style:normal; position:relative; flex-shrink:0; font-size:16px; color:var(--color-14,#1d0c17); text-align:center; white-space:nowrap; }
+.lyft-layered-art .lyft-badgecollection-15 { line-height:normal; }
+.lyft-layered-art .lyft-badgecollection-16 { position:absolute; display:flex; height:197.952px; align-items:center; justify-content:center; left:813.72px; top:40.6px; width:186.277px; }
+.lyft-layered-art .lyft-badgecollection-17 { flex:none; rotate:15deg; }
+.lyft-layered-art .lyft-badgecollection-18 { height:120px; position:relative; flex-shrink:0; width:102.396px; }
+.lyft-layered-art .lyft-badgecollection-19 { position:absolute; display:contents; inset:0 0 10.05% 0; }
+.lyft-layered-art .lyft-badgecollection-20 { position:absolute; display:flex; inset:0 0 10.05% 0; align-items:center; justify-content:center; }
+.lyft-layered-art .lyft-badgecollection-21 { flex:none; height:100cqh; rotate:180deg; width:100cqw; }
+.lyft-layered-art .lyft-badgecollection-22 { position:relative; width:100%;height:100%; }
+.lyft-layered-art .lyft-badgecollection-23 { position:absolute; inset:0 0 10.05% 0; }
+.lyft-layered-art .lyft-badgecollection-24 { position:absolute; inset:34.76% 37.84% 28.7% 19.33%; }
+.lyft-layered-art .lyft-badgecollection-25 { position:absolute; inset:12.84% 15.22% 50.24% 41.51%; }
+.lyft-layered-art .lyft-badgecollection-26 { position:absolute; bottom:25%; display:contents; left:14.41%; right:35.53%; top:32.29%; }
+.lyft-layered-art .lyft-badgecollection-27 { position:absolute; display:flex; inset:34.83% 38.5% 27.56% 17.41%; align-items:center; justify-content:center; }
+.lyft-layered-art .lyft-badgecollection-28 { flex:none; height:hypot(-28.6764cqw,71.3236cqh); rotate:21.9deg; transform:skewX(-0.01deg); width:hypot(71.3236cqw,28.6764cqh); }
+.lyft-layered-art .lyft-badgecollection-29 { position:absolute; bottom:25%; display:flex; align-items:center; justify-content:center; left:14.41%; right:35.53%; top:32.29%; }
+.lyft-layered-art .lyft-badgecollection-30 { flex:none; height:hypot(97.3403cqw,2.65979cqh); rotate:-88.43deg; width:hypot(2.65968cqw,-97.3402cqh); }
+.lyft-layered-art .lyft-badgecollection-31 { position:absolute; display:contents; inset:9.26% 10.98% 48.03% 38.95%; }
+.lyft-layered-art .lyft-badgecollection-32 { position:absolute; display:flex; inset:11.81% 13.96% 50.58% 41.95%; align-items:center; justify-content:center; }
+.lyft-layered-art .lyft-badgecollection-33 { position:absolute; display:flex; inset:9.26% 10.98% 48.03% 38.95%; align-items:center; justify-content:center; }
+.lyft-layered-art .lyft-badgecollection-34 { position:absolute; inset:96.69% 3.79% 0 4.39%; }
+.lyft-layered-art .lyft-badgecollection-35 { position:absolute; display:flex; height:188.413px; align-items:center; justify-content:center; left:139.52px; top:14.04px; width:175.02px; }
+.lyft-layered-art .lyft-badgecollection-36 { rotate:-10deg; flex:none; }
+.lyft-layered-art .lyft-badgecollection-37 { align-content:stretch; display:flex; flex-direction:column; align-items:center; justify-content:center; position:relative; flex-shrink:0; }
+.lyft-layered-art .lyft-badgecollection-38 { height:120px; position:relative; flex-shrink:0; width:108.167px; }
+.lyft-layered-art .lyft-badgecollection-39 { position:absolute; display:contents; inset:0 0 7.98% 0; }
+.lyft-layered-art .lyft-badgecollection-40 { position:absolute; inset:0 0 7.98% 0; }
+.lyft-layered-art .lyft-badgecollection-41 { position:absolute; display:contents; inset:17.28% 22.28% 31.92% 21.88%; }
+.lyft-layered-art .lyft-badgecollection-42 { position:absolute; inset:17.28% 22.28% 31.92% 21.88%; }
+.lyft-layered-art .lyft-badgecollection-43 { position:absolute; inset:28.94% 35% 43.69% 34.49%; }
+.lyft-layered-art .lyft-badgecollection-44 { position:absolute; inset:32.57% 38.98% 47.32% 38.47%; }
+.lyft-layered-art .lyft-badgecollection-45 { position:absolute; inset:96.62% 5.55% 0 5.55%; }
+.lyft-layered-art .lyft-badgecollection-46 { position:absolute; display:flex; height:177.44px; align-items:center; justify-content:center; left:279.87px; top:0; width:162.431px; }
+.lyft-layered-art .lyft-badgecollection-47 { rotate:-5deg; flex:none; }
+.lyft-layered-art .lyft-badgecollection-48 { height:120px; position:relative; flex-shrink:0; width:107.929px; }
+.lyft-layered-art .lyft-badgecollection-49 { position:absolute; inset:96.69% 6.46% 0 6.46%; }
+.lyft-layered-art .lyft-badgecollection-50 { position:absolute; inset:29.14% 17.05% 24.96% 17.05%; }
+.lyft-layered-art .lyft-badgecollection-51 { position:absolute; display:flex; height:188.413px; align-items:center; justify-content:center; left:686.06px; top:14.04px; width:175.02px; }
+.lyft-layered-art .lyft-badgecollection-52 { flex:none; rotate:10deg; }
+.lyft-layered-art .lyft-badgecollection-53 { height:120px; position:relative; flex-shrink:0; width:107.941px; }
+.lyft-layered-art .lyft-badgecollection-54 { position:absolute; inset:96.69% 4.58% 0 8.33%; }
+.lyft-layered-art .lyft-badgecollection-55 { position:absolute; display:contents; inset:21.87% 16.27% 26.36% 18.57%; }
+.lyft-layered-art .lyft-badgecollection-56 { position:absolute; inset:21.87% 22.41% 44.45% 32.75%; }
+.lyft-layered-art .lyft-badgecollection-57 { position:absolute; inset:24.51% 25.11% 50.29% 34.25%; }
+.lyft-layered-art .lyft-badgecollection-58 { position:absolute; display:contents; inset:54.12% 16.27% 26.36% 18.57%; }
+.lyft-layered-art .lyft-badgecollection-59 { position:absolute; inset:54.12% 23.54% 27.3% 18.57%; }
+.lyft-layered-art .lyft-badgecollection-60 { position:absolute; inset:54.12% 16.27% 26.36% 18.57%; }
+.lyft-layered-art .lyft-badgecollection-61 { position:absolute; display:flex; height:177.44px; align-items:center; justify-content:center; left:557.89px; top:0; width:162.431px; }
+.lyft-layered-art .lyft-badgecollection-62 { flex:none; rotate:5deg; }
+.lyft-layered-art .lyft-badgecollection-63 { height:120px; position:relative; flex-shrink:0; width:104.735px; }
+.lyft-layered-art .lyft-badgecollection-64 { position:absolute; inset:19.38% 14.08% 27.08% 13.19%; }
+.lyft-layered-art .lyft-badgecollection-65 { position:absolute; inset:96.62% 4.09% 0 4.09%; }
+.lyft-layered-art .lyft-badgecollection-66 { position:absolute; background:var(--color-1,white); align-content:stretch; filter:drop-shadow(0px 0px 0.5px rgba(0,0,0,0.12)) drop-shadow(0px 6px 5px rgba(0,0,0,0.16)); display:flex; flex-direction:column; gap:8px; height:165.117px; align-items:center; justify-content:center; left:425.75px; border-radius:20px; top:0; width:148.605px; }
+.lyft-layered-art .lyft-badgecollection-67 { align-content:stretch; display:flex; flex-direction:column; align-items:center; position:relative; flex-shrink:0; }
+.lyft-layered-art .lyft-badgecollection-68 { height:112px; position:relative; flex-shrink:0; width:123.349px; }
+.lyft-layered-art .lyft-badgeexplorations-0 { align-content:stretch; display:flex; flex-direction:column; gap:40px; align-items:flex-start; justify-content:center; position:relative; flex-shrink:0; }
+.lyft-layered-art .lyft-badgeexplorations-1 { align-content:stretch; display:flex; flex-direction:column; gap:20px; align-items:center; justify-content:center; position:relative; flex-shrink:0; }
+.lyft-layered-art .lyft-badgeexplorations-2 { background:#f5f5f5; align-content:stretch; filter:drop-shadow(0px 2px 2.5px rgba(0,0,0,0.05)); display:flex; gap:20px; align-items:center; justify-content:center; padding:40px; position:relative; border-radius:12px; flex-shrink:0; width:480px; }
+.lyft-layered-art .lyft-badgeexplorations-3 { display:flex; flex:1 0 0; flex-direction:row; align-items:center; align-self:stretch; }
+.lyft-layered-art .lyft-badgeexplorations-4 { background:var(--color-1,white); align-content:stretch; filter:drop-shadow(0px 0px 0.5px rgba(0,0,0,0.12)) drop-shadow(0px 6px 5px rgba(0,0,0,0.16)); display:flex; flex:1 0 0; flex-direction:column; gap:20px; height:100%; align-items:center; justify-content:center; min-width:1px; padding:20px; position:relative; border-radius:8px; }
+.lyft-layered-art .lyft-badgeexplorations-5 { grid-template-rows:max-content; display:inline-grid; line-height:0; place-items:start; position:relative; flex-shrink:0; width:100%; }
+.lyft-layered-art .lyft-badgeexplorations-6 { aspect-ratio:40.25306943167817/40.25047421114516; grid-column:1; display:flex; align-items:center; justify-content:center; margin-left:0; margin-top:6.95px; position:relative; grid-row:1; width:26.84%; }
+.lyft-layered-art .lyft-badgeexplorations-7 { rotate:-10deg; flex:none; height:hypot(14.9901cqw,85.0108cqh); width:hypot(85.0099cqw,-14.9892cqh); }
+.lyft-layered-art .lyft-badgeexplorations-8 { overflow:clip; position:relative; width:100%;height:100%; }
+.lyft-layered-art .lyft-badgeexplorations-9 { translate:0 -50%; position:absolute; aspect-ratio:34.037410736083984/34.745704650878906; display:contents; left:0.83%; right:1.21%; top:50%; }
+.lyft-layered-art .lyft-badgeexplorations-10 { position:absolute; aspect-ratio:34.037410736083984/34.745704650878906; display:contents; left:0.83%; right:1.21%; top:0; }
+.lyft-layered-art .lyft-badgeexplorations-11 { position:absolute; inset:0 1.21% 0 0.83%; }
+.lyft-layered-art .lyft-badgeexplorations-12 { position:absolute; display:block; inset:0; max-width:none; width:100%;height:100%; }
+.lyft-layered-art .lyft-badgeexplorations-13 { overflow-wrap:break-word; position:absolute; font-family:"Inter",sans-serif; line-height:normal; left:6.58px; font-style:normal; font-size:12px; color:var(--color-7,#d9e6ff); top:8.73px; white-space:nowrap; }
+.lyft-layered-art .lyft-badgeexplorations-14 { position:absolute; inset:0 1.3% 0 0.83%; }
+.lyft-layered-art .lyft-badgeexplorations-15 { aspect-ratio:40.25306684285738/40.25047162240077; grid-column:1; display:flex; align-items:center; justify-content:center; margin-left:73.16%; margin-top:6.95px; position:relative; grid-row:1; width:26.84%; }
+.lyft-layered-art .lyft-badgeexplorations-16 { flex:none; height:hypot(-14.9901cqw,85.0108cqh); rotate:10deg; width:hypot(85.0099cqw,14.9892cqh); }
+.lyft-layered-art .lyft-badgeexplorations-17 { position:absolute; aspect-ratio:32.87601089477539/34.74547576904297; display:contents; left:2.5%; right:2.88%; top:0; }
+.lyft-layered-art .lyft-badgeexplorations-18 { position:absolute; display:flex; inset:0 2.89% 0 2.5%; align-items:center; justify-content:center; }
+.lyft-layered-art .lyft-badgeexplorations-19 { flex:none; height:100cqh; rotate:180deg; width:100cqw; }
+.lyft-layered-art .lyft-badgeexplorations-20 { position:relative; width:100%;height:100%; }
+.lyft-layered-art .lyft-badgeexplorations-21 { position:absolute; inset:0 2.89% 0 2.5%; }
+.lyft-layered-art .lyft-badgeexplorations-22 { position:absolute; display:flex; inset:0 2.88% 0 2.5%; align-items:center; justify-content:center; }
+.lyft-layered-art .lyft-badgeexplorations-23 { position:absolute; inset:38.65% 38.69% 20.73% 20.79%; }
+.lyft-layered-art .lyft-badgeexplorations-24 { position:absolute; inset:14.27% 17.28% 44.69% 41.78%; }
+.lyft-layered-art .lyft-badgeexplorations-25 { overflow-wrap:break-word; position:absolute; font-family:"Inter",sans-serif; line-height:normal; left:5.9px; font-style:normal; font-size:12px; color:var(--color-7,#d9e6ff); top:8.42px; white-space:nowrap; }
+.lyft-layered-art .lyft-badgeexplorations-26 { aspect-ratio:37.64319767562051/37.6410967423235; grid-column:1; display:flex; align-items:center; justify-content:center; margin-left:19.11%; margin-top:0; position:relative; grid-row:1; width:25.1%; }
+.lyft-layered-art .lyft-badgeexplorations-27 { rotate:-5deg; flex:none; height:hypot(8.04517cqw,91.9551cqh); width:hypot(91.9548cqw,-8.04487cqh); }
+.lyft-layered-art .lyft-badgeexplorations-28 { position:absolute; display:contents; inset:-0.03% 0.19% -0.03% -0.19%; }
+.lyft-layered-art .lyft-badgeexplorations-29 { position:absolute; inset:-0.04% 0.19% -0.03% -0.19%; }
+.lyft-layered-art .lyft-badgeexplorations-30 { overflow-wrap:break-word; position:absolute; font-family:"Inter",sans-serif; line-height:normal; left:5.32px; font-style:normal; font-size:12px; color:var(--color-6,#ffe1b0); top:11.84px; white-space:nowrap; }
+.lyft-layered-art .lyft-badgeexplorations-31 { aspect-ratio:37.64312855658247/37.64116586426832; grid-column:1; display:flex; align-items:center; justify-content:center; margin-left:55.79%; margin-top:0; position:relative; grid-row:1; width:25.09%; }
+.lyft-layered-art .lyft-badgeexplorations-32 { flex:none; height:hypot(-8.04502cqw,91.955cqh); rotate:5deg; width:hypot(91.955cqw,8.04502cqh); }
+.lyft-layered-art .lyft-badgeexplorations-33 { position:absolute; display:contents; inset:0.78% 0.19% 0.78% -0.19%; }
+.lyft-layered-art .lyft-badgeexplorations-34 { position:absolute; inset:0.78% 0.19% 0.78% -0.19%; }
+.lyft-layered-art .lyft-badgeexplorations-35 { overflow-wrap:break-word; position:absolute; font-family:"Inter",sans-serif; line-height:normal; left:5.82px; font-style:normal; font-size:12px; color:var(--color-5,#daedab); top:10.8px; white-space:nowrap; }
+.lyft-layered-art .lyft-badgeexplorations-36 { aspect-ratio:80/80; grid-column:1; margin-left:38.51%; margin-top:0; overflow:clip; position:relative; grid-row:1; width:23.17%; }
+.lyft-layered-art .lyft-badgeexplorations-37 { translate:0 -50%; position:absolute; aspect-ratio:30.09228515625/34.74514389038086; display:contents; left:6.51%; right:6.89%; top:50%; }
+.lyft-layered-art .lyft-badgeexplorations-38 { position:absolute; inset:0 6.89% 0 6.51%; }
+.lyft-layered-art .lyft-badgeexplorations-39 { overflow-wrap:break-word; position:absolute; font-family:"Inter",sans-serif; line-height:normal; left:5.23px; font-style:normal; font-size:12px; color:var(--color-10,#ffdfc4); top:9.27px; white-space:nowrap; }
+.lyft-layered-art .lyft-badgeexplorations-40 { overflow-wrap:break-word; display:flex; flex-direction:column; font-family:"Inter",sans-serif; font-weight:600; justify-content:center; line-height:0; min-width:100%; font-style:normal; position:relative; flex-shrink:0; font-size:16px; color:var(--color-14,#1d0c17); text-align:center; width:min-content; }
+.lyft-layered-art .lyft-badgeexplorations-41 { line-height:normal; }
+.lyft-layered-art .lyft-badgeexplorations-42 { background:#ffded5; align-content:stretch; display:flex; gap:5px; align-items:center; justify-content:center; padding-left:10px;padding-right:10px; padding-top:5px;padding-bottom:5px; position:relative; border-radius:20px; flex-shrink:0; }
+.lyft-layered-art .lyft-badgeexplorations-43 { overflow-wrap:break-word; font-family:"Inter",sans-serif; font-weight:400; line-height:22px; font-style:normal; position:relative; flex-shrink:0; color:#191919; font-size:16px; text-align:center; white-space:nowrap; }
+.lyft-layered-art .lyft-badgeexplorations-44 { background:var(--color-1,white); align-content:stretch; filter:drop-shadow(0px 0px 0.5px rgba(0,0,0,0.12)) drop-shadow(0px 6px 5px rgba(0,0,0,0.16)); display:flex; flex:1 0 0; flex-direction:column; gap:20px; align-items:center; justify-content:center; min-width:1px; padding:20px; position:relative; border-radius:8px; }
+.lyft-layered-art .lyft-badgeexplorations-45 { grid-column:1; grid-template-rows:max-content; display:inline-grid; margin-left:0; margin-top:0; place-items:start; position:relative; grid-row:1; width:99.7%; }
+.lyft-layered-art .lyft-badgeexplorations-46 { aspect-ratio:36.683904918298595/40.56649533489008; grid-column:1; display:flex; align-items:center; justify-content:center; margin-left:0; margin-top:7.15px; position:relative; grid-row:1; width:24.53%; }
+.lyft-layered-art .lyft-badgeexplorations-47 { rotate:-10deg; flex:none; height:hypot(16.9159cqw,86.7523cqh); width:hypot(83.0841cqw,-13.2477cqh); }
+.lyft-layered-art .lyft-badgeexplorations-48 { aspect-ratio:36.68390116155433/40.56649467248053; grid-column:1; display:flex; align-items:center; justify-content:center; margin-left:75.47%; margin-top:7.14px; position:relative; grid-row:1; width:24.53%; }
+.lyft-layered-art .lyft-badgeexplorations-49 { flex:none; height:hypot(-16.9159cqw,86.7523cqh); rotate:10deg; width:hypot(83.0841cqw,13.2477cqh); }
+.lyft-layered-art .lyft-badgeexplorations-50 { aspect-ratio:33.94550736619772/38.296563153493196; grid-column:1; display:flex; align-items:center; justify-content:center; margin-left:19.71%; margin-top:0; position:relative; grid-row:1; width:22.7%; }
+.lyft-layered-art .lyft-badgeexplorations-51 { rotate:-5deg; flex:none; height:hypot(9.17531cqw,92.9568cqh); width:hypot(90.8247cqw,-7.04317cqh); }
+.lyft-layered-art .lyft-badgeexplorations-52 { aspect-ratio:33.9454826241481/38.296585113836045; grid-column:1; display:flex; align-items:center; justify-content:center; margin-left:57.55%; margin-top:0; position:relative; grid-row:1; width:22.7%; }
+.lyft-layered-art .lyft-badgeexplorations-53 { flex:none; height:hypot(-9.17525cqw,92.9568cqh); rotate:5deg; width:hypot(90.8248cqw,7.04322cqh); }
+.lyft-layered-art .lyft-badgeexplorations-54 { aspect-ratio:212.17999267578125/245; grid-column:1; margin-left:39.73%; margin-top:0; position:relative; grid-row:1; width:20.69%; }
+.lyft-layered-art .lyft-badgeexplorations-55 { grid-column:1; grid-template-rows:max-content; display:inline-grid; margin-left:0.3%; margin-top:19.65px; place-items:start; position:relative; grid-row:1; width:99.7%; }
+.lyft-layered-art .lyft-badgeexplorations-56 { aspect-ratio:36.68390300623798/40.56649680246869; grid-column:1; display:flex; align-items:center; justify-content:center; margin-left:0; margin-top:7.15px; position:relative; grid-row:1; width:24.53%; }
+.lyft-layered-art .lyft-badgeexplorations-57 { aspect-ratio:36.68390116155433/40.56649467248053; grid-column:1; display:flex; align-items:center; justify-content:center; margin-left:75.47%; margin-top:7.15px; position:relative; grid-row:1; width:24.53%; }
+.lyft-layered-art .lyft-badgeexplorations-58 { aspect-ratio:33.945457368656434/38.29660333009272; grid-column:1; display:flex; align-items:center; justify-content:center; margin-left:19.71%; margin-top:0; position:relative; grid-row:1; width:22.7%; }
+.lyft-layered-art .lyft-badgeexplorations-59 { rotate:-5deg; flex:none; height:hypot(9.17519cqw,92.9567cqh); width:hypot(90.8248cqw,-7.04326cqh); }
+.lyft-layered-art .lyft-badgeexplorations-60 { aspect-ratio:33.94545947958909/38.29660569066573; grid-column:1; display:flex; align-items:center; justify-content:center; margin-left:57.55%; margin-top:0; position:relative; grid-row:1; width:22.7%; }
+.lyft-layered-art .lyft-badgeexplorations-61 { flex:none; height:hypot(-9.17519cqw,92.9567cqh); rotate:5deg; width:hypot(90.8248cqw,7.04326cqh); }
+.lyft-layered-art .lyft-badgeexplorations-62 { overflow-wrap:break-word; display:flex; flex-direction:column; font-family:"Inter",sans-serif; font-weight:400; justify-content:center; line-height:0; font-style:normal; position:relative; flex-shrink:0; color:#636363; font-size:16px; white-space:nowrap; }
+.lyft-layered-art .lyft-badgeexplorations-63 { line-height:22px; }
+.lyft-layered-art .lyft-badgeexplorations-64 { background:#f5f5f5; align-content:stretch; filter:drop-shadow(0px 2px 2.5px rgba(0,0,0,0.05)); display:flex; align-items:center; justify-content:center; padding:40px; position:relative; border-radius:12px; flex-shrink:0; width:480px; }
+.lyft-layered-art .lyft-badgeexplorations-65 { background:var(--color-1,white); align-content:stretch; filter:drop-shadow(0px 0px 0.5px rgba(0,0,0,0.12)) drop-shadow(0px 6px 5px rgba(0,0,0,0.16)); display:flex; flex-direction:column; gap:20px; height:225px; align-items:center; justify-content:center; padding:20px; position:relative; border-radius:8px; flex-shrink:0; width:190px; }
+.lyft-layered-art .lyft-badgeexplorations-66 { grid-column:1; grid-template-rows:max-content; display:inline-grid; margin-left:9.27%; margin-top:23.18px; place-items:start; position:relative; grid-row:1; width:81.32%; }
+.lyft-layered-art .lyft-badgeexplorations-67 { aspect-ratio:40.228072400911/42.484467735439296; grid-column:1; display:flex; align-items:center; justify-content:center; margin-left:67.02%; margin-top:1.39px; position:relative; grid-row:1; width:32.98%; }
+.lyft-layered-art .lyft-badgeexplorations-68 { flex:none; height:hypot(-16.0105cqw,85.977cqh); rotate:10deg; width:hypot(83.9895cqw,14.023cqh); }
+.lyft-layered-art .lyft-badgeexplorations-69 { position:absolute; inset:0; max-width:none; object-fit:cover; pointer-events:none; width:100%;height:100%; }
+.lyft-layered-art .lyft-badgeexplorations-70 { aspect-ratio:40.01922747382963/42.44764293430427; grid-column:1; display:flex; align-items:center; justify-content:center; margin-left:0; margin-top:1.43px; position:relative; grid-row:1; width:32.81%; }
+.lyft-layered-art .lyft-badgeexplorations-71 { rotate:-10deg; flex:none; height:hypot(16.094cqw,86.0516cqh); width:hypot(83.906cqw,-13.9484cqh); }
+.lyft-layered-art .lyft-badgeexplorations-72 { aspect-ratio:37.19943038928835/39.92092077422575; grid-column:1; display:flex; align-items:center; justify-content:center; margin-left:46.26%; margin-top:0; position:relative; grid-row:1; width:30.49%; }
+.lyft-layered-art .lyft-badgeexplorations-73 { flex:none; height:hypot(-8.69007cqw,92.5561cqh); rotate:5deg; width:hypot(91.3099cqw,7.44395cqh); }
+.lyft-layered-art .lyft-badgeexplorations-74 { aspect-ratio:37.410685946736606/39.93939937197675; grid-column:1; display:flex; align-items:center; justify-content:center; margin-left:23.95%; margin-top:0; position:relative; grid-row:1; width:30.67%; }
+.lyft-layered-art .lyft-badgeexplorations-75 { rotate:-5deg; flex:none; height:hypot(8.64099cqw,92.5132cqh); width:hypot(91.359cqw,-7.48678cqh); }
+.lyft-layered-art .lyft-badgeexplorations-76 { grid-column:1; grid-template-rows:max-content; display:inline-grid; margin-left:0; margin-top:0; place-items:start; position:relative; grid-row:1; width:100%; }
+.lyft-layered-art .lyft-badgeexplorations-77 { aspect-ratio:40.22803199930769/42.48450606445198; grid-column:1; display:flex; align-items:center; justify-content:center; margin-left:0; margin-top:4.17px; position:relative; grid-row:1; width:26.82%; }
+.lyft-layered-art .lyft-badgeexplorations-78 { rotate:-10deg; flex:none; height:hypot(16.0104cqw,85.9769cqh); width:hypot(83.9896cqw,-14.0231cqh); }
+.lyft-layered-art .lyft-badgeexplorations-79 { aspect-ratio:40.22807101837873/42.484469281423856; grid-column:1; display:flex; align-items:center; justify-content:center; margin-left:73.18%; margin-top:4.17px; position:relative; grid-row:1; width:26.82%; }
+.lyft-layered-art .lyft-badgeexplorations-80 { aspect-ratio:37.410685946736606/39.93939937197675; grid-column:1; display:flex; align-items:center; justify-content:center; margin-left:18.85%; margin-top:0; position:relative; grid-row:1; width:24.94%; }
+.lyft-layered-art .lyft-badgeexplorations-81 { aspect-ratio:37.410685946736606/39.93939937197675; grid-column:1; display:flex; align-items:center; justify-content:center; margin-left:56.16%; margin-top:0; position:relative; grid-row:1; width:24.94%; }
+.lyft-layered-art .lyft-badgeexplorations-82 { flex:none; height:hypot(-8.64099cqw,92.5132cqh); rotate:5deg; width:hypot(91.359cqw,7.48678cqh); }
+.lyft-layered-art .lyft-badgeexplorations-83 { aspect-ratio:74/80; grid-column:1; margin-left:38.52%; margin-top:0.46px; position:relative; grid-row:1; width:22.88%; }
+.lyft-layered-art .lyft-badgeexplorations-84 { background:#daedab; align-content:stretch; display:flex; gap:5px; align-items:center; justify-content:center; padding-left:10px;padding-right:10px; padding-top:5px;padding-bottom:5px; position:relative; border-radius:20px; flex-shrink:0; }
+.lyft-layered-art .lyft-notificationexamples-0 { align-content:stretch; display:flex; gap:40px; align-items:center; position:relative; width:100%;height:100%; }
+.lyft-layered-art .lyft-notificationexamples-1 { background:var(--color-11,rgba(29,12,23,0.6)); align-content:stretch; display:flex; gap:10px; align-items:center; justify-content:center; min-height:64px; opacity:.8; padding-left:14px;padding-right:14px; padding-top:12px;padding-bottom:12px; position:relative; border-radius:20px; flex-shrink:0; width:335px; }
+.lyft-layered-art .lyft-notificationexamples-2 { position:absolute; inset:0 0 -0.5px 0; }
+.lyft-layered-art .lyft-notificationexamples-3 { position:absolute; background:rgba(255,255,255,0.07); inset:0; mix-blend-mode:screen; border-radius:20px; box-shadow:0px 8px 40px 0px rgba(0,0,0,0.2); }
+.lyft-layered-art .lyft-notificationexamples-4 { background:#ff00bf; align-content:stretch; display:flex; align-items:flex-start; padding:6.315px; position:relative; border-radius:10.104px; flex-shrink:0; }
+.lyft-layered-art .lyft-notificationexamples-5 { position:relative; flex-shrink:0; width:30.313px;height:30.313px; }
+.lyft-layered-art .lyft-notificationexamples-6 { position:absolute; display:contents; inset:17.82% -0.31% 15.57% 0.84%; }
+.lyft-layered-art .lyft-notificationexamples-7 { position:absolute; inset:17.82% -0.31% 15.57% 0.84%; }
+.lyft-layered-art .lyft-notificationexamples-8 { position:absolute; inset:0 0 -0.29% 0; }
+.lyft-layered-art .lyft-notificationexamples-9 { display:block; max-width:none; width:100%;height:100%; }
+.lyft-layered-art .lyft-notificationexamples-10 { align-content:stretch; display:flex; flex:1 0 0; gap:10px; align-items:flex-start; justify-content:center; min-width:1px; position:relative; }
+.lyft-layered-art .lyft-notificationexamples-11 { overflow-wrap:break-word; align-content:stretch; display:flex; flex:1 0 0; flex-direction:column; align-items:flex-start; justify-content:center; min-width:1px; position:relative; align-self:stretch; font-size:15px; color:var(--color-1,white); letter-spacing:-0.23px; }
+.lyft-layered-art .lyft-notificationexamples-12 { font-family:system-ui,sans-serif; font-weight:590; height:17.5px; line-height:17px; position:relative; flex-shrink:0; width:235.667px; }
+.lyft-layered-art .lyft-notificationexamples-13 { font-family:system-ui,sans-serif; font-weight:400; line-height:18px; min-width:100%; position:relative; flex-shrink:0; width:min-content; }
+.lyft-layered-art .lyft-notificationexamples-14 { align-content:stretch; display:flex; flex-direction:column; gap:5.5px; align-items:flex-end; position:relative; flex-shrink:0; }
+.lyft-layered-art .lyft-notificationexamples-15 { align-content:stretch; display:flex; align-items:center; justify-content:center; mix-blend-mode:plus-lighter; position:relative; flex-shrink:0; }
+.lyft-layered-art .lyft-notificationexamples-16 { overflow-wrap:break-word; font-family:system-ui,sans-serif; font-weight:400; line-height:17px; position:relative; flex-shrink:0; color:#4d4d4d; font-size:15px; text-align:right; white-space:nowrap; }
+.lyft-layered-art .lyft-notificationexamples-17 { position:relative; flex-shrink:0; width:32px;height:32px; }
+.lyft-layered-art .lyft-notificationexamples-18 { position:absolute; display:contents; inset:0 7.15% 0 6.25%; }
+.lyft-layered-art .lyft-notificationexamples-19 { position:absolute; inset:0 7.15% 0 6.25%; }
+.lyft-layered-art .lyft-notificationexamples-20 { position:absolute; display:block; inset:0; max-width:none; width:100%;height:100%; }
+.lyft-layered-art .lyft-notificationexamples-21 { align-content:stretch; display:flex; flex-direction:column; gap:160px; align-items:flex-start; position:relative; flex-shrink:0; width:340px; }
+.lyft-layered-art .lyft-notificationexamples-22 { background:var(--color-11,rgba(29,12,23,0.6)); align-content:stretch; display:flex; gap:10px; align-items:center; justify-content:center; min-height:64px; opacity:.8; padding-left:14px;padding-right:14px; padding-top:12px;padding-bottom:12px; position:relative; border-radius:24px; flex-shrink:0; width:100%; }
+.lyft-layered-art .lyft-notificationexamples-23 { position:absolute; display:contents; inset:0.78% 0; }
+.lyft-layered-art .lyft-notificationexamples-24 { position:absolute; inset:0.78% 0; }
+.lyft-layered-art .lyft-notificationexamples-25 { position:absolute; display:contents; inset:21.62% 23.5% 17.66% 23.58%; }
+.lyft-layered-art .lyft-notificationexamples-26 { position:absolute; display:contents; inset:21.62% 27.65% 17.66% 27.73%; }
+.lyft-layered-art .lyft-notificationexamples-27 { position:absolute; inset:21.62% 27.65% 17.65% 27.73%; }
+.lyft-layered-art .lyft-notificationexamples-28 { position:absolute; inset:53.7% 23.5% 29.82% 23.58%; }
+.lyft-layered-art .lyft-notificationexamples-29 { background:var(--color-11,rgba(29,12,23,0.6)); align-content:stretch; display:flex; gap:10px; align-items:center; justify-content:center; min-height:64px; opacity:.8; padding-left:14px;padding-right:14px; padding-top:12px;padding-bottom:12px; position:relative; border-radius:20px; flex-shrink:0; width:100%; }
+.lyft-layered-art .lyft-notificationexamples-30 { font-family:system-ui,sans-serif; font-weight:400; line-height:18px; min-width:100%; position:relative; flex-shrink:0; width:min-content; white-space:pre-wrap; }
+.lyft-layered-art .lyft-notificationexamples-31 { position:absolute; display:contents; inset:0 2.65% 0 2.5%; }
+.lyft-layered-art .lyft-notificationexamples-32 { position:absolute; inset:0 2.65% 0 2.5%; }
+.lyft-layered-art .lyft-notificationexamples-33 { position:absolute; inset:21.06% 16% 20.75% 15.01%; }
+.lyft-layered-art .lyft-notificationexamples-34 { height:609px; position:relative; border-radius:30px; box-shadow:0px 0px 1px 0px rgba(0,0,0,0.12),0px 6px 10px 0px rgba(0,0,0,0.16); flex-shrink:0; width:280px; }
+.lyft-layered-art .lyft-notificationexamples-35 { position:absolute; inset:0; overflow:hidden; border-radius:30px; }
+.lyft-layered-art .lyft-notificationexamples-36 { align-content:stretch; display:flex; flex-direction:column; gap:160px; align-items:flex-start; position:relative; flex-shrink:0; width:335px; }
+.lyft-layered-art .lyft-notificationexamples-37 { overflow:clip; position:relative; flex-shrink:0; width:32px;height:32px; }
+.lyft-layered-art .lyft-notificationexamples-38 { position:absolute; display:contents; inset:0 1.21% 0 0.83%; }
+.lyft-layered-art .lyft-notificationexamples-39 { position:absolute; inset:0 1.21% 0 0.83%; }
+.lyft-layered-art .lyft-notificationexamples-40 { position:absolute; display:contents; inset:18.78% 23.03% 26.01% 22.26%; }
+.lyft-layered-art .lyft-notificationexamples-41 { position:absolute; inset:18.78% 23.03% 26.01% 22.26%; }
+.lyft-layered-art .lyft-notificationexamples-42 { position:absolute; inset:31.46% 35.5% 38.81% 34.61%; }
+.lyft-layered-art .lyft-notificationexamples-43 { position:absolute; inset:35.39% 39.39% 42.75% 38.51%; }
+.lyft-layered-art .lyft-notificationexamples-44 { position:absolute; display:contents; inset:0 2.77% 0 2.38%; }
+.lyft-layered-art .lyft-notificationexamples-45 { position:absolute; display:flex; inset:0 2.77% 0 2.38%; align-items:center; justify-content:center; }
+.lyft-layered-art .lyft-notificationexamples-46 { flex:none; height:100cqh; rotate:180deg; width:100cqw; }
+.lyft-layered-art .lyft-notificationexamples-47 { position:relative; width:100%;height:100%; }
+.lyft-layered-art .lyft-notificationexamples-48 { position:absolute; inset:0 2.77% 0 2.38%; }
+.lyft-layered-art .lyft-notificationexamples-49 { position:absolute; inset:38.65% 38.66% 20.73% 20.72%; }
+.lyft-layered-art .lyft-notificationexamples-50 { position:absolute; inset:14.27% 17.2% 44.69% 41.76%; }
+.lyft-layered-art .lyft-notificationexamples-51 { position:absolute; display:contents; inset:35.89% 36.47% 16.62% 16.05%; }
+.lyft-layered-art .lyft-notificationexamples-52 { position:absolute; display:flex; inset:38.72% 39.29% 19.46% 18.89%; align-items:center; justify-content:center; }
+.lyft-layered-art .lyft-notificationexamples-53 { flex:none; height:hypot(-28.6764cqw,71.3236cqh); rotate:21.9deg; width:hypot(71.3236cqw,28.6764cqh); }
+.lyft-layered-art .lyft-notificationexamples-54 { position:absolute; display:flex; inset:35.9% 36.47% 16.62% 16.05%; align-items:center; justify-content:center; }
+.lyft-layered-art .lyft-notificationexamples-55 { flex:none; height:hypot(97.3403cqw,2.65979cqh); rotate:-88.43deg; width:hypot(2.65968cqw,-97.3402cqh); }
+.lyft-layered-art .lyft-notificationexamples-56 { position:absolute; display:contents; inset:10.29% 13.18% 42.22% 39.33%; }
+.lyft-layered-art .lyft-notificationexamples-57 { position:absolute; display:flex; inset:13.12% 16.01% 45.06% 42.18%; align-items:center; justify-content:center; }
+.lyft-layered-art .lyft-notificationexamples-58 { position:absolute; display:flex; inset:10.29% 13.18% 42.22% 39.33%; align-items:center; justify-content:center; }
+.lyft-layered-art .lyft-notificationexamples-59 { position:absolute; display:contents; inset:0 0.19% 0 -0.19%; }
+.lyft-layered-art .lyft-notificationexamples-60 { position:absolute; inset:0 0.19% 0 -0.19%; }
+.lyft-layered-art .lyft-notificationexamples-61 { position:absolute; display:contents; inset:24.31% 16.46% 18.13% 18.37%; }
+.lyft-layered-art .lyft-notificationexamples-62 { position:absolute; inset:24.31% 22.6% 38.25% 32.56%; }
+.lyft-layered-art .lyft-notificationexamples-63 { position:absolute; inset:27.25% 25.31% 44.74% 34.05%; }
+.lyft-layered-art .lyft-notificationexamples-64 { position:absolute; display:contents; inset:60.17% 16.46% 18.13% 18.37%; }
+.lyft-layered-art .lyft-notificationexamples-65 { position:absolute; inset:60.17% 23.73% 19.18% 18.37%; }
+.lyft-layered-art .lyft-notificationexamples-66 { position:absolute; inset:60.17% 16.46% 18.13% 18.37%; }

@@ -4,6 +4,7 @@ const pages = [
   ['/', 'Home'], ['/about', 'About'], ['/resume', 'Resume'],
   ['/projects/revvity', 'Revvity'], ['/projects/gradeeasy', 'GradeEasy'],
   ['/projects/plooto', 'Plooto'], ['/projects/radicalgary', 'RadiCalgary'],
+  ['/projects/lyft', 'Lyft'],
 ];
 
 for (const [path, title] of pages) {
@@ -13,6 +14,9 @@ for (const [path, title] of pages) {
     await page.goto(path);
     await expect(page).toHaveTitle(`${title} | Nancy Huynh`);
     await expect(page.getByRole('main')).toBeVisible();
+    if (path === '/projects/lyft') {
+      await expect(page.getByRole('heading', { name: 'Rider Badges Refresh', exact: true })).toBeVisible();
+    }
     await page.evaluate(async () => {
       await document.fonts.ready;
       await Promise.all([...document.images].map(image => {

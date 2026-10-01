@@ -49,6 +49,7 @@ a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible { outline: 3
 .read-cursor-gradeeasy { background: #dfecfc; }
 .read-cursor-plooto { background: #dfe3ed; }
 .read-cursor-radicalgary { background: #f0dff0; }
+.read-cursor-lyft { background: #ffe0f7; }
 @keyframes drag-cursor-pop {
   from { opacity: 0; transform: translate(8px, -90%) scale(.95); }
   to { opacity: 1; transform: translate(8px, -100%) scale(1); }
@@ -96,6 +97,93 @@ a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible { outline: 3
 .cs-cover-link:focus-visible .bottom-card-image { transform: scale(1.025); }
 .content-page img { max-width: 100%; }
 .content-page a[target="_blank"] { text-underline-offset: 4px; }
+/* Lyft uses the shared project layout and type, with its own Figma artwork. */
+.logo-chip.lyft { gap: 5px; background: #ea0b8c; }
+.lyft-project-art { display: block; width: 100%; height: auto; overflow: visible; transition: transform .35s ease; }
+.lyft-project-panel, .lyft-project-shipped { fill: var(--brightwhite); stroke: var(--black); stroke-width: 5px; transition: fill .35s ease; }
+.lyft-project-shipped-label { fill: var(--black); font: 500 12px Inter, sans-serif; }
+.lyft-project-default, .lyft-project-hover { transition: opacity .35s ease; }
+.lyft-project-hover { opacity: 0; }
+.lyft-project-cover:hover .lyft-project-art,
+.cs-cover-link:focus-visible .lyft-project-art { transform: scale(1.025); }
+.lyft-project-cover:hover .lyft-project-panel,
+.cs-cover-link:focus-visible .lyft-project-panel { fill: #f2e8ee; }
+.lyft-project-cover:hover .lyft-project-shipped,
+.cs-cover-link:focus-visible .lyft-project-shipped { fill: #f5f5f5; }
+.lyft-project-cover:hover .lyft-project-default,
+.cs-cover-link:focus-visible .lyft-project-default { opacity: 0; }
+.lyft-project-cover:hover .lyft-project-hover,
+.cs-cover-link:focus-visible .lyft-project-hover { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .lyft-project-art, .lyft-project-panel, .lyft-project-shipped,
+  .lyft-project-default, .lyft-project-hover { transition: none; }
+  .lyft-project-cover:hover .lyft-project-art,
+  .cs-cover-link:focus-visible .lyft-project-art { transform: none; }
+}
+
+/* Lyft Rider Badges case study */
+.lyft-banner { overflow: hidden; background: linear-gradient(135deg, #fbedf9 0%, #f7f3ff 52%, #fff 100%); }
+.lyft-cover { min-height: 640px; flex-flow: row; align-items: center; justify-content: space-around; gap: 64px; }
+.lyft-hero-copy { display: flex; flex-flow: column; max-width: 480px; color: #181818; font-family: Inter, sans-serif; }
+.lyft-hero-copy span { margin-bottom: 18px; color: #a5007d; font-size: 14px; font-weight: 750; letter-spacing: .16em; }
+.lyft-hero-copy strong { font-size: clamp(42px, 5.4vw, 76px); line-height: .98; letter-spacing: -.055em; }
+.lyft-phone { flex: 0 0 auto; width: 276px; padding: 9px; border-radius: 42px; background: #181818; box-shadow: 0 28px 70px #6d245333; font-family: Inter, sans-serif; }
+.lyft-phone-screen { position: relative; box-sizing: border-box; min-height: 520px; overflow: hidden; padding: 62px 20px 25px; border-radius: 34px; background: #fff; }
+.lyft-phone-notch { position: absolute; top: 13px; left: 50%; width: 86px; height: 22px; border-radius: 13px; background: #181818; transform: translateX(-50%); }
+.lyft-phone-header { color: #181818; font-size: 20px; font-weight: 750; letter-spacing: -.03em; }
+.lyft-phone-subtitle { margin: 6px 0 20px; color: #707070; font-size: 11px; line-height: 1.4; }
+.lyft-badge { position: relative; display: grid; grid-template-columns: 48px 1fr; align-items: center; gap: 11px; margin-top: 10px; padding: 13px; border-radius: 17px; background: #fff4fc; }
+.lyft-badge.featured { padding-block: 18px; background: #f8f3fa; }
+.lyft-badge.purple { background: #f2f0ff; }
+.lyft-badge-icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; color: #fff; background: #ff00bf; box-shadow: inset 0 0 0 5px #ffffff40; }
+.lyft-badge.purple .lyft-badge-icon { background: #523be4; }
+.lyft-badge-title { color: #181818; font-size: 12px; font-weight: 750; }
+.lyft-badge-detail { margin-top: 4px; color: #747474; font-size: 9px; }
+.lyft-level { position: absolute; right: 12px; bottom: 10px; color: #888; font-size: 8px; }
+.lyft-case-study { --lyft-pink: #ff00bf; --lyft-purple: #523be4; }
+.lyft-journey { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; padding: 38px; border-radius: 24px; background: #171717; color: #fff; font-family: Inter, sans-serif; }
+.lyft-journey-step { position: relative; display: flex; flex-flow: column; gap: 12px; padding: 22px; border: 1px solid #ffffff25; border-radius: 16px; }
+.lyft-journey-step:not(:last-child)::after { content: '→'; position: absolute; z-index: 2; top: 50%; right: -22px; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; color: #181818; background: #fff; transform: translateY(-50%); }
+.lyft-journey-step span { color: #ff75dc; font-size: 13px; font-weight: 700; }
+.lyft-journey-step strong { font-size: 18px; }
+.lyft-principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.lyft-principles > div { display: flex; flex-flow: column; min-height: 170px; padding: 22px; border-radius: 18px; background: #f7f3f8; font-family: Inter, sans-serif; }
+.lyft-principles span { margin-bottom: 30px; color: #b10086; font-size: 12px; font-weight: 750; }
+.lyft-principles strong { color: #202020; font-size: 16px; }
+.lyft-principles p, .lyft-entry-points p { margin: 8px 0 0; color: #666; font-size: 13px; line-height: 1.55; }
+.lyft-phone-gallery { display: flex; align-items: center; justify-content: center; gap: clamp(18px, 4vw, 55px); margin-bottom: 25px; padding: 60px 30px; border-radius: 28px; background: linear-gradient(145deg, #faeafa, #efefff); }
+.lyft-phone-gallery .lyft-phone { width: 245px; transform: rotate(-2deg); }
+.lyft-phone-gallery .lyft-phone:nth-child(2) { transform: translateY(24px) rotate(2deg); }
+.lyft-phone-gallery .lyft-phone:nth-child(3) { transform: rotate(-1deg); }
+.lyft-phone.is-dark { background: #ececec; }
+.lyft-phone.is-dark .lyft-phone-screen { color: #fff; background: #181818; }
+.lyft-phone.is-dark .lyft-phone-notch { background: #050505; }
+.lyft-phone.is-dark .lyft-detail-title { color: #fff; }
+.lyft-back { position: absolute; top: 58px; left: 22px; font-size: 28px; }
+.lyft-celebration-icon { display: grid; place-items: center; width: 110px; height: 110px; margin: 50px auto 25px; border-radius: 50%; color: #fff; background: #ff00bf; box-shadow: 0 0 0 17px #ff00bf20; font-size: 43px; }
+.lyft-detail-title { color: #181818; font-size: 22px; font-weight: 780; text-align: center; }
+.lyft-detail-copy { max-width: 190px; margin: 10px auto 24px; color: #777; font-size: 11px; line-height: 1.5; text-align: center; }
+.lyft-progress { height: 8px; overflow: hidden; border-radius: 8px; background: #e5e1e6; }
+.lyft-progress span { display: block; width: 92%; height: 100%; border-radius: inherit; background: #523be4; }
+.lyft-progress-label { display: flex; justify-content: space-between; margin-top: 7px; color: #777; font-size: 9px; }
+.lyft-confetti { position: absolute; top: 80px; inset-inline: 0; color: #ff69d6; font-size: 18px; line-height: 3; text-align: center; }
+.lyft-phone button { width: 100%; margin-top: 40px; padding: 13px; border: 0; border-radius: 25px; color: #fff; background: #ff00bf; font: 700 12px Inter, sans-serif; }
+.lyft-entry-points { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.lyft-entry-points > div { position: relative; min-height: 110px; padding: 24px 24px 24px 80px; border: 1px solid #e5dde5; border-radius: 18px; font-family: Inter, sans-serif; }
+.lyft-entry-points strong { color: #222; }
+.lyft-pin { position: absolute; top: 23px; left: 22px; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; color: #fff; background: #ff00bf; font-weight: 800; }
+.lyft-state-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.lyft-state { box-sizing: border-box; min-height: 160px; padding: 20px; border: 1px solid #e8e3e8; border-radius: 16px; font-family: Inter, sans-serif; text-align: center; }
+.lyft-state.skeleton { display: flex; flex-flow: column; gap: 12px; }
+.lyft-state.skeleton i { display: block; height: 28px; border-radius: 8px; background: linear-gradient(90deg, #eee, #f8f8f8, #eee); }
+.lyft-state.skeleton i:first-child { width: 48px; height: 48px; margin: 0 auto; border-radius: 50%; }
+.lyft-state.empty, .lyft-state.error { display: flex; flex-flow: column; align-items: center; justify-content: center; gap: 10px; font-size: 12px; }
+.lyft-state.empty span, .lyft-state.error span { color: #ff00bf; font-size: 28px; }
+.lyft-state small { color: #a5007d; font-weight: 700; }
+.lyft-results { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.lyft-results > div { display: flex; flex-flow: column; gap: 6px; min-height: 120px; padding: 22px; border-radius: 18px; color: #fff; background: #181818; font-family: Inter, sans-serif; }
+.lyft-results strong { color: #ff61d6; font-size: 42px; line-height: 1; }
+.lyft-results span { font-size: 13px; line-height: 1.4; }
 .case-study-body .cs-container[id] { scroll-margin-top: 120px; }
 .case-study-nav { display: none; }
 @media (min-width: 1200px) {
@@ -218,9 +306,20 @@ a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible { outline: 3
   .cs-cover-link { width: 100%; }
   .cs-cover-link .div-card-image { margin-inline: auto; }
   .case-study-card { margin-inline: 0; }
+  .lyft-cover { min-height: 560px; gap: 32px; }
+  .lyft-phone-gallery { gap: 16px; padding-inline: 18px; }
+  .lyft-phone-gallery .lyft-phone { width: 210px; }
+  .lyft-phone-gallery .lyft-phone-screen { min-height: 470px; padding-inline: 14px; }
 }
 @media (max-width: 767px) {
   .sticker-button { flex-basis: 80px; }
+  .lyft-cover { flex-flow: column; padding-block: 45px; text-align: center; }
+  .lyft-cover .lyft-phone { width: 240px; }
+  .lyft-journey, .lyft-principles, .lyft-results { grid-template-columns: 1fr 1fr; }
+  .lyft-journey-step::after { display: none !important; }
+  .lyft-phone-gallery { overflow-x: auto; justify-content: flex-start; padding: 40px 24px 65px; scroll-snap-type: x mandatory; }
+  .lyft-phone-gallery .lyft-phone { flex: 0 0 235px; scroll-snap-align: center; transform: none !important; }
+  .lyft-entry-points, .lyft-state-row { grid-template-columns: 1fr; }
 }
 @media (max-width: 479px) {
   .sticker-button { flex-basis: 70px; }
@@ -228,6 +327,11 @@ a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible { outline: 3
   .brand-link img { width: 32px; height: 32px; }
   .characters { width: 100%; }
   .chip-container { flex-wrap: wrap; }
+  .lyft-banner { padding-inline: 22px; }
+  .lyft-cover { min-height: 620px; }
+  .lyft-hero-copy strong { font-size: 43px; }
+  .lyft-journey, .lyft-principles, .lyft-results { grid-template-columns: 1fr; }
+  .lyft-journey { padding: 20px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

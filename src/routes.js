@@ -6,4 +6,5 @@ export const pageTitles = {
   '/projects/gradeeasy': 'GradeEasy',
   '/projects/plooto': 'Plooto',
   '/projects/radicalgary': 'RadiCalgary',
+  '/projects/lyft': 'Lyft',
 };

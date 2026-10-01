@@ -8,6 +8,7 @@ for (const [path, selector] of [
   ['/projects/gradeeasy', '.case-study-body > .cs-container:last-child'],
   ['/projects/plooto', '.case-study-body > .cs-container:last-child'],
   ['/projects/radicalgary', '.case-study-body > .cs-container:last-child'],
+  ['/projects/lyft', '.case-study-body > .cs-container:last-child'],
 ]) {
   test(`${path} reveals below-fold content once on scroll`, async ({ page }) => {
     await page.goto(path);
@@ -43,7 +44,7 @@ for (const path of ['/projects/revvity', '/projects/gradeeasy', '/projects/ploot
   });
 }
 
-for (const path of ['/', '/about', '/resume', '/projects/revvity', '/projects/gradeeasy', '/projects/plooto', '/projects/radicalgary']) {
+for (const path of ['/', '/about', '/resume', '/projects/revvity', '/projects/gradeeasy', '/projects/plooto', '/projects/radicalgary', '/projects/lyft']) {
   test(`${path} does not animate the footer`, async ({ page }) => {
     await page.goto(path);
     await expect(page.locator('.footer .div-block-9')).not.toHaveClass(/reveal-/);

@@ -11,7 +11,7 @@ export default function Home() {
   const colourIcon = index => setColouredIcons(previous => ({ ...previous, [index]: true }));
   return <div className="w-layout-vflex home-container-draggable">
     <div className="home-background" aria-hidden="true">
-      {['head-left', 'header-right', 'revvity', 'gradeeasy', 'plooto', 'radicalgary'].map(name => <div key={name} className={`bg-colour-blur ${name}`} />)}
+      {['head-left', 'header-right', 'lyft', 'revvity', 'gradeeasy', 'plooto', 'radicalgary'].map(name => <div key={name} className={`bg-colour-blur ${name}`} />)}
     </div>
     <section className="w-layout-vflex home-header" aria-label="Introduction">
       <div className="w-layout-vflex center-aligned landingpage">

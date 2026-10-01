@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640">
+  <rect width="800" height="640" rx="40" fill="#f5e9f6"/>
+  <circle cx="665" cy="76" r="126" fill="#ff00bf" opacity=".16"/>
+  <circle cx="120" cy="596" r="170" fill="#523be4" opacity=".12"/>
+  <g transform="translate(233 50)">
+    <rect width="334" height="560" rx="46" fill="#181818"/>
+    <rect x="10" y="10" width="314" height="540" rx="38" fill="#fff"/>
+    <rect x="118" y="20" width="98" height="23" rx="12" fill="#181818"/>
+    <text x="34" y="91" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#181818">Your badges</text>
+    <text x="34" y="119" font-family="Arial, sans-serif" font-size="12" fill="#6b6b6b">Celebrate every ride along the way</text>
+    <g transform="translate(34 153)">
+      <rect width="266" height="124" rx="22" fill="#f7f4fa"/>
+      <circle cx="62" cy="61" r="39" fill="#ff00bf"/>
+      <path d="M43 63c14-26 38-26 43 0-7 16-35 17-43 0Z" fill="white"/>
+      <text x="119" y="52" font-family="Arial, sans-serif" font-size="15" font-weight="700">Night Owl</text>
+      <text x="119" y="76" font-family="Arial, sans-serif" font-size="12" fill="#6b6b6b">25 late-night rides</text>
+      <rect x="119" y="91" width="112" height="7" rx="4" fill="#ded9e4"/>
+      <rect x="119" y="91" width="78" height="7" rx="4" fill="#523be4"/>
+    </g>
+    <g transform="translate(34 295)">
+      <rect width="126" height="150" rx="22" fill="#fff2fb"/>
+      <circle cx="63" cy="55" r="34" fill="#ff7a00"/>
+      <path d="m63 30 8 16 18 3-13 12 3 18-16-9-16 9 3-18-13-12 18-3Z" fill="white"/>
+      <text x="63" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700">Road Star</text>
+      <text x="63" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#6b6b6b">Level 3</text>
+    </g>
+    <g transform="translate(174 295)">
+      <rect width="126" height="150" rx="22" fill="#f1efff"/>
+      <circle cx="63" cy="55" r="34" fill="#523be4"/>
+      <path d="M44 62c8-27 31-31 39-5 4 18-31 27-39 5Z" fill="white"/>
+      <text x="63" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700">Explorer</text>
+      <text x="63" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#6b6b6b">Level 2</text>
+    </g>
+    <rect x="34" y="475" width="266" height="46" rx="23" fill="#ff00bf"/>
+    <text x="167" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="white">View all badges</text>
+  </g>
+</svg>
