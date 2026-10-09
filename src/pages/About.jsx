@@ -5,15 +5,15 @@ import React, { useEffect, useState } from 'react';
 import './About.css';
 
 const outsidePhotos = [
-  { name: 'nara-deer', alt: 'Nancy meeting a deer in Nara', width: 497, height: 750 },
-  { name: 'museum-friends', alt: 'Friends on the steps of the Metropolitan Museum of Art', width: 900, height: 871 },
-  { name: 'banana-costumes', alt: 'Friends dressed up in banana costumes', width: 935, height: 750 },
-  { name: 'kayaking', alt: 'Nancy and friends getting ready to kayak', width: 660, height: 782 },
-  { name: 'activate-friends', alt: 'Nancy and friends at Activate Games', width: 1332, height: 747 },
-  { name: 'bamboo-forest', alt: 'Nancy walking through a bamboo forest', width: 500, height: 752 },
-  { name: 'pagoda', alt: 'A five-storey pagoda against a blue sky', width: 497, height: 602 },
-  { name: 'tree-gathering', alt: 'Friends gathered among the trees', width: 562, height: 750 },
-  { name: 'mahjong', alt: 'A game of mahjong with friends', width: 561, height: 618 },
+  { name: 'nara-deer', alt: 'Nancy meeting a deer in Nara', caption: 'seeing deer in Nara, Japan', width: 497, height: 750 },
+  { name: 'museum-friends', alt: 'Friends on the steps of the Metropolitan Museum of Art', caption: '@ the MET', width: 900, height: 871 },
+  { name: 'banana-costumes', alt: 'Friends dressed up in banana costumes', caption: 'banana bar crawl', width: 935, height: 750 },
+  { name: 'kayaking', alt: 'Nancy and friends getting ready to kayak', caption: 'kayaking with Lyfterns', width: 660, height: 782 },
+  { name: 'activate-friends', alt: 'Nancy and friends at Activate Games', caption: 'activate with Lyfterns', width: 1332, height: 747 },
+  { name: 'bamboo-forest', alt: 'Nancy walking through a bamboo forest', caption: 'Arashiyama Bamboo Forest', width: 500, height: 752 },
+  { name: 'pagoda', alt: 'A five-storey pagoda against a blue sky', caption: 'Sensō-ji Temple', width: 497, height: 602 },
+  { name: 'tree-gathering', alt: 'Friends gathered among the trees', caption: 'hide n seek @ Toronto Islands', width: 562, height: 750 },
+  { name: 'mahjong', alt: 'A game of mahjong with friends', caption: 'mahjong!!', width: 561, height: 618 },
 ];
 
 export default function About() {
@@ -198,8 +198,13 @@ export default function About() {
         <div className="outside-gallery">
           {outsidePhotos.map(photo => (
             <div key={photo.name} className={`outside-photo outside-photo--${photo.name}`}>
-              <img src={withBase(`/assets/about/${photo.name}.png`)} alt={photo.alt}
-                width={photo.width} height={photo.height} loading="lazy" decoding="async" />
+                <img src={withBase(`/assets/about/${photo.name}.png`)} alt={photo.alt}
+                  width={photo.width} height={photo.height} loading="lazy" decoding="async" />
+                {photo.caption && (
+                  <span className="outside-photo-caption" aria-hidden="true">
+                    <span>{photo.caption}</span>
+                  </span>
+                )}
             </div>
           ))}
         </div>

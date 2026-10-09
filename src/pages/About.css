@@ -45,6 +45,41 @@
   top: var(--photo-top, 0%);
 }
 
+.outside-photo-caption {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+  pointer-events: none;
+}
+
+.outside-photo-caption::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 5px solid #000;
+  border-radius: 12px;
+  background: rgb(255 255 255 / 80%);
+}
+
+.outside-photo-caption > span {
+  position: relative;
+  width: min(178px, calc(100% - 32px));
+  color: var(--black);
+  font: italic 400 30px/34px 'Crimson Text', serif;
+  text-align: center;
+}
+
+@media (hover: hover) {
+  .outside-photo:hover .outside-photo-caption { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .outside-photo-caption { transition: none; }
+}
+
 .outside-photo--nara-deer { grid-area: deer; --photo-width: 136.88%; --photo-left: -19.1%; }
 .outside-photo--museum-friends { grid-area: museum; --photo-width: 103.42%; --photo-height: 100.09%; --photo-left: -.38%; --photo-top: -.04%; }
 .outside-photo--banana-costumes { grid-area: costumes; --photo-width: 124.59%; --photo-left: -8.2%; }
@@ -85,4 +120,5 @@
 @media (max-width: 479px) {
   .outside-section { padding-inline: 20px; padding-bottom: 40px; }
   .outside-section > .heading-2 { margin-bottom: 24px; }
+  .outside-photo-caption > span { font-size: 20px; line-height: 24px; }
 }
