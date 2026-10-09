@@ -20,6 +20,27 @@ export default function About() {
   useScrollReveal('about');
   useColouredBackground();
   const [portrait, setPortrait] = useState(1);
+  const [tapCaptions, setTapCaptions] = useState(() => window.matchMedia('(hover: none)').matches);
+  const [tappedPhotos, setTappedPhotos] = useState(() => new Set());
+
+  useEffect(() => {
+    const touch = window.matchMedia('(hover: none)');
+    const updateInteraction = () => {
+      setTapCaptions(touch.matches);
+      setTappedPhotos(new Set());
+    };
+    touch.addEventListener('change', updateInteraction);
+    return () => touch.removeEventListener('change', updateInteraction);
+  }, []);
+
+  function toggleCaption(name) {
+    setTappedPhotos(current => {
+      const next = new Set(current);
+      if (next.has(name)) next.delete(name);
+      else next.add(name);
+      return next;
+    });
+  }
 
   useEffect(() => {
     const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -196,8 +217,16 @@ export default function About() {
       <section className="outside-section" aria-labelledby="outside-heading">
         <h2 id="outside-heading" className="heading-2 hover-animate">outside of work</h2>
         <div className="outside-gallery">
-          {outsidePhotos.map(photo => (
-            <div key={photo.name} className={`outside-photo outside-photo--${photo.name}`}>
+          {outsidePhotos.map(photo => {
+            const Photo = tapCaptions ? 'button' : 'div';
+            const interaction = tapCaptions ? {
+              type: 'button',
+              'aria-label': photo.caption,
+              'aria-pressed': tappedPhotos.has(photo.name),
+              onClick: () => toggleCaption(photo.name),
+            } : {};
+            return (
+              <Photo key={photo.name} className={`outside-photo outside-photo--${photo.name}`} {...interaction}>
                 <img src={withBase(`/assets/about/${photo.name}.png`)} alt={photo.alt}
                   width={photo.width} height={photo.height} loading="lazy" decoding="async" />
                 {photo.caption && (
@@ -205,8 +234,9 @@ export default function About() {
                     <span>{photo.caption}</span>
                   </span>
                 )}
-            </div>
-          ))}
+              </Photo>
+            );
+          })}
         </div>
       </section>
     </>

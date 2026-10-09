@@ -45,6 +45,13 @@
   top: var(--photo-top, 0%);
 }
 
+button.outside-photo {
+  appearance: none;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
 .outside-photo-caption {
   position: absolute;
   inset: 0;
@@ -74,6 +81,10 @@
 
 @media (hover: hover) {
   .outside-photo:hover .outside-photo-caption { opacity: 1; }
+}
+
+@media (hover: none) {
+  .outside-photo[aria-pressed='true'] .outside-photo-caption { opacity: 1; }
 }
 
 @media (prefers-reduced-motion: reduce) {

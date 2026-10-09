@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('gallery captions share the hover effect without becoming clickable', async ({ page, isMobile }) => {
+test('gallery captions appear on hover or toggle on mobile tap', async ({ page, isMobile }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto('/about');
   for (const [name, text] of [
@@ -20,7 +20,11 @@ test('gallery captions share the hover effect without becoming clickable', async
     await expect(caption).toHaveCSS('opacity', '0');
     if (isMobile) {
       await photo.tap();
+      await expect(caption).toHaveCSS('opacity', '1');
+      await expect(photo).toHaveAttribute('aria-pressed', 'true');
+      await photo.tap();
       await expect(caption).toHaveCSS('opacity', '0');
+      await expect(photo).toHaveAttribute('aria-pressed', 'false');
     } else {
       await photo.hover();
       await expect(caption).toHaveCSS('opacity', '1');
@@ -28,19 +32,21 @@ test('gallery captions share the hover effect without becoming clickable', async
       await expect(caption).toHaveCSS('opacity', '0');
     }
   }
-  await expect(page.locator('.outside-gallery button, .outside-gallery [tabindex]')).toHaveCount(0);
+  await expect(page.locator('.outside-gallery button')).toHaveCount(isMobile ? 9 : 0);
 });
 
-test('deer caption only appears on hover and does not toggle on touch', async ({ page, isMobile }) => {
+test('deer caption fades on hover or toggles with successive taps', async ({ page, isMobile }) => {
   await page.goto('/about');
   const photo = page.locator('.outside-photo--nara-deer');
   const caption = photo.locator('.outside-photo-caption');
   await photo.scrollIntoViewIfNeeded();
   await expect(photo).not.toHaveClass(/reveal-/);
   await expect(caption).toHaveCSS('opacity', '0');
-  await expect(page.locator('.outside-gallery button, .outside-gallery [tabindex]')).toHaveCount(0);
+  await expect(page.locator('.outside-gallery button')).toHaveCount(isMobile ? 9 : 0);
 
   if (isMobile) {
+    await photo.tap();
+    await expect(caption).toHaveCSS('opacity', '1');
     await photo.tap();
     await expect(caption).toHaveCSS('opacity', '0');
   } else {
@@ -63,5 +69,10 @@ test('deer caption respects reduced motion', async ({ page, isMobile }) => {
   if (!isMobile) {
     await photo.hover();
     await expect(caption).toHaveCSS('opacity', '1');
+  } else {
+    await photo.tap();
+    await expect(caption).toHaveCSS('opacity', '1');
+    await photo.tap();
+    await expect(caption).toHaveCSS('opacity', '0');
   }
 });
