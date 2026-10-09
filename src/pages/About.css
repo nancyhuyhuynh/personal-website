@@ -9,9 +9,8 @@
 .outside-section > .heading-2 {
   margin: 0 0 40px;
   color: var(--black);
-  font-size: 30px;
-  line-height: 44px;
   text-align: center;
+  cursor: default;
 }
 
 /* Figma's four-column collage, with a 3px offset on its bottom row. */
@@ -47,9 +46,11 @@
 
 button.outside-photo {
   appearance: none;
+  cursor: default;
   padding: 0;
   border: 0;
   background: transparent;
+  touch-action: manipulation;
 }
 
 .outside-photo-caption {
@@ -79,13 +80,8 @@ button.outside-photo {
   text-align: center;
 }
 
-@media (hover: hover) {
-  .outside-photo:hover .outside-photo-caption { opacity: 1; }
-}
-
-@media (hover: none) {
-  .outside-photo[aria-pressed='true'] .outside-photo-caption { opacity: 1; }
-}
+.outside-photo[data-hovered='true'] .outside-photo-caption,
+.outside-photo[aria-pressed='true'] .outside-photo-caption { opacity: 1; }
 
 @media (prefers-reduced-motion: reduce) {
   .outside-photo-caption { transition: none; }

@@ -1,7 +1,7 @@
 import { useColouredBackground } from '../useColouredBackground';
 import { useScrollReveal } from '../useScrollReveal';
 import { withBase } from '../urls';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './About.css';
 
 const outsidePhotos = [
@@ -16,31 +16,40 @@ const outsidePhotos = [
   { name: 'mahjong', alt: 'A game of mahjong with friends', caption: 'mahjong!!', width: 561, height: 618 },
 ];
 
+function OutsidePhoto({ photo }) {
+  const [pressed, setPressed] = useState(false);
+  const [hovered, setHovered] = useState(false);
+  const pointerType = useRef('mouse');
+
+  return (
+    <button type="button" className={`outside-photo outside-photo--${photo.name}`}
+      aria-label={photo.caption} aria-pressed={pressed} data-hovered={hovered}
+      onPointerEnter={event => setHovered(event.pointerType === 'mouse')}
+      onPointerLeave={() => setHovered(false)}
+      onPointerCancel={() => setHovered(false)}
+      onPointerDown={event => {
+        pointerType.current = event.pointerType;
+        if (event.pointerType !== 'mouse') setHovered(false);
+      }}
+      onClick={event => {
+        // Keyboard activation and touch toggle; mouse interaction stays hover-only.
+        if (event.detail === 0 || pointerType.current !== 'mouse') {
+          setPressed(current => !current);
+        }
+      }}>
+      <img src={withBase(`/assets/about/${photo.name}.png`)} alt={photo.alt}
+        width={photo.width} height={photo.height} loading="lazy" decoding="async" />
+      <span className="outside-photo-caption" aria-hidden="true">
+        <span>{photo.caption}</span>
+      </span>
+    </button>
+  );
+}
+
 export default function About() {
   useScrollReveal('about');
   useColouredBackground();
   const [portrait, setPortrait] = useState(1);
-  const [tapCaptions, setTapCaptions] = useState(() => window.matchMedia('(hover: none)').matches);
-  const [tappedPhotos, setTappedPhotos] = useState(() => new Set());
-
-  useEffect(() => {
-    const touch = window.matchMedia('(hover: none)');
-    const updateInteraction = () => {
-      setTapCaptions(touch.matches);
-      setTappedPhotos(new Set());
-    };
-    touch.addEventListener('change', updateInteraction);
-    return () => touch.removeEventListener('change', updateInteraction);
-  }, []);
-
-  function toggleCaption(name) {
-    setTappedPhotos(current => {
-      const next = new Set(current);
-      if (next.has(name)) next.delete(name);
-      else next.add(name);
-      return next;
-    });
-  }
 
   useEffect(() => {
     const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -217,26 +226,7 @@ export default function About() {
       <section className="outside-section" aria-labelledby="outside-heading">
         <h2 id="outside-heading" className="heading-2 hover-animate">outside of work</h2>
         <div className="outside-gallery">
-          {outsidePhotos.map(photo => {
-            const Photo = tapCaptions ? 'button' : 'div';
-            const interaction = tapCaptions ? {
-              type: 'button',
-              'aria-label': photo.caption,
-              'aria-pressed': tappedPhotos.has(photo.name),
-              onClick: () => toggleCaption(photo.name),
-            } : {};
-            return (
-              <Photo key={photo.name} className={`outside-photo outside-photo--${photo.name}`} {...interaction}>
-                <img src={withBase(`/assets/about/${photo.name}.png`)} alt={photo.alt}
-                  width={photo.width} height={photo.height} loading="lazy" decoding="async" />
-                {photo.caption && (
-                  <span className="outside-photo-caption" aria-hidden="true">
-                    <span>{photo.caption}</span>
-                  </span>
-                )}
-              </Photo>
-            );
-          })}
+          {outsidePhotos.map(photo => <OutsidePhoto key={photo.name} photo={photo} />)}
         </div>
       </section>
     </>

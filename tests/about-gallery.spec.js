@@ -1,5 +1,42 @@
 import { test, expect } from '@playwright/test';
 
+test('touch captions toggle even when the browser reports hover support', async ({ page, isMobile }) => {
+  test.skip(!isMobile, 'Requires touch input');
+  await page.addInitScript(() => {
+    const matchMedia = window.matchMedia.bind(window);
+    window.matchMedia = query => {
+      const result = matchMedia(query);
+      if (query === '(hover: none)' || query === '(hover: hover)') {
+        Object.defineProperty(result, 'matches', { value: query === '(hover: hover)' });
+      }
+      return result;
+    };
+  });
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/about');
+  for (const photo of await page.locator('.outside-photo').all()) {
+    const caption = photo.locator('.outside-photo-caption');
+    await photo.scrollIntoViewIfNeeded();
+    await photo.tap();
+    await expect(caption).toHaveCSS('opacity', '1');
+    await photo.tap();
+    await expect(caption).toHaveCSS('opacity', '0');
+  }
+});
+
+test('gallery captions toggle with the keyboard', async ({ page, isMobile }) => {
+  test.skip(isMobile, 'Desktop keyboard interaction');
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/about');
+  const photo = page.locator('.outside-photo--nara-deer');
+  const caption = photo.locator('.outside-photo-caption');
+  await photo.focus();
+  await photo.press('Enter');
+  await expect(caption).toHaveCSS('opacity', '1');
+  await photo.press('Space');
+  await expect(caption).toHaveCSS('opacity', '0');
+});
+
 test('gallery captions appear on hover or toggle on mobile tap', async ({ page, isMobile }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto('/about');
@@ -32,7 +69,7 @@ test('gallery captions appear on hover or toggle on mobile tap', async ({ page, 
       await expect(caption).toHaveCSS('opacity', '0');
     }
   }
-  await expect(page.locator('.outside-gallery button')).toHaveCount(isMobile ? 9 : 0);
+  await expect(page.locator('.outside-gallery button')).toHaveCount(9);
 });
 
 test('deer caption fades on hover or toggles with successive taps', async ({ page, isMobile }) => {
@@ -42,7 +79,7 @@ test('deer caption fades on hover or toggles with successive taps', async ({ pag
   await photo.scrollIntoViewIfNeeded();
   await expect(photo).not.toHaveClass(/reveal-/);
   await expect(caption).toHaveCSS('opacity', '0');
-  await expect(page.locator('.outside-gallery button')).toHaveCount(isMobile ? 9 : 0);
+  await expect(page.locator('.outside-gallery button')).toHaveCount(9);
 
   if (isMobile) {
     await photo.tap();
