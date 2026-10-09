@@ -1,0 +1,88 @@
+.outside-section {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: calc(var(--body-size) + 40px);
+  margin-inline: auto;
+  padding: 40px 20px 60px;
+}
+
+.outside-section > .heading-2 {
+  margin: 0 0 40px;
+  color: var(--black);
+  font-size: 30px;
+  line-height: 44px;
+  text-align: center;
+}
+
+/* Figma's four-column collage, with a 3px offset on its bottom row. */
+.outside-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: 305fr 305fr 308fr;
+  grid-template-areas:
+    'deer museum costumes kayaking'
+    'deer games games bamboo'
+    'pagoda trees mahjong bamboo';
+  gap: 20px;
+  aspect-ratio: 1280 / 958;
+}
+
+.outside-photo {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.outside-photo > img {
+  position: absolute;
+  display: block;
+  max-width: none;
+  width: var(--photo-width, 100%);
+  height: var(--photo-height, 100%);
+  left: var(--photo-left, 0%);
+  top: var(--photo-top, 0%);
+}
+
+.outside-photo--nara-deer { grid-area: deer; --photo-width: 136.88%; --photo-left: -19.1%; }
+.outside-photo--museum-friends { grid-area: museum; --photo-width: 103.42%; --photo-height: 100.09%; --photo-left: -.38%; --photo-top: -.04%; }
+.outside-photo--banana-costumes { grid-area: costumes; --photo-width: 124.59%; --photo-left: -8.2%; }
+.outside-photo--kayaking { grid-area: kayaking; --photo-height: 118.48%; --photo-top: -9.09%; }
+.outside-photo--activate-friends { grid-area: games; --photo-height: 115.84%; --photo-top: -9.23%; }
+.outside-photo--bamboo-forest { grid-area: bamboo; margin-top: 3px; --photo-width: 137.38%; --photo-height: 100.03%; --photo-left: -16.72%; --photo-top: -.01%; }
+.outside-photo--pagoda { grid-area: pagoda; margin-top: 3px; --photo-height: 121.13%; --photo-top: -11.22%; }
+.outside-photo--tree-gathering { grid-area: trees; margin-top: 3px; --photo-height: 133.45%; --photo-top: -30.17%; }
+.outside-photo--mahjong { grid-area: mahjong; margin-top: 3px; --photo-height: 110.16%; --photo-top: -6.89%; }
+
+@media (max-width: 991px) {
+  .outside-section {
+    max-width: calc(var(--body-size) + 80px);
+    padding-inline: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .outside-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+      'deer museum'
+      'deer costumes'
+      'games games'
+      'kayaking bamboo'
+      'pagoda bamboo'
+      'trees mahjong';
+    aspect-ratio: auto;
+    gap: 16px;
+  }
+  .outside-photo { margin-top: 0; aspect-ratio: 1; }
+  .outside-photo--nara-deer,
+  .outside-photo--bamboo-forest { aspect-ratio: auto; }
+  .outside-photo--activate-friends { aspect-ratio: 630 / 305; }
+}
+
+@media (max-width: 479px) {
+  .outside-section { padding-inline: 20px; padding-bottom: 40px; }
+  .outside-section > .heading-2 { margin-bottom: 24px; }
+}

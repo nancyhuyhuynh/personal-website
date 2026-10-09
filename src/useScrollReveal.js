@@ -3,7 +3,7 @@ import { useLayoutEffect } from 'react';
 // Reveal content groups independently, without adding wrappers to the grids.
 const targets = {
   home: '.landingpage.center-aligned > *, .sticker-button, .case-study-card',
-  about: '.character-block, .flex-block-38 > *, .recent-favs, .about-page-container .heading-2, .crochet .div-block-19, .crochet .div-block-17, .grid-8.adventures > img',
+  about: '.character-block, .flex-block-38 > *, .recent-favs, .about-page-container .heading-2, .crochet .div-block-19, .crochet .div-block-17, .outside-section > .heading-2, .outside-photo',
   resume: '.flex-block-35 > *, .flex-block-37 > .title-2, .grid-5 > *',
   caseStudy: '.banner-image, .case-study-body > .cs-container, .large-image',
 };

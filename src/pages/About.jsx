@@ -2,6 +2,19 @@ import { useColouredBackground } from '../useColouredBackground';
 import { useScrollReveal } from '../useScrollReveal';
 import { withBase } from '../urls';
 import React, { useEffect, useState } from 'react';
+import './About.css';
+
+const outsidePhotos = [
+  { name: 'nara-deer', alt: 'Nancy meeting a deer in Nara', width: 497, height: 750 },
+  { name: 'museum-friends', alt: 'Friends on the steps of the Metropolitan Museum of Art', width: 900, height: 871 },
+  { name: 'banana-costumes', alt: 'Friends dressed up in banana costumes', width: 935, height: 750 },
+  { name: 'kayaking', alt: 'Nancy and friends getting ready to kayak', width: 660, height: 782 },
+  { name: 'activate-friends', alt: 'Nancy and friends at Activate Games', width: 1332, height: 747 },
+  { name: 'bamboo-forest', alt: 'Nancy walking through a bamboo forest', width: 500, height: 752 },
+  { name: 'pagoda', alt: 'A five-storey pagoda against a blue sky', width: 497, height: 602 },
+  { name: 'tree-gathering', alt: 'Friends gathered among the trees', width: 562, height: 750 },
+  { name: 'mahjong', alt: 'A game of mahjong with friends', width: 561, height: 618 },
+];
 
 export default function About() {
   useScrollReveal('about');
@@ -180,27 +193,17 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="div-block-18">
-        <div className="w-layout-vflex about-page-container">
-          <div className="w-layout-vflex flex-block-39">
-            <div className="adventures">
-              <div className="div-block-19">
-                <div className="heading-2 hover-animate">
-                  {"outside of work"}
-                </div>
-              </div>
-              <div className="w-layout-grid grid-8 adventures">
-                <img src={withBase('/assets/68cf0b1346e749fd225a1a41_DSCF0383-min-min.png')} loading="lazy" alt="" id="w-node-_330b85e0-dac0-dbe0-93e0-43a5db826be6-79f132b3" className="image-57" />
-                <img src={withBase('/assets/66e37868836e304acf40578e_IMG_4609-1-min.png')} loading="lazy" alt="" className="image-53" />
-                <img src={withBase('/assets/68cf0b13a53a47caf31bed97_DSCF0539-2-min.png')} loading="lazy" alt="" className="image-54" />
-                <img src={withBase('/assets/66e37b2dfbceb8b6924a01d7_IMG_9894-min.png')} loading="lazy" alt="" className="image-55" />
-                <img src={withBase('/assets/68cf0b12e2afc590d7e248b2_Screenshot-2025-09-20-at-4.04.20-PM-min.png')} loading="lazy" alt="" className="image-52" />
-                <img src={withBase('/assets/66e37c794719e277e77f91ac_IMG_8403-1--1-.png')} loading="lazy" alt="" id="w-node-_804e5287-42de-a80c-e962-8dc73aababc0-79f132b3" className="image-56" />
-              </div>
+      <section className="outside-section" aria-labelledby="outside-heading">
+        <h2 id="outside-heading" className="heading-2 hover-animate">outside of work</h2>
+        <div className="outside-gallery">
+          {outsidePhotos.map(photo => (
+            <div key={photo.name} className={`outside-photo outside-photo--${photo.name}`}>
+              <img src={withBase(`/assets/about/${photo.name}.png`)} alt={photo.alt}
+                width={photo.width} height={photo.height} loading="lazy" decoding="async" />
             </div>
-          </div>
+          ))}
         </div>
-      </div>
+      </section>
     </>
   );
 }

@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 for (const [path, selector] of [
   ['/', '.case-study-card:last-child'],
-  ['/about', '.grid-8.adventures > img:last-child'],
+  ['/about', '.outside-photo:last-child'],
   ['/resume', '.grid-5 > :last-child'],
   ['/projects/revvity', '.case-study-body > .cs-container:last-child'],
   ['/projects/gradeeasy', '.case-study-body > .cs-container:last-child'],
